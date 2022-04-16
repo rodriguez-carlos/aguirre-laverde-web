@@ -1,0 +1,17 @@
+.round-button {
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #437672, #054340);
+    height: 82px;
+    width: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 3px 3px 3px #000;
+}
+
+.button-icon {
+    color: #fff;
+    font-size: 30px;
+    font-family: "Regular";
+}

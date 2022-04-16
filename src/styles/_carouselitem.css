@@ -1,0 +1,26 @@
+.carousel-item {
+    max-height: 780px;
+    height: 75vh;
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-item-right {
+    background-color: rgba(7, 71, 68, 0.75);
+    width: 30.98%;
+    height: 100%;
+    position: absolute;
+    margin-left: 69.02%;
+}
+
+.carousel-item-right-text {
+    font-family: "Regular";
+    color: #fff;
+}

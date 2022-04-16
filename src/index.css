@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Regular";
+  src: local("AlteHaasGroteskRegular"),
+    url('./fonts/AlteHaasGroteskRegular.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Bold";
+  src: local("AlteHaasGroteskBold"),
+    url('./fonts/AlteHaasGroteskBold.ttf') format("truetype");
+}

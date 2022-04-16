@@ -1,6 +1,13 @@
+import React from 'react';
+import Nav from "../components/Nav";
+import CarouselItem from '../components/CarouselItem';
+
 const Home = () => {
     return (
-        <h1>hola</h1>
+        <>
+            <Nav />
+            <CarouselItem />
+        </>
     );
 }
  export default Home;
