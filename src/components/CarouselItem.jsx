@@ -35,9 +35,12 @@ const CarouselItem = () => {
             <div className='carousel-item-right'>
                 <div className='carousel-item-right-content'>
                     <p className='carousel-item-right-text'>{carouselSlideData[0].carouselSlideText}</p>
-                    <Link to={carouselSlideData[0].carouselSlideButtonRoute} style={{textDecoration: "none", width: "auto"}}>
-                        <RoundButton buttonSize="small" buttonIcon="back" />
-                    </Link>
+                    <div className="carousel-item-right-actions">
+                        <Link className="carousel-item-right-anchor" to={carouselSlideData[0].carouselSlideButtonRoute}>
+                            <RoundButton buttonSize="small" buttonIcon="plus" />
+                        </Link>
+                        <p>Conócenos</p>
+                    </div>
                 </div>
             </div>
         </div>

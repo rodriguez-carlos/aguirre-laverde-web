@@ -20,7 +20,32 @@
     margin-left: 69.02%;
 }
 
+.carousel-item-right-content {
+    margin: 30% 15%;
+}
+
 .carousel-item-right-text {
     font-family: "Regular";
+    font-size: 51px;
+    color: #fff;
+    text-align: justify;
+}
+
+.carousel-item-right-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.carousel-item-right-actions p {
+    font-family: "Regular";
+    font-size: 33px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.carousel-item-right-anchor {
+    display: block;
+    text-decoration: none;
+    width: 85px;
     color: #fff;
 }
