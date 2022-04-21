@@ -9,13 +9,12 @@ const RoundButton = ({buttonSize, buttonIcon}) => {
         switch (iconProp) {
             case "plus":
                 return <FontAwesomeIcon className='button-icon' icon={faPlus}/>;
-                break;
             case "back":
                 return <FontAwesomeIcon className='button-icon' icon={faLessThan}/>;
-                break;
             case "enviar":
                 return <span>ENVIAR</span>;
-                break;
+            default:
+                return "";
         }
     }
     return (

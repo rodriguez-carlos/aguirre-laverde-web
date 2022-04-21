@@ -38,3 +38,9 @@ nav {
     color: #3A4948;
     text-decoration: none;
 }
+
+@media (max-width: 550px) {
+    .nav-right-side ul {
+        display: none;
+    }
+}

@@ -39,7 +39,7 @@ const CarouselItem = () => {
                         <Link className="carousel-item-right-anchor" to={carouselSlideData[0].carouselSlideButtonRoute}>
                             <RoundButton buttonSize="small" buttonIcon="plus" />
                         </Link>
-                        <p>Conócenos</p>
+                        <span>Conócenos</span>
                     </div>
                 </div>
             </div>

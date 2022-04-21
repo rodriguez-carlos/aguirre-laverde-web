@@ -1,5 +1,6 @@
 .carousel-item {
     max-height: 780px;
+    min-height: 700px;
     height: 75vh;
     display: flex;
     position: relative;
@@ -36,7 +37,7 @@
     justify-content: flex-start;
     align-items: center;
 }
-.carousel-item-right-actions p {
+.carousel-item-right-actions span {
     font-family: "Regular";
     font-size: 33px;
     margin-left: 10px;
@@ -48,4 +49,39 @@
     text-decoration: none;
     width: 85px;
     color: #fff;
+}
+
+@media (max-width: 950px) {
+    .carousel-item {
+        min-height: 500px;
+    }
+    .carousel-item-right-text {
+        font-size: 40px;
+    }
+
+    .carousel-item-right {
+        width: 50%;
+        margin-left: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+    .carousel-item-right-content {
+        margin: 20% 10%;
+    }
+    .carousel-item-right-text {
+        font-size: 30px;
+    }
+
+    .carousel-item-right {
+        width: 50%;
+        margin-left: 50%;
+    }
+    .carousel-item-right-actions {
+        flex-direction: column;
+    }
+    .carousel-item-right-actions span {
+        font-size: 25px;
+    }
+
 }

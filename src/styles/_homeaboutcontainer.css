@@ -1,0 +1,44 @@
+.home-about-container {
+    background-color: #054340;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.home-about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-about-logo img {
+    height: 380px;
+    background-color: #D8DBDB;
+}
+
+.home-about-text-container {
+    background-color: #062B27;
+    color: #fff;
+    width: 35%;
+    padding: 35px 25px;
+}
+
+.home-about-text-title {
+    font-family: "Regular";
+    font-size: 95px;
+    font-weight: 400;
+}
+.home-about-text-text {
+    font-family: "Regular";
+    text-align: justify;
+}
+
+.home-about-actions {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: "Regular";
+    font-size: 25px;
+}
