@@ -1,25 +1,6 @@
 
 
-header {
-    width: 100%;
-    background-color: #D8DBDB;
-}
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10% 0 10%;
-    height: 221px;
-}
-
-.nav-left-side {
-    height: 100%;
-}
-
-.nav-left-side img {
-    height: 100%;
-}
 
 .nav-right-side {
     width: 70%;

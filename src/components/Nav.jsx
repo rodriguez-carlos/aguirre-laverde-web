@@ -1,18 +1,28 @@
 import React from 'react';
 import '../styles/_nav.css';
-import logo from "../static/DEFINITIVOS-06.png";
 import { Link } from 'react-router-dom';
+import styled from '@emotion/styled';
+import logo from "../static/DEFINITIVOS-06.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 
+const LogoContainer = styled.div`
+    height: 100%;
+`;
+
+const Logo = styled.img`
+    height: 100%;
+`;
 
 const Nav = () => {
     return (
         <header>
             <nav>
-                <div className='nav-left-side'>
-                    <Link to="/"><img src={logo} alt="" /></Link>
-                </div>
+                <LogoContainer>
+                    <Link to="/">
+                        <Logo src={logo} alt="" />
+                    </Link>
+                </LogoContainer>
                 <div className='nav-right-side'>
                     <ul>
                         <li><Link to="/conocenos">Conócenos</Link> </li>
