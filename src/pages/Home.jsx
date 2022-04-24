@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import HomeAboutContainer from '../components/HomeAboutContainer';
 import HomeServicesContainer from '../components/HomeServicesContainer';
+import HomeContactContainer from '../components/HomeContactContainer';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             </Carousel>
             <HomeAboutContainer />
             <HomeServicesContainer />
+            <HomeContactContainer />
         </>
     );
 }

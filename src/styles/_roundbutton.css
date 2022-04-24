@@ -8,6 +8,7 @@
     align-items: center;
     border: none;
     box-shadow: 3px 3px 3px #000;
+    z-index: 90;
 }
 
 .button-icon {
