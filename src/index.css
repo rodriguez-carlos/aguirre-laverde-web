@@ -22,3 +22,7 @@ code {
   src: local("AlteHaasGroteskBold"),
     url('./fonts/AlteHaasGroteskBold.ttf') format("truetype");
 }
+
+* {
+  z-index: 1;
+}

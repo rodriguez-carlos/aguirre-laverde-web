@@ -1,11 +1,23 @@
 import React from 'react';
 import logo from '../static/DEFINITIVOS-06.png';
 import RoundButton from './RoundButton';
+import Circle from './Circle';
 import '../styles/_homeaboutcontainer.css'
 
 const HomeAboutContainer = () => {
     return (
         <section className="home-about-container">
+            <Circle
+                color="#2a514d"
+                size="40vw"
+                left="50%"
+            />
+            <Circle
+                color="#50706d"
+                size="20vw"
+                left="40%"
+                top="50%"
+            />
             <div className='home-about-content'>
                 <div className='home-about-text-container'>
                     <h2 className="home-about-text-title">CONOCENOS</h2>
