@@ -2,8 +2,8 @@ import React from 'react';
 import '../styles/_nav.css';
 import logo from "../static/DEFINITIVOS-06.png";
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 
 
 const Nav = () => {
@@ -16,9 +16,9 @@ const Nav = () => {
                 <div className='nav-right-side'>
                     <ul>
                         <li><Link to="/conocenos">Conócenos</Link> </li>
-                        <li><FontAwesomeIcon icon={faEllipsisVertical} /></li>
+                        <li><FontAwesomeIcon icon={faEllipsisVertical} alt="Visual division on menu. No action" /></li>
                         <li><Link to="/que-hacemos">¿Qué hacemos?</Link></li>
-                        <li><FontAwesomeIcon icon={faEllipsisVertical} /></li>
+                        <li><FontAwesomeIcon icon={faEllipsisVertical} alt="Visual division on menu. No action" /></li>
                         <li><Link to="/contacto">Contáctanos</Link></li>
                     </ul>
                 </div>

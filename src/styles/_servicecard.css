@@ -1,0 +1,29 @@
+.service-card {
+    height: 417px;
+    width: 300px;
+    flex: 1 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1.5%;
+}
+
+.service-card img {
+    width: 100%;
+}
+
+.service-card-title {
+    background-color: #D8DBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Regular";
+    font-size: 40px;
+    width: 100%
+}
+
+.service-card-title p {
+    text-align: center;
+    color: #3A4948;
+}

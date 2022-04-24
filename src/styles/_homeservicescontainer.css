@@ -1,0 +1,48 @@
+.home-services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(50,104,100,1) 56%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 71%);
+    padding: 3rem;
+
+}
+
+.home-services-title {
+    display: flex;
+    font-size: 50px;
+    justify-content: flex-end;
+    text-align: right;
+    width: 80%;
+    color: #fff;
+}
+
+.home-services-title h2 {
+    text-align: right;
+    font-family: "Regular";
+    font-weight: 400;
+}
+
+.home-services-intro {
+    background-color: #062B27;
+    color: #fff;
+    display: flex;
+    width: 80%;
+    padding: 10px 25px 50px;
+}
+
+.home-services-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.home-services-actions {
+    display: flex;
+    justify-content: center;
+    color: #124D4A;
+    font-family: "Regular";
+    font-size: 25px;
+}
