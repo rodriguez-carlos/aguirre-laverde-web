@@ -14,7 +14,7 @@ const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px #00000070;
+    box-shadow: 0 4px 8px #00000080;
     z-index: 90;
     transition: 0.5s;
     cursor: pointer;

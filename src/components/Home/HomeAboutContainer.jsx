@@ -11,7 +11,6 @@ const Container = styled.section`
     flex-direction: column;
     align-items: center;
     padding: 80px 0;
-    position: relative;
 `;
 
 const Content = styled.div`
@@ -19,6 +18,7 @@ const Content = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
 `;
 
 const TextContainer = styled.div`
@@ -47,18 +47,19 @@ const Actions = styled.div`
 const HomeAboutContainer = () => {
     return (
         <Container>
-            <Circle
-                color="#2a514d"
-                size="40vw"
-                left="50%"
-            />
-            <Circle
-                color="#50706d"
-                size="20vw"
-                left="40%"
-                top="50%"
-            />
             <Content>
+                <Circle
+                    color="#2a514d"
+                    size="500px"
+                    left="55%"
+                    top="-40px"
+                />
+                <Circle
+                    color="#50706d"
+                    size="250px"
+                    left="45%"
+                    top="50%"
+                />
                 <TextContainer>
                     <Title>CONÓCENOS</Title>
                     <div>
