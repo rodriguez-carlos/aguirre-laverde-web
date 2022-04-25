@@ -1,18 +1,62 @@
 import React from "react";
-import '../../styles/_homecontactcontainer.css';
+import styled from '@emotion/styled';
 import image from '../../static/imagenes-20.png';
 import RoundButton from "../RoundButton";
+import { Container } from '../Layout';
+import Title from '../Title';
+
+const SectionContainer = styled(Container)`
+    background: linear-gradient(180deg, rgba(6,43,39,1) 56%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 71%);
+`;
+
+const Image = styled.img`
+    height: 400px;
+    max-width: 90%;
+`;
+
+const BoxContainer = styled.div`
+    display: flex;
+    width: 80%;
+    position: relative;
+`;
+
+const InfoContainer = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -50%);
+    display: flex;
+`;
+
+const TextContainer = styled.div`
+    width: 100%;
+    min-width: 525px;
+    background-color: #d8dbdb;
+    color: #062b27;
+    padding: 40px 60px;
+    box-sizing: border-box;
+`;
+
+const Button = styled(RoundButton)`
+    margin: 40px -40px 0 0;
+`;
 
 const HomeContactContainer = () => {
     return(
-        <section className="home-contact-container">
-            <img src={image} alt="" />
-            <RoundButton buttonIcon="plus" className="home-contact-button" />
-            <div className="home-contact-text-container">
-                <h2>CONTÁCTANOS</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, repellendus commodi eveniet officiis voluptatibus suscipit molestias officia dicta qui amet reprehenderit saepe aperiam quidem iste dolor pariatur vero aut necessitatibus?</p>
-            </div>
-        </section>
+        <SectionContainer>
+            <BoxContainer>
+                <Image src={image} alt="" />
+                <InfoContainer>
+                    <Button buttonIcon="plus" />
+                    <TextContainer>
+                        <Title color="#062b27" >CONTÁCTANOS</Title>
+                        <p>
+                            Ponte en contacto con nosotros si necesitas asesoria legal especializada. Nuestro equipo estará dispuesto a brindarte la mejor solución.
+                        </p>
+                    </TextContainer>
+                </InfoContainer>
+            </BoxContainer>
+        </SectionContainer>
     );
 }
 

@@ -10,6 +10,7 @@ const Button = styled.button`
     background-image: linear-gradient(to right, #437672 0%, #054340 50%);
     height: 82px;
     width: 82px;
+    flex-shrink: 0;
     margin: 0 2rem;
     display: flex;
     justify-content: center;
@@ -34,7 +35,7 @@ const Icon = styled.div`
 `;
 
 
-const RoundButton = ({ buttonSize, buttonIcon }) => {
+const RoundButton = ({ buttonSize, buttonIcon, className }) => {
     function renderIcon(iconProp) {
         switch (iconProp) {
             case "plus":
@@ -48,7 +49,7 @@ const RoundButton = ({ buttonSize, buttonIcon }) => {
         }
     }
     return (
-        <Button>
+        <Button className={className}>
             <Icon size={buttonSize}>
                 {renderIcon(buttonIcon)}
             </Icon>
