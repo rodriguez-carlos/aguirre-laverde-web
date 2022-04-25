@@ -1,13 +1,52 @@
 import React from 'react';
-import logo from '../static/DEFINITIVOS-06.png';
-import RoundButton from './RoundButton';
-import Circle from './Circle';
-import Title from './Title';
-import '../styles/_homeaboutcontainer.css'
+import styled from '@emotion/styled';
+import logo from '../../static/DEFINITIVOS-06.png';
+import RoundButton from '../RoundButton';
+import Circle from '../Circle';
+import Title from '../Title';
+
+const Container = styled.section`
+    background-color: #054340;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    position: relative;
+`;
+
+const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`;
+
+const TextContainer = styled.div`
+    background-color: #062B27;
+    color: #fff;
+    width: 35%;
+    max-width: 500px;
+    padding: 45px 35px;
+`;
+
+const ImageContainer = styled.div`
+    background-color: #D8DBDB;
+`;
+
+const Image = styled.img`
+    height: 306.5px;
+`;
+
+const Actions = styled.div`
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+`;
 
 const HomeAboutContainer = () => {
     return (
-        <section className="home-about-container">
+        <Container>
             <Circle
                 color="#2a514d"
                 size="40vw"
@@ -19,27 +58,30 @@ const HomeAboutContainer = () => {
                 left="40%"
                 top="50%"
             />
-            <div className='home-about-content'>
-                <div className='home-about-text-container'>
-                    <Title>CONOCENOS</Title>
-                    <div className='home-about-text-text'>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem animi repudiandae distinctio dolores. Adipisci repellendus autem a commodi veniam delectus vero, dolorem, non recusandae, suscipit dicta nulla doloribus rerum laudantium?
+            <Content>
+                <TextContainer>
+                    <Title>CONÓCENOS</Title>
+                    <div>
+                        <p>
+                            Somos  una  firma  de  abogados  con experiencia  y  conocimiento  especializado  que brinda a sus clientes asesoría jurídica integral, oportuna y confiable.
                         </p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem animi repudiandae distinctio dolores. Adipisci repellendus autem a commodi veniam delectus vero, dolorem, non recusandae, suscipit dicta nulla doloribus rerum laudantium?
+                        <p>
+                            Las   áreas   más   relevantes   de   nuestra   practica  incluyen  responsabilidad  civil  y seguros, derecho comercial y corporativo, derecho de familia, derecho inmobiliario y derecho penal.
                         </p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem animi repudiandae distinctio dolores. Adipisci repellendus autem a commodi veniam delectus vero, dolorem, non recusandae, suscipit dicta nulla doloribus rerum laudantium?
+                        <p>
+                            Buscamos crear relaciones de largo plazo integrando  el  conocimiento  legal  con  el entendimiento   de   los   negocios   de nuestros   clientes,   sus   objetivos   y desafíos...
                         </p>
                     </div>
-                </div>
-                <div className="home-about-logo">
-                    <img src={logo} alt="" />
-                </div>
-            </div>
-            <div className='home-about-actions'>
+                </TextContainer>
+                <ImageContainer>
+                    <Image src={logo} alt="" />
+                </ImageContainer>
+            </Content>
+            <Actions>
                 <p>Más de conócenos</p>
                 <RoundButton buttonIcon="plus"/>
-            </div>
-        </section>
+            </Actions>
+        </Container>
     )
 }
 

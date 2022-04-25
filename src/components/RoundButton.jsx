@@ -10,6 +10,7 @@ const Button = styled.button`
     background-image: linear-gradient(to right, #437672 0%, #054340 50%);
     height: 82px;
     width: 82px;
+    margin: 0 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

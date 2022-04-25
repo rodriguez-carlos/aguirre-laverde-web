@@ -17,6 +17,11 @@ export default css`
       monospace;
   }
 
+  p {
+    text-align: justify;
+    line-height: 1.5;
+  }
+
   @font-face {
     font-family: "Regular";
     src: url(${regular}) format("truetype");
