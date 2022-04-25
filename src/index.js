@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import { BrowserRouter } from 'react-router-dom'
-import Router from './Router';
-
-import './fonts/AlteHaasGroteskRegular.ttf';
-import './fonts/AlteHaasGroteskBold.ttf';
+import { BrowserRouter } from 'react-router-dom';
+import { Global } from '@emotion/react';
+import GlobalStyles from './GlobalStyles';
+import App from './App';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Router />
+    <Global styles={GlobalStyles} />
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );

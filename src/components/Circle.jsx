@@ -11,6 +11,8 @@ const CircleElement = styled.div`
   position: absolute;
   top: ${props => props.top};
   left: ${props => props.left};
+  bottom: ${props => props.bottom};
+  right: ${props => props.right};
   z-index: ${props => props.zIndex || 0};
 `;
 
