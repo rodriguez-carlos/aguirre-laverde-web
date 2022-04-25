@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../static/DEFINITIVOS-06.png';
-import RoundButton from './RoundButton';
-import Circle from './Circle';
-import '../styles/_homeaboutcontainer.css'
+import logo from '../../static/DEFINITIVOS-06.png';
+import RoundButton from '../RoundButton';
+import Circle from '../Circle';
+import '../../styles/_homeaboutcontainer.css'
 
 const HomeAboutContainer = () => {
     return (

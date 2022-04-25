@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles/_homecontactcontainer.css';
-import image from '../static/imagenes-20.png';
-import RoundButton from "./RoundButton";
+import '../../styles/_homecontactcontainer.css';
+import image from '../../static/imagenes-20.png';
+import RoundButton from "../RoundButton";
 
 const HomeContactContainer = () => {
     return(

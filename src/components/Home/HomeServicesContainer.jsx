@@ -1,7 +1,7 @@
 import React from 'react';
-import RoundButton from './RoundButton';
-import '../styles/_homeservicescontainer.css';
-import ServiceCard from './ServiceCard';
+import RoundButton from '../RoundButton';
+import '../../styles/_homeservicescontainer.css';
+import ServiceCard from '../ServiceCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 

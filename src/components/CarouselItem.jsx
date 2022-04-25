@@ -37,7 +37,7 @@ const CarouselItem = () => {
                     <p className='carousel-item-right-text'>{carouselSlideData[0].carouselSlideText}</p>
                     <div className="carousel-item-right-actions">
                         <Link className="carousel-item-right-anchor" to={carouselSlideData[0].carouselSlideButtonRoute}>
-                            <RoundButton buttonSize="small" buttonIcon="plus" />
+                            <RoundButton buttonIcon="plus" />
                         </Link>
                         <span>Conócenos</span>
                     </div>
