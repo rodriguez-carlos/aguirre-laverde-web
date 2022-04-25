@@ -23,7 +23,7 @@ const Logo = styled.img`
 const MenuContainer = styled.nav`
     flex: 3;
     display: flex;
-    padding: 0 10%;
+    padding: 0 40px;
 `;
 
 const Menu = styled.ul`
@@ -31,7 +31,7 @@ const Menu = styled.ul`
     flex: 1;
     align-items: center;
     list-style: none;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 30px;
     color: #3A4948;
 
@@ -45,6 +45,8 @@ const Menu = styled.ul`
 const MenuItemLink = styled(Link)`
     color: #3A4948;
     text-decoration: none;
+    margin: 0 30px;
+    display: block;
 `;
 
 const Nav = () => {
@@ -58,12 +60,12 @@ const Nav = () => {
                     <li>
                         <MenuItemLink to="/conocenos">Conócenos</MenuItemLink>
                     </li>
-                    <FontAwesomeIcon icon={faEllipsisVertical} alt="Visual division on menu. No action" />
+                    <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
 
                     <li>
                         <MenuItemLink to="/que-hacemos">¿Qué hacemos?</MenuItemLink>
                     </li>
-                    <FontAwesomeIcon icon={faEllipsisVertical} alt="Visual division on menu. No action" />
+                    <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
 
                     <li>
                         <MenuItemLink to="/contacto">Contáctanos</MenuItemLink>
