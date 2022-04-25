@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../static/DEFINITIVOS-06.png';
 import RoundButton from './RoundButton';
 import Circle from './Circle';
+import Title from './Title';
 import '../styles/_homeaboutcontainer.css'
 
 const HomeAboutContainer = () => {
@@ -20,7 +21,7 @@ const HomeAboutContainer = () => {
             />
             <div className='home-about-content'>
                 <div className='home-about-text-container'>
-                    <h2 className="home-about-text-title">CONOCENOS</h2>
+                    <Title>CONOCENOS</Title>
                     <div className='home-about-text-text'>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem animi repudiandae distinctio dolores. Adipisci repellendus autem a commodi veniam delectus vero, dolorem, non recusandae, suscipit dicta nulla doloribus rerum laudantium?
                         </p>
