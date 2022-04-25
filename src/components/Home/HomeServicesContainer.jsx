@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import RoundButton from '../RoundButton';
-import '../../styles/_homeservicescontainer.css';
 import ServiceCard from '../ServiceCard';
 import Title from '../Title';
 import Circle from '../Circle';
 import { Container } from '../Layout';
+
+import servicesData from '../../static/staticServicesData';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -44,15 +45,27 @@ const IntroContainer = styled.div`
     }
 `;
 
+const CardsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+`;
+
 const Actions = styled.div`
     display: flex;
     justify-content: center;
     color: #124D4A;
     font-size: 25px;
-    margin: 60px 0;
+    margin: 40px 0;
 `;
 
 const HomeServicesContainer = () => {
+    const [data, setData] = useState(servicesData);
+
     return (
         <SectionContainer>
             <Circle
@@ -81,14 +94,9 @@ const HomeServicesContainer = () => {
                     Realizamos consultorías, capacitaciones, gestiones  ante  autoridades  y  proyectos especiales.    Desarrollamos  estrategias legales que permiten dar solución efectiva a los problemas de nuestros clientes.
                 </p>
             </IntroContainer>
-            <div className='home-services-cards-container'>
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-            </div>
+            <CardsContainer>
+                {data.map(item => <ServiceCard image={item.image} text={item.text} />)}
+            </CardsContainer>
             <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>
                 <RoundButton buttonIcon="plus"/>
