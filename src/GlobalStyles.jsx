@@ -30,17 +30,4 @@ export default css`
     z-index: 1;
     font-family: "Regular";
   }
-
-  header {
-    width: 100%;
-    background-color: #D8DBDB;
-  }
-
-  nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 10% 0 10%;
-      height: 221px;
-  }
 `;
