@@ -4,14 +4,7 @@ import logo from '../../static/DEFINITIVOS-06.png';
 import RoundButton from '../RoundButton';
 import Circle from '../Circle';
 import Title from '../Title';
-
-const Container = styled.section`
-    background-color: #054340;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 0;
-`;
+import { Container } from '../Layout';
 
 const Content = styled.div`
     display: flex;
@@ -23,10 +16,10 @@ const Content = styled.div`
 
 const TextContainer = styled.div`
     background-color: #062B27;
-    color: #fff;
+    padding: 45px 35px;
     width: 35%;
     max-width: 500px;
-    padding: 45px 35px;
+    color: white;
 `;
 
 const ImageContainer = styled.div`
@@ -46,7 +39,7 @@ const Actions = styled.div`
 
 const HomeAboutContainer = () => {
     return (
-        <Container>
+        <Container color="#054340">
             <Content>
                 <Circle
                     color="#2a514d"
@@ -79,7 +72,7 @@ const HomeAboutContainer = () => {
                 </ImageContainer>
             </Content>
             <Actions>
-                <p>Más de conócenos</p>
+                <p>Más de CONÓCENOS</p>
                 <RoundButton buttonIcon="plus"/>
             </Actions>
         </Container>

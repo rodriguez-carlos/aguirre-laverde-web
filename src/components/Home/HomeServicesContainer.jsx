@@ -1,23 +1,86 @@
 import React from 'react';
+import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import RoundButton from '../RoundButton';
 import '../../styles/_homeservicescontainer.css';
 import ServiceCard from '../ServiceCard';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import Title from '../Title';
+import Circle from '../Circle';
+import { Container } from '../Layout';
+
+const SectionContainer = styled(Container)`
+    position: relative;
+    background: linear-gradient(180deg, rgba(50,104,100,1) 56%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 71%);
+`;
+
+const TitleContainer = styled.div`
+    display: flex;
+    font-size: 50px;
+    justify-content: flex-end;
+    text-align: right;
+    width: 80%;
+
+    svg {
+        margin: 0 40px;
+    }
+`;
+
+const IntroContainer = styled.div`
+    background-color: #062B27;
+    padding: 45px 35px 80px;
+    color: #fff;
+    display: flex;
+    width: 80%;
+
+    p:first-of-type {
+        margin-right: 20px;
+        flex: 1 1 50%;
+    }
+
+    p:last-of-type {
+        margin-left: 20px;
+        flex: 1 1 50%;
+    }
+`;
+
+const Actions = styled.div`
+    display: flex;
+    justify-content: center;
+    color: #124D4A;
+    font-size: 25px;
+    margin: 60px 0;
+`;
 
 const HomeServicesContainer = () => {
     return (
-        <section className='home-services-container'>
-            <div className='home-services-title'>
-                <h2>
-                    <FontAwesomeIcon icon={faEllipsis} style={{color: "#3A4948"}} />
+        <SectionContainer>
+            <Circle
+                color="#608e89"
+                size="600px"
+                top="40px"
+                left="80px"
+            />
+            <Circle
+                color="#a5b4b3"
+                size="300px"
+                bottom="180px"
+                right="150px"
+            />
+            <TitleContainer>
+                <Title>
+                    <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
                     ¿QUÉ HACEMOS?
-                </h2>
-            </div>
-            <div className='home-services-intro'>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam perspiciatis aperiam adipisci voluptates accusamus assumenda nulla quidem distinctio praesentium deserunt, veritatis reprehenderit repellat necessitatibus ut perferendis, optio doloribus fugiat ex.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, alias obcaecati. Cupiditate corporis architecto, quas dolores quam ut, excepturi necessitatibus quo accusamus aspernatur voluptatem totam aut consequatur ducimus ea magnam.</p>
-            </div>
+                </Title>
+            </TitleContainer>
+            <IntroContainer>
+                <p>
+                    Escuchamos  a  nuestros  clientes  y  les  brindamos soluciones legales de acuerdo a  sus  necesidades.  Los  asesoramos  y representamos  en  litigios  judiciales  y arbitrales.   
+                </p>
+                <p>
+                    Realizamos consultorías, capacitaciones, gestiones  ante  autoridades  y  proyectos especiales.    Desarrollamos  estrategias legales que permiten dar solución efectiva a los problemas de nuestros clientes.
+                </p>
+            </IntroContainer>
             <div className='home-services-cards-container'>
                 <ServiceCard />
                 <ServiceCard />
@@ -26,12 +89,11 @@ const HomeServicesContainer = () => {
                 <ServiceCard />
                 <ServiceCard />
             </div>
-            <div className='home-services-actions'>
+            <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>
                 <RoundButton buttonIcon="plus"/>
-            </div>
-        </section>
-        
+            </Actions>
+        </SectionContainer>
     );
 }
 
