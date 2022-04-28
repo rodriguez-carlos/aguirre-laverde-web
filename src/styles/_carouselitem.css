@@ -22,14 +22,18 @@
 }
 
 .carousel-item-right-content {
-    margin: 30% 15%;
+    margin: 30% 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .carousel-item-right-text {
     font-family: "Regular";
     font-size: 51px;
     color: #fff;
-    text-align: justify;
+    text-align: center;
+    line-height: 50px;
 }
 
 .carousel-item-right-actions {
@@ -40,7 +44,7 @@
 .carousel-item-right-actions span {
     font-family: "Regular";
     font-size: 33px;
-    margin-left: 10px;
+    margin-left: 50px;
     color: #fff;
 }
 

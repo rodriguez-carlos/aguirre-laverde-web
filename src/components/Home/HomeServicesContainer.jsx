@@ -12,7 +12,7 @@ import servicesData from '../../static/staticServicesData';
 
 const SectionContainer = styled(Container)`
     position: relative;
-    background: linear-gradient(180deg, rgba(50,104,100,1) 56%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 71%);
+    background: linear-gradient(180deg, rgba(50,104,100,1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
 `;
 
 const TitleContainer = styled.div`
@@ -20,7 +20,7 @@ const TitleContainer = styled.div`
     font-size: 50px;
     justify-content: flex-end;
     text-align: right;
-    width: 80%;
+    width: 65%;
 
     svg {
         margin: 0 40px;
@@ -32,7 +32,7 @@ const IntroContainer = styled.div`
     padding: 45px 35px 80px;
     color: #fff;
     display: flex;
-    width: 80%;
+    width: 65%;
 
     p:first-of-type {
         margin-right: 20px;
@@ -49,7 +49,7 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 80%;
+    max-width: 70%;
     margin: auto;
     margin-bottom: 2rem;
     margin-top: -4rem;
@@ -60,7 +60,7 @@ const Actions = styled.div`
     justify-content: center;
     color: #124D4A;
     font-size: 25px;
-    margin: 40px 0;
+    margin: 30px 0;
 `;
 
 const HomeServicesContainer = () => {
@@ -98,7 +98,7 @@ const HomeServicesContainer = () => {
                 {data.map(item => <ServiceCard image={item.image} text={item.text} />)}
             </CardsContainer>
             <Actions>
-                <p>Más de ¿QUÉ HACEMOS?</p>
+                <p style={{"margin-right": "-15px"}}>Más de ¿QUÉ HACEMOS?</p>
                 <RoundButton buttonIcon="plus"/>
             </Actions>
         </SectionContainer>

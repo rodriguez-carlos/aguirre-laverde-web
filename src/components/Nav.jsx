@@ -31,7 +31,8 @@ const Menu = styled.ul`
     flex: 1;
     align-items: center;
     list-style: none;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 40px;
     font-size: 30px;
     color: #3A4948;
 

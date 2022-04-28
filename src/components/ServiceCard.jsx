@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 const Card = styled.div`
     height: 420px;
-    max-width: 300px;
+    max-width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,7 @@ const Image = styled.img`
     width: 100%;
     height: 280px;
     flex: 2;
+    object-fit: cover;
 `;
 
 const Title = styled.div`
@@ -23,7 +24,7 @@ const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 26px;
     width: 100%;
     padding: 10px 20px;
     flex: 1;
@@ -33,6 +34,7 @@ const Title = styled.div`
     p {
         text-align: center;
         color: #3A4948;
+        line-height: 30px;
     }
 `;
 

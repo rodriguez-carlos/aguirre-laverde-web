@@ -6,7 +6,7 @@ import { Container } from '../Layout';
 import Title from '../Title';
 
 const SectionContainer = styled(Container)`
-    background: linear-gradient(180deg, rgba(6,43,39,1) 56%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 71%);
+    background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
 `;
 
 const Image = styled.img`
@@ -24,7 +24,7 @@ const InfoContainer = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-40px, -50%);
+    transform: translate(-120px, -50%);
     display: flex;
 `;
 
@@ -47,7 +47,7 @@ const HomeContactContainer = () => {
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>
-                    <Button buttonIcon="plus" />
+                    <Button buttonIcon="plus" buttonSize="large" />
                     <TextContainer>
                         <Title color="#062b27" >CONTÁCTANOS</Title>
                         <p>

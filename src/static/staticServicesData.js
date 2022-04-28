@@ -1,4 +1,4 @@
-import service01 from './imagenes-09.png';
+import service01 from './Recurso-1.png';
 import service02 from './imagenes-10.png';
 import service03 from './imagenes-11.png';
 import service04 from './imagenes-12.png';
@@ -12,7 +12,7 @@ const servicesData = [
   },
   {
     image: service02,
-    text: 'Derecho Comercial y Cooperativo',
+    text: 'Derecho Comercial y Corporativo',
   }, ,
   {
     image: service03,
