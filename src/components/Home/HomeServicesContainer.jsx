@@ -34,6 +34,10 @@ const IntroContainer = styled.div`
     display: flex;
     width: 65%;
 
+    p {
+        font-size: 18px;
+    }
+
     p:first-of-type {
         margin-right: 20px;
         flex: 1 1 50%;
@@ -70,9 +74,9 @@ const HomeServicesContainer = () => {
         <SectionContainer>
             <Circle
                 color="#608e89"
-                size="600px"
+                size="650px"
                 top="40px"
-                left="80px"
+                right="50%"
             />
             <Circle
                 color="#a5b4b3"

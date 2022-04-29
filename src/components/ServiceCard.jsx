@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 const Card = styled.div`
     height: 420px;
     max-width: 320px;
+    flex: 1 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,9 +39,9 @@ const Title = styled.div`
     }
 `;
 
-const ServiceCard = ({ image, text }) => {
+const ServiceCard = ({ image, text, className }) => {
     return (
-        <Card>
+        <Card className={className}>
             <Image src={image} alt={text} />
             <Title>
                 <p>{text}</p>
