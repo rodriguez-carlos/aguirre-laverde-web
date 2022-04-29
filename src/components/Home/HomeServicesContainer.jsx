@@ -61,6 +61,10 @@ const Actions = styled.div`
     color: #124D4A;
     font-size: 25px;
     margin: 30px 0;
+
+    p {
+        margin-right: 15px
+    }
 `;
 
 const HomeServicesContainer = () => {
@@ -98,7 +102,7 @@ const HomeServicesContainer = () => {
                 {data.map(item => <ServiceCard image={item.image} text={item.text} />)}
             </CardsContainer>
             <Actions>
-                <p style={{"margin-right": "-15px"}}>Más de ¿QUÉ HACEMOS?</p>
+                <p>Más de ¿QUÉ HACEMOS?</p>
                 <RoundButton buttonIcon="plus"/>
             </Actions>
         </SectionContainer>

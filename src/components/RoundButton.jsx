@@ -11,7 +11,6 @@ const Button = styled.button`
     height: 82px;
     width: 82px;
     flex-shrink: 0;
-    margin: 0 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

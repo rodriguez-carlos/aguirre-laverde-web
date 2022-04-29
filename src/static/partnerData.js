@@ -13,12 +13,12 @@ const partnerData = [
     {
         name: "Luis Fernando",
         lastName: "Aguirre Henao",
-        bio: "Cuenta con más de 40 años de experiencia en la asesoría jurídica y representación de personas naturales en procesos penales. Experto en los recursos de casación y revisión penal.Profesor universitario de pruebas penales, teoría general del proceso, derecho procesal penal. Coordinador de barras académicas defensoría del pueblo. Exconjuez de las Salas Penales de los Tribunales de Medellín y Antioquia.",
+        bio: "Cuenta con más de 40 años de experiencia en la asesoría jurídica y representación de personas naturales en procesos penales. Experto en los recursos de casación y revisión penal. Profesor universitario de pruebas penales, teoría general del proceso, derecho procesal penal. Coordinador de barras académicas defensoría del pueblo. Exconjuez de las Salas Penales de los Tribunales de Medellín y Antioquia.",
         academics: "Abogado Universidad Pontificia Bolivariana. Especialista en Derecho Procesal de Universidad Pontificia Bolivariana. Especialista en Investigación Criminal y Sistema Penal Acusatorio de la Universidad Católica. Aspirante a Maestría teoría del delito y derecho procesal penal.",
         image: luis
     },
     {
-        name: "Lucia",
+        name: "Lucía",
         lastName: "Laverde Gallego",
         bio: "Cuenta con más de 40 años de experiencia en la asesoría jurídica y representación de personas naturales en procesos de familia e inmobiliario.",
         academics: "Abogada de la Universidad Pontificia Bolivariana. Especialista en Derecho de Familia de la misma Universidad. Especialista en Derecho Inmobiliario.",

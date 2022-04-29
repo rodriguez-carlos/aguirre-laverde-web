@@ -2,8 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Card = styled.div`
-    height: 500px;
-    max-width: 290px;
+    max-width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,14 +12,16 @@ const Card = styled.div`
 
 const Image = styled.img`
     width: 100%;
-    height: 400px;
+    max-height: 400px;
     object-fit: cover;
 `;
 
 const Name = styled.p`
     font-family: "Bold";
-    color: #054340;
+    color: #054340 !important;
+    line-height: 1 !important;
     font-size: 30px;
+    margin: 5px 0;
 `
 
 const Text = styled.div`
@@ -30,11 +31,12 @@ const Text = styled.div`
     flex: 1;
     box-sizing: border-box;
     box-shadow: -4px 4px 12px #00000060;
+    padding: 30px 25px;
 
     p {
-        text-align: left;
+        text-align: justify;
         color: #3A4948;
-        line-height: 30px;
+        line-height: 1.5;
     }
 `;
 

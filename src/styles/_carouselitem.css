@@ -7,7 +7,7 @@
     margin: auto;
 }
 
-.carousel-item img {
+.carousel-item-image {
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -22,19 +22,18 @@
 }
 
 .carousel-item-right-content {
-    margin: 23% 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    height: 100%
 }
 
-.carousel-item-right-text {
-    font-family: "Regular";
-    font-size: 51px;
+.carousel-item-right-content .carousel-item-right-text {
+    width: 350px !important;
     color: #fff;
     text-align: center;
-    line-height: 50px;
-    /* background-color: red; */
+    filter: brightness(2.0)
 }
 
 .carousel-item-right-actions {
@@ -45,7 +44,7 @@
 .carousel-item-right-actions span {
     font-family: "Regular";
     font-size: 33px;
-    margin-left: 50px;
+    margin-left: 25px;
     color: #fff;
 }
 

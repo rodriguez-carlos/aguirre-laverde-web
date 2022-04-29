@@ -26,11 +26,15 @@ const InfoContainer = styled.div`
     left: 50%;
     transform: translate(-120px, -50%);
     display: flex;
+
+    a {
+        z-index: 99;
+    }
 `;
 
 const TextContainer = styled.div`
     width: 100%;
-    min-width: 525px;
+    min-width: 500px;
     background-color: #d8dbdb;
     color: #062b27;
     padding: 40px 60px;
@@ -47,7 +51,7 @@ const HomeContactContainer = () => {
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>
-                    <Button buttonIcon="plus" buttonSize="large" />
+                    <a href="/contactanos"><Button buttonIcon="plus" buttonSize="large" /></a>
                     <TextContainer>
                         <Title color="#062b27" >CONTÁCTANOS</Title>
                         <p>

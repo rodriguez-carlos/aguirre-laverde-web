@@ -7,7 +7,7 @@ import '../styles/_carouselitem.css';
 const CarouselItem = ({carouselSlideData}) => {
     return (
         <div className='carousel-item'>
-            <img src={carouselSlideData.carouselSlideImg} alt="" />
+            <img className='carousel-item-image' src={carouselSlideData.carouselSlideImg} alt="" />
             <div className='carousel-item-right'>
                 <div className='carousel-item-right-content'>
                     {/* <p className='carousel-item-right-text'>{carouselSlideData.carouselSlideText}</p> */}

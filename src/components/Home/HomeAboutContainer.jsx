@@ -35,6 +35,10 @@ const Actions = styled.div`
     justify-content: center;
     color: #fff;
     font-size: 25px;
+
+    p {
+        margin-right: 15px
+    }
 `;
 
 const HomeAboutContainer = () => {
