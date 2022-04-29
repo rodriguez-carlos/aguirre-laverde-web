@@ -2,10 +2,14 @@ import React from "react";
 import styled from '@emotion/styled';
 import image from '../../static/imagenes-20.png';
 import RoundButton from "../RoundButton";
+import Circle from "../Circle";
 import { Container } from '../Layout';
 import Title from '../Title';
 
 const SectionContainer = styled(Container)`
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 120px;
     background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
 `;
 
@@ -16,7 +20,7 @@ const Image = styled.img`
 
 const BoxContainer = styled.div`
     display: flex;
-    width: 80%;
+    width: 1000px;
     position: relative;
 `;
 
@@ -33,8 +37,7 @@ const InfoContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 100%;
-    min-width: 500px;
+    width: 520px;
     background-color: #d8dbdb;
     color: #062b27;
     padding: 40px 60px;
@@ -48,6 +51,18 @@ const Button = styled(RoundButton)`
 const HomeContactContainer = () => {
     return(
         <SectionContainer>
+            <Circle
+                color="#50706d"
+                size="400px"
+                left="50%"
+                top="80px"
+            />
+            <Circle
+                color="#a5b4b3"
+                size="200px"
+                left="55%"
+                top="60%"
+            />
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>
