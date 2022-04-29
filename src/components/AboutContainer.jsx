@@ -4,6 +4,7 @@ import image from '../static/VERSION-MOBIL-15.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import RoundButton from './RoundButton';
+import Circle from './Circle';
 import PartnerCard from './PartnerCard';
 import Title from './Title';
 import { Container } from './Layout';
@@ -11,7 +12,7 @@ import partnerData from '../static/partnerData';
 
 const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, #054340 0, #054340 20%, #326864 20%, #326864 60%, #ffffff 60%, #ffffff 100%);
-    position: relative
+    position: relative;
 `
 
 const Content = styled.div`
@@ -19,6 +20,8 @@ const Content = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
+    margin-bottom: 80px;
     position: relative;
 `;
 
@@ -54,7 +57,7 @@ const Actions = styled.div`
     margin: 30px 0;
 
     p {
-        margin-right: 15px
+        margin-right: 15px;
     }
 `;
 
@@ -64,6 +67,18 @@ const AboutContainer = () => {
     return (
         <SectionContainer>
             <Content>
+                <Circle
+                    color="#2a514d"
+                    size="530px"
+                    left="55%"
+                    top="-40px"
+                />
+                <Circle
+                    color="#50706d"
+                    size="250px"
+                    left="40%"
+                    top="0px"
+                />
             <TextContainer>
                     <Title>CONÓCENOS</Title>
                     <div>
