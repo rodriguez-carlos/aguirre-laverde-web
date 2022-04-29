@@ -6,6 +6,8 @@ import { Container } from '../Layout';
 import Title from '../Title';
 
 const SectionContainer = styled(Container)`
+    padding-top: 180px;
+    padding-bottom: 120px;
     background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
 `;
 
@@ -16,7 +18,7 @@ const Image = styled.img`
 
 const BoxContainer = styled.div`
     display: flex;
-    width: 80%;
+    width: 1000px;
     position: relative;
 `;
 
@@ -33,8 +35,7 @@ const InfoContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 100%;
-    min-width: 500px;
+    width: 520px;
     background-color: #d8dbdb;
     color: #062b27;
     padding: 40px 60px;
