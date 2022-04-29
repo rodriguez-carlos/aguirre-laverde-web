@@ -25,6 +25,13 @@ const Content = styled.div`
     position: relative;
 `;
 
+const TeamContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+`;
+
 const TextContainer = styled.div`
     background-color: #062B27;
     padding: 45px 35px;
@@ -95,17 +102,29 @@ const AboutContainer = () => {
                 </TextContainer>
                 <Image src={image} />
             </Content>
-            <div style={{display: "flex", flexDirection: "column", width: "70%"}}>
+            <TeamContent>
+                <Circle
+                    color="#50706d"
+                    size="250px"
+                    right="-40px"
+                    top="-20px"
+                />
+                <Circle
+                    color="#F0F0F0"
+                    size="500px"
+                    left="-10%"
+                    bottom="-10%"
+                />
                 <TitleContainer>
                     <Title style={{textAlign: "right"}}>
-                        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
+                        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#D8DBDB" }} />
                         NUESTRO EQUIPO
                     </Title>
                 </TitleContainer>
                 <div style={{display: "flex", alignItems: 'stretch', justifyContent: 'space-between',}}>
                     {data.map(partner => <PartnerCard partner={partner}/>)}
                 </div>
-            </div>
+            </TeamContent>
             <Actions>
                 <p>Volver al HOME</p>
                 <a href="/"><RoundButton buttonIcon="back"/></a>
