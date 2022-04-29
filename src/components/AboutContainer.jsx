@@ -4,6 +4,7 @@ import image from '../static/VERSION-MOBIL-15.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import RoundButton from './RoundButton';
+import Circle from './Circle';
 import PartnerCard from './PartnerCard';
 import Title from './Title';
 import { Container } from './Layout';
@@ -11,7 +12,7 @@ import partnerData from '../static/partnerData';
 
 const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, #054340 0, #054340 20%, #326864 20%, #326864 60%, #ffffff 60%, #ffffff 100%);
-    position: relative
+    position: relative;
 `
 
 const Content = styled.div`
@@ -19,6 +20,15 @@ const Content = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
+    margin-bottom: 80px;
+    position: relative;
+`;
+
+const TeamContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 70%;
     position: relative;
 `;
 
@@ -54,7 +64,7 @@ const Actions = styled.div`
     margin: 30px 0;
 
     p {
-        margin-right: 15px
+        margin-right: 15px;
     }
 `;
 
@@ -64,6 +74,18 @@ const AboutContainer = () => {
     return (
         <SectionContainer>
             <Content>
+                <Circle
+                    color="#2a514d"
+                    size="530px"
+                    left="55%"
+                    top="-40px"
+                />
+                <Circle
+                    color="#50706d"
+                    size="250px"
+                    left="40%"
+                    top="0px"
+                />
             <TextContainer>
                     <Title>CONÓCENOS</Title>
                     <div>
@@ -80,17 +102,29 @@ const AboutContainer = () => {
                 </TextContainer>
                 <Image src={image} />
             </Content>
-            <div style={{display: "flex", flexDirection: "column", width: "70%"}}>
+            <TeamContent>
+                <Circle
+                    color="#50706d"
+                    size="250px"
+                    right="-40px"
+                    top="-20px"
+                />
+                <Circle
+                    color="#F0F0F0"
+                    size="500px"
+                    left="-10%"
+                    bottom="-10%"
+                />
                 <TitleContainer>
                     <Title style={{textAlign: "right"}}>
-                        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
+                        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#D8DBDB" }} />
                         NUESTRO EQUIPO
                     </Title>
                 </TitleContainer>
                 <div style={{display: "flex", alignItems: 'stretch', justifyContent: 'space-between',}}>
                     {data.map(partner => <PartnerCard partner={partner}/>)}
                 </div>
-            </div>
+            </TeamContent>
             <Actions>
                 <p>Volver al HOME</p>
                 <a href="/"><RoundButton buttonIcon="back"/></a>

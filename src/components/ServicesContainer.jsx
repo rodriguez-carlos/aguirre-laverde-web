@@ -51,6 +51,7 @@ const IntroContainer = styled.div`
 `;
 
 const CardsContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -63,6 +64,7 @@ const CardsContainer = styled.div`
 const ServiceDetailCard = styled.div`
   display: flex;
   margin-bottom: 100px;
+  width: 100%;
 `;
 
 const Card = styled(ServiceCard)`
@@ -75,6 +77,7 @@ const ServiceDetailDescription = styled.div`
   padding: 30px;
   display: flex;
   align-items: center;
+  flex: 1;
 `;
 
 const DescriptionList = styled.ul`
@@ -118,6 +121,26 @@ const ServicesContainer = () => {
         size="300px"
         top="50%"
         right="80px"
+      />
+      <Circle
+        color="#F0F0F0"
+        size="200px"
+        top="65%"
+        right="150px"
+      />
+      <Circle
+        color="#608e89"
+        size="300px"
+        bottom="180px"
+        left="-20px"
+        opacity="0.7"
+      />
+      <Circle
+        color="#608e89"
+        size="200px"
+        bottom="90px"
+        left="100px"
+        opacity="0.3"
       />
       <TitleContainer>
         <Title>
