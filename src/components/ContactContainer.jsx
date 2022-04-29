@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import image from '../static/imagenes-20.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import RoundButton from "./RoundButton";
 import { Container } from './Layout';
 import Title from './Title';
@@ -66,8 +67,11 @@ const ContactInfo = styled.div `
     font-family: 'Regular'
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     text-align: left;
+    height: 100%;
+    width: 100%;
 
     a {
         text-decoration: none;
@@ -94,7 +98,7 @@ const ContactContainer = () => {
             <FormSection>
                 <FormLeftContainer>
                     <ContactInfo>
-                        <a href=""><p><FontAwesomeIcon />+57 317 648 5863</p></a>
+                        <a href=""><p><FontAwesomeIcon icon={faWhatsapp}/>+57 317 648 5863</p></a>
                         <a href=""><p><FontAwesomeIcon icon={faEnvelope} />info@aguirrelaverde.com</p></a>
                         <p>MEDELLÍN - COLOMBIA</p>
                     </ContactInfo>

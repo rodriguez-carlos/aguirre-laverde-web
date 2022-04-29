@@ -77,7 +77,7 @@ const HomeAboutContainer = () => {
             </Content>
             <Actions>
                 <p>Más de CONÓCENOS</p>
-                <RoundButton buttonIcon="plus"/>
+                <a href="/conocenos"><RoundButton buttonIcon="plus"/></a>
             </Actions>
         </Container>
     )

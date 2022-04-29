@@ -32,10 +32,11 @@ const IntroContainer = styled.div`
     padding: 45px 35px 80px;
     color: #fff;
     display: flex;
-    width: 65%;
+    width: 62%;
 
     p {
       font-size: 18px;
+      margin: 10px 1rem;
     }
 
     p:first-of-type {
