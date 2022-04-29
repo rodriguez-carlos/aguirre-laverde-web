@@ -1,7 +1,7 @@
 .carousel-item {
     max-height: 780px;
-    min-height: 700px;
-    height: 75vh;
+    min-height: 600px;
+    max-height: 75vh;
     display: flex;
     position: relative;
     margin: auto;
@@ -22,7 +22,7 @@
 }
 
 .carousel-item-right-content {
-    margin: 30% 10%;
+    margin: 23% 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -34,6 +34,7 @@
     color: #fff;
     text-align: center;
     line-height: 50px;
+    /* background-color: red; */
 }
 
 .carousel-item-right-actions {
@@ -66,6 +67,12 @@
     .carousel-item-right {
         width: 50%;
         margin-left: 50%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .carousel-item-right-content {
+        margin: 20% 7%;
     }
 }
 
