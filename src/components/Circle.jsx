@@ -6,6 +6,7 @@ const CircleElement = styled.div`
   background-color: ${props => props.color || '#124D4A'};
   width: ${props => props.size || '200px'};
   height: ${props => props.size || '200px' };
+  opacity: ${props => props.opacity || '1'};
   border-radius: 50%;
 
   position: absolute;
