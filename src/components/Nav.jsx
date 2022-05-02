@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from '@emotion/styled';
 import logo from "../static/DEFINITIVOS-06.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,9 +48,15 @@ const MenuItemLink = styled(Link)`
     text-decoration: none;
     margin: 0 30px;
     display: block;
+
+    &:hover {
+        color: #888888;
+    }
 `;
 
 const Nav = () => {
+    const location = useLocation(); 
+    console.log(location);
     return (
         <Header>
             <Link to="/">

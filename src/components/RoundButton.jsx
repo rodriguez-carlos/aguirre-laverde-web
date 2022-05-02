@@ -26,6 +26,10 @@ const Button = styled.button`
     :active {
         opacity: 50%;
     }
+
+    span {
+        font-size: 20px;
+    }
 `;
 
 const Icon = styled.div`
@@ -43,6 +47,8 @@ const RoundButton = ({ buttonSize, buttonIcon, className }) => {
                 return <FontAwesomeIcon className='button-icon' icon={faLessThan}/>;
             case "enviar":
                 return <span>ENVIAR</span>;
+            case "ver":
+                return <span>VER</span>
             default:
                 return "";
         }

@@ -78,9 +78,9 @@ const HomeServicesContainer = () => {
         <SectionContainer>
             <Circle
                 color="#608e89"
-                size="650px"
+                size="700px"
                 top="40px"
-                right="50%"
+                right="43%"
             />
             <Circle
                 color="#a5b4b3"
@@ -107,7 +107,7 @@ const HomeServicesContainer = () => {
             </CardsContainer>
             <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>
-                <RoundButton buttonIcon="plus"/>
+                <a href="/que-hacemos"><RoundButton buttonIcon="plus"/></a>
             </Actions>
         </SectionContainer>
     );

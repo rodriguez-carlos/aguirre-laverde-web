@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Container } from './Layout';
+import RoundButton from './RoundButton';
 import Title from './Title';
 
 const SectionContainer = styled(Container)`
@@ -41,27 +42,33 @@ const TextContainer = styled.div`
 
     p {
         text-align: center;
-        font-size: 26px
+        font-size: 26px;
+        line-height: 26px;
     }
 `;
 
 const FormSection = styled.div`
     display: flex;
     flex-direction: row;
-    height: 500px;
+    height: 800px;
 `;
 
 const FormLeftContainer = styled.div`
     width: 55%;
     background-color: #054340;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 32px;
     font-family: 'Regular';
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: left;
+    line-height: 16px;
+
+    div {
+        line-height: 16px;
+    }
 
     a {
         text-decoration: none;
@@ -76,12 +83,61 @@ const FormRightContainer = styled.div`
 `;
 
 const ContactForm = styled.form`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+    input, textarea {
+        border: none;
+        border-radius: 7px;
+        color: #000000;
+        background-color: #D8DBDB;
+        width: 60%;
+        font-size: 18px;
+        padding-left: 10px;
+        height: 42px;
+        font-family: "Regular";
+    }
+
+    textarea {
+        margin-bottom: 42px;
+        height: 240px;
+    }
 `;
 
-const Input = styled.input`
+const FormActions = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
 
+    input {
+        border: none;
+        border-radius: 7px;
+        color: #000000;
+        background-color: #D8DBDB;
+    }
+
+    label {
+        float: right;
+        color: #D8DBDB;
+    }
 `;
+
+const Actions = styled.div`
+    display: flex;
+    justify-content: center;
+    color: #124D4A;
+    font-size: 25px;
+    margin: 30px 0;
+
+    p {
+        margin-right: 15px;
+    }
+`;
+
 
 const ContactContainer = () => {
     return (
@@ -102,21 +158,35 @@ const ContactContainer = () => {
             <FormSection>
                 <FormLeftContainer>
                     <div>
-                        <a href="https://wa.me/573176485863" target="_blank" rel="noopener noreferrer"><p><FontAwesomeIcon icon={faWhatsapp}/>+57 317 648 5863</p></a>
-                        <a href="mailto:info@aguirrelaverde.com"><p><FontAwesomeIcon icon={faEnvelope} />info@aguirrelaverde.com</p></a>
+                        <a href="https://wa.me/573176485863" target="_blank" rel="noopener noreferrer"><p><FontAwesomeIcon icon={faWhatsapp}/> +57 317 648 5863</p></a>
+                        <a href="mailto:info@aguirrelaverde.com"><p><FontAwesomeIcon icon={faEnvelope} /> info@aguirrelaverde.com</p></a>
                         <p>MEDELLÍN - COLOMBIA</p>
                     </div>
                 </FormLeftContainer>
                 <FormRightContainer>
-                    <ContactForm target="_blank" action="https://formsubmit.co/saviacerveza@gmail.com" method="POST">
-                        <Input type="text" id="nameAndLastName" name="Nombre y apellido" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido'/><br />
-                        <Input type="text" id="email" name="Email" placeholder='MAIL' aria-label='Mail'/><br />
-                        <Input type="text" id="phone" name="Phone" placeholder='TELÉFONO' aria-label='Teléfono'/><br />
-                        <textarea name="Mensaje" id="message" cols="30" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
-                        <Input type="submit" id="submit" value="ENVIAR" className="submit-disabled"/>
+                    <ContactForm target="_blank" action="https://formsubmit.co/carlosdanielrod@gmail.com" method="POST">
+                        <input type="text" id="nameAndLastName" name="Nombre y apellido" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido'/><br />
+                        <input type="text" id="email" name="Email" placeholder='MAIL' aria-label='Mail'/><br />
+                        <input type="text" id="phone" name="Teléfono" placeholder='TELÉFONO' aria-label='Teléfono'/><br />
+                        <textarea name="Mensaje" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
+                        <FormActions>
+                            <div>
+                                <div style={{width: "100%"}}>
+                                    <input type="checkbox" id='accept-policy'/>
+                                    <label htmlFor="accept-policy">Acepto</label>
+                                </div>
+                            </div>
+                            <div>
+                                <RoundButton buttonIcon="enviar" buttonSize="large"></RoundButton>
+                            </div>
+                        </FormActions>
                     </ContactForm>
                 </FormRightContainer>
             </FormSection>
+            <Actions>
+                <p>Volver al HOME</p>
+                <a href="/"><RoundButton buttonIcon="back"/></a>
+            </Actions>
         </>
     )
 }

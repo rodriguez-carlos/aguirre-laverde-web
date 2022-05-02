@@ -13,6 +13,7 @@ import servicesData from '../static/staticServicesData';
 const SectionContainer = styled(Container)`
     position: relative;
     background: linear-gradient(180deg, rgba(50,104,100,1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
+    padding-top: 180px;
 `;
 
 const TitleContainer = styled.div`
@@ -85,17 +86,17 @@ const DescriptionList = styled.ul`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-
+  justify-content: center;
   // inner list
   ul {
-    padding-inline-start: 20px;
+    padding-inline-start: 5px;
     list-style-type: '-';
   }
 
   li {
     font-size: 14px;
     color: #062B27;
+    padding-bottom: 10px;
   }
 `;
 
@@ -112,34 +113,40 @@ const ServicesContainer = () => {
     <SectionContainer>
       <Circle
         color="#608e89"
-        size="650px"
-        top="40px"
-        right="50%"
+        size="700px"
+        top="90px"
+        right="43%"
       />
       <Circle
         color="#2a514d"
         size="300px"
-        top="50%"
-        right="80px"
+        top="47%"
+        left="180px"
       />
       <Circle
-        color="#F0F0F0"
+        color="#EDF3F2"
         size="200px"
-        top="65%"
+        top="67%"
+        right="200px"
+      />
+      <Circle
+        color="#487A76"
+        size="300px"
+        top="25%"
         right="150px"
       />
       <Circle
         color="#608e89"
-        size="300px"
-        bottom="180px"
+        size="450px"
+        bottom="150px"
         left="-20px"
         opacity="0.7"
       />
       <Circle
         color="#608e89"
         size="200px"
-        bottom="90px"
-        left="100px"
+        bottom="100px"
+        left="250px"
         opacity="0.3"
       />
       <TitleContainer>
