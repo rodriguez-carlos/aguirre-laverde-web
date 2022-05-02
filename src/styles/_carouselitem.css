@@ -1,3 +1,7 @@
+.carousel.carousel-slider {
+    z-index: -1;
+}
+
 .carousel-item {
     max-height: 780px;
     min-height: 600px;
