@@ -32,6 +32,7 @@ export default css`
   }
 
   * {
+    z-index: 0;
     font-family: "Regular";
   }
 `;
