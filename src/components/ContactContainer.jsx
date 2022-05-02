@@ -54,6 +54,7 @@ const FormSection = styled.div`
     display: flex;
     flex-direction: row;
     height: 800px;
+    margin-bottom: 60px;
 `;
 
 const FormLeftContainer = styled.div`
@@ -129,20 +130,6 @@ const FormActions = styled.div`
     }
 `;
 
-const Actions = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #124D4A;
-    font-size: 25px;
-    margin: 30px 0;
-    height: 250px;
-
-    p {
-        margin-right: 15px;
-    }
-`;
-
 
 const ContactContainer = () => {
     return (
@@ -188,10 +175,6 @@ const ContactContainer = () => {
                     </ContactForm>
                 </FormRightContainer>
             </FormSection>
-            <Actions>
-                <p>Volver al HOME</p>
-                <a href="/"><RoundButton buttonIcon="back"/></a>
-            </Actions>
         </>
     )
 }
