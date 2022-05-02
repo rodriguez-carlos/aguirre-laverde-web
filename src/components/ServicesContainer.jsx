@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
-import RoundButton from './RoundButton';
 import ServiceCard from './ServiceCard';
 import Title from './Title';
 import Circle from './Circle';
