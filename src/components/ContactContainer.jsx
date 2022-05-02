@@ -41,6 +41,7 @@ const TextContainer = styled.div`
     box-sizing: border-box;
 
     p {
+        margin-top: -15px;
         text-align: center;
         font-size: 26px;
         line-height: 26px;
