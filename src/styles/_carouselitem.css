@@ -69,19 +69,8 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .carousel-item-right-content {
-        margin: 20% 7%;
-    }
-}
 
 @media (max-width: 550px) {
-    .carousel-item-right-content {
-        margin: 20% 10%;
-    }
-    .carousel-item-right-text {
-        font-size: 30px;
-    }
 
     .carousel-item-right {
         width: 50%;

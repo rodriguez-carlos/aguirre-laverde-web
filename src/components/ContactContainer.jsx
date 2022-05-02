@@ -4,7 +4,6 @@ import image from '../static/imagenes-20.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import RoundButton from "./RoundButton";
 import { Container } from './Layout';
 import Title from './Title';
 
@@ -29,6 +28,7 @@ const InfoContainer = styled.div`
     left: 50%;
     transform: translate(-200px, -50%);
     display: flex;
+    text-align: center;
 `;
 
 const TextContainer = styled.div`
@@ -54,6 +54,20 @@ const FormSection = styled.div`
 const FormLeftContainer = styled.div`
     width: 55%;
     background-color: #054340;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Regular';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+    }
 `;
 
 const FormRightContainer = styled.div`
@@ -61,23 +75,13 @@ const FormRightContainer = styled.div`
     background-color: #326864;
 `;
 
-const ContactInfo = styled.div `
-    color: #ffffff;
-    font-size: 24px;
-    font-family: 'Regular'
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    height: 100%;
-    width: 100%;
+const ContactForm = styled.form`
 
-    a {
-        text-decoration: none;
-        color: #ffffff
-    }
-`
+`;
+
+const Input = styled.input`
+
+`;
 
 const ContactContainer = () => {
     return (
@@ -97,15 +101,20 @@ const ContactContainer = () => {
             </SectionContainer>
             <FormSection>
                 <FormLeftContainer>
-                    <ContactInfo>
-                        <a href=""><p><FontAwesomeIcon icon={faWhatsapp}/>+57 317 648 5863</p></a>
-                        <a href=""><p><FontAwesomeIcon icon={faEnvelope} />info@aguirrelaverde.com</p></a>
+                    <div>
+                        <a href="https://wa.me/573176485863" target="_blank" rel="noopener noreferrer"><p><FontAwesomeIcon icon={faWhatsapp}/>+57 317 648 5863</p></a>
+                        <a href="mailto:info@aguirrelaverde.com"><p><FontAwesomeIcon icon={faEnvelope} />info@aguirrelaverde.com</p></a>
                         <p>MEDELLÍN - COLOMBIA</p>
-                    </ContactInfo>
+                    </div>
                 </FormLeftContainer>
                 <FormRightContainer>
-
-
+                    <ContactForm target="_blank" action="https://formsubmit.co/saviacerveza@gmail.com" method="POST">
+                        <Input type="text" id="nameAndLastName" name="Nombre y apellido" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido'/><br />
+                        <Input type="text" id="email" name="Email" placeholder='MAIL' aria-label='Mail'/><br />
+                        <Input type="text" id="phone" name="Phone" placeholder='TELÉFONO' aria-label='Teléfono'/><br />
+                        <textarea name="Mensaje" id="message" cols="30" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
+                        <Input type="submit" id="submit" value="ENVIAR" className="submit-disabled"/>
+                    </ContactForm>
                 </FormRightContainer>
             </FormSection>
         </>

@@ -66,7 +66,7 @@ const HomeContactContainer = () => {
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>
-                    <a href="/contactanos"><Button buttonIcon="plus" buttonSize="large" /></a>
+                    <a href="/contacto"><Button buttonIcon="plus" buttonSize="large" /></a>
                     <TextContainer>
                         <Title color="#062b27" >CONTÁCTANOS</Title>
                         <p>
