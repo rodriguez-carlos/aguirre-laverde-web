@@ -10,6 +10,7 @@ import Title from './Title';
 
 const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, #054340 0%, #054340 64%, #ffffff 64%, #ffffff 100%);
+    padding-top: 230px;
 `;
 
 const Image = styled.img`
@@ -39,9 +40,10 @@ const TextContainer = styled.div`
     color: #062b27;
     padding: 40px 60px;
     box-sizing: border-box;
+    margin-top: -80px;
 
     p {
-        margin-top: -15px;
+        margin-top: -7px;
         text-align: center;
         font-size: 26px;
         line-height: 26px;
@@ -130,9 +132,11 @@ const FormActions = styled.div`
 const Actions = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #124D4A;
     font-size: 25px;
     margin: 30px 0;
+    height: 250px;
 
     p {
         margin-right: 15px;

@@ -61,7 +61,7 @@ const Actions = styled.div`
     justify-content: center;
     color: #124D4A;
     font-size: 25px;
-    margin: 30px 0;
+    margin: 80px 0;
 
     p {
         margin-right: 15px;
@@ -121,7 +121,7 @@ const AboutContainer = () => {
                         NUESTRO EQUIPO
                     </Title>
                 </TitleContainer>
-                <div style={{display: "flex", alignItems: 'stretch', justifyContent: 'space-between',}}>
+                <div style={{display: "flex", alignItems: 'stretch', justifyContent: 'space-between'}}>
                     {data.map(partner => <PartnerCard partner={partner}/>)}
                 </div>
             </TeamContent>
