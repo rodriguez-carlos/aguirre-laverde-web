@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import image from '../static/VERSION-MOBIL-15.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
-import RoundButton from './RoundButton';
 import Circle from './Circle';
 import PartnerCard from './PartnerCard';
 import Title from './Title';
@@ -56,20 +55,9 @@ const Image = styled.img`
     height: 306.5px;
 `;
 
-const Actions = styled.div`
-    display: flex;
-    justify-content: center;
-    color: #124D4A;
-    font-size: 25px;
-    margin: 80px 0;
-
-    p {
-        margin-right: 15px;
-    }
-`;
 
 const AboutContainer = () => {
-    const [data, setData] = useState(partnerData);
+    const [data] = useState(partnerData);
 
     return (
         <SectionContainer>
@@ -125,10 +113,6 @@ const AboutContainer = () => {
                     {data.map(partner => <PartnerCard partner={partner}/>)}
                 </div>
             </TeamContent>
-            <Actions>
-                <p>Volver al HOME</p>
-                <a href="/"><RoundButton buttonIcon="back"/></a>
-            </Actions>
         </SectionContainer>
     )
 }

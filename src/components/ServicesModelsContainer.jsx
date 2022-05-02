@@ -10,7 +10,6 @@ const SectionContainer = styled(Container)`
     position: relative;
     background: linear-gradient(180deg, rgba(5, 67, 64, 1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
     padding-top: 180px;
-    margin-bottom: 100px;
 `;
 
 const TitleContainer = styled.div`
