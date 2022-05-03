@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Container } from './Layout';
+import Circle from './Circle';
 import RoundButton from './RoundButton';
 import Title from './Title';
 
 const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, #054340 0%, #054340 64%, #ffffff 64%, #ffffff 100%);
     padding-top: 230px;
+    position: relative;
 `;
 
 const Image = styled.img`
@@ -35,6 +37,7 @@ const InfoContainer = styled.div`
 
 const TextContainer = styled.div`
     width: 100%;
+    height: 220px;
     min-width: 500px;
     background-color: #d8dbdb;
     color: #062b27;
@@ -68,16 +71,17 @@ const FormLeftContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: left;
-    line-height: 16px;
 
-    div {
-        line-height: 16px;
+    p {
+        margin-top: 0;
+        margin-bottom: 8px;
     }
 
     a {
         text-decoration: none;
         color: #ffffff;
         display: block;
+
     }
 `;
 
@@ -120,8 +124,9 @@ const FormActions = styled.div`
     input {
         border: none;
         border-radius: 7px;
-        color: #000000;
+        color: red;
         background-color: #D8DBDB;
+        font-size: 18px;
     }
 
     label {
@@ -135,6 +140,18 @@ const ContactContainer = () => {
     return (
         <>
             <SectionContainer>
+                <Circle
+                color="#16514E"
+                size="450px"
+                top="90px"
+                right="23%"
+                />
+                <Circle
+                color="#A5B4B3"
+                size="190px"
+                top="420px"
+                right="36%"
+                />
                 <BoxContainer>
                     <Image src={image} alt="" />
                     <InfoContainer>
@@ -163,8 +180,8 @@ const ContactContainer = () => {
                         <textarea name="Mensaje" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
                         <FormActions>
                             <div>
-                                <div style={{width: "100%"}}>
-                                    <input type="checkbox" id='accept-policy'/>
+                                <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
+                                    <input type="checkbox" id='accept-policy' style={{flex: "none"}}/>
                                     <label htmlFor="accept-policy">Acepto</label>
                                 </div>
                             </div>

@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <>
             <Nav />
-            <SlideCarousel />
+            <SlideCarousel startingPosition={0} />
             <ContactContainer />
             <BackHomeButton />
         </>

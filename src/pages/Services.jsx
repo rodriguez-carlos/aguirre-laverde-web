@@ -9,7 +9,7 @@ const Services = () => {
     return (
         <>
             <Nav />
-            <SlideCarousel />
+            <SlideCarousel startingPosition={2}/>
             <ServicesContainer />
             <ServicesModelsContainer />
             <BackHomeButton />

@@ -8,7 +8,7 @@ const About = () => {
     return (
         <>
             <Nav />
-            <SlideCarousel />
+            <SlideCarousel startingPosition={1}/>
             <AboutContainer />
             <BackHomeButton />
         </>
