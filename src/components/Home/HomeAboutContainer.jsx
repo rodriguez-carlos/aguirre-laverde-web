@@ -8,10 +8,14 @@ import { Container } from '../Layout';
 
 const Content = styled.div`
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column-reverse;
     position: relative;
+
+    @media (min-width: 650px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const TextContainer = styled.div`

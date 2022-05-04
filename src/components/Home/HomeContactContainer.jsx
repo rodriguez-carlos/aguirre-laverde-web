@@ -20,8 +20,12 @@ const Image = styled.img`
 
 const BoxContainer = styled.div`
     display: flex;
-    width: 1000px;
+    width: 100%;
     position: relative;
+
+    @media (min-width: 1240px) {
+        width: 1000px;
+    }
 `;
 
 const InfoContainer = styled.div`
@@ -37,11 +41,15 @@ const InfoContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 520px;
+    width: 200px;
     background-color: #d8dbdb;
     color: #062b27;
     padding: 40px 60px;
     box-sizing: border-box;
+
+    @media (min-width: 650px) {
+        width: 520px;
+    }
 `;
 
 const Button = styled(RoundButton)`
