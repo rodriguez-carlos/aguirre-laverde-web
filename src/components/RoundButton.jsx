@@ -8,8 +8,8 @@ const Button = styled.button`
     border-radius: 50%;
     background-size: 200% auto;
     background-image: linear-gradient(to right, #437672 0%, #054340 50%);
-    height: 82px;
-    width: 82px;
+    height: 65px;
+    width: 65px;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -29,6 +29,11 @@ const Button = styled.button`
 
     span {
         font-size: 20px;
+    }
+
+    @media (min-width: 650px) {
+        height: ${props => props.tiny ? '50px' : '82px'};
+        width: ${props => props.tiny ? '50px' : '82px'};
     }
 `;
 
@@ -56,10 +61,8 @@ const RoundButton = ({ buttonSize, buttonIcon, className, tinyVersion, isSubmit 
     return (
         <Button 
             className={className}
-            style={{width: tinyVersion ? "50px" : "84px",
-                    height: tinyVersion ? "50px" : "84px",
-                    }}
             type={isSubmit ? "submit" : "button"}
+            tiny={tinyVersion}
         >
             <Icon size={buttonSize}>
                 {renderIcon(buttonIcon)}

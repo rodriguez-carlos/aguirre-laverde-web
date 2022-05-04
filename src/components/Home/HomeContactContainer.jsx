@@ -8,18 +8,29 @@ import Title from '../Title';
 
 const SectionContainer = styled(Container)`
     position: relative;
-    padding-top: 180px;
     padding-bottom: 120px;
     background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
+
+    @media (min-width: 650px) {
+        padding-top: 180px;
+    }
 `;
 
 const Image = styled.img`
-    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
     max-width: 90%;
+
+    @media (min-width: 650px) {
+        height: 400px;
+    }
 `;
 
 const BoxContainer = styled.div`
     display: flex;
+    justify-content: flex-end;
     width: 100%;
     position: relative;
 
@@ -29,31 +40,35 @@ const BoxContainer = styled.div`
 `;
 
 const InfoContainer = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-120px, -50%);
     display: flex;
+    margin: 50px 0;
 
     a {
         z-index: 99;
     }
+
+    @media (min-width: 650px) {
+    }
+`;
+
+const SectionTitle = styled(Title)`
+    font-size: 28px;
 `;
 
 const TextContainer = styled.div`
-    width: 200px;
+    box-sizing: border-box;
     background-color: #d8dbdb;
     color: #062b27;
-    padding: 40px 60px;
-    box-sizing: border-box;
+    padding: 40px;
 
     @media (min-width: 650px) {
         width: 520px;
+        padding: 40px 60px;
     }
 `;
 
 const Button = styled(RoundButton)`
-    margin: 40px -40px 0 0;
+    margin: 40px -30px 0 0;
 `;
 
 const HomeContactContainer = () => {
@@ -76,7 +91,7 @@ const HomeContactContainer = () => {
                 <InfoContainer>
                     <a href="/contacto"><Button buttonIcon="plus" buttonSize="large" /></a>
                     <TextContainer>
-                        <Title color="#062b27" >CONTÁCTANOS</Title>
+                        <SectionTitle color="#062b27">CONTÁCTANOS</SectionTitle>
                         <p>
                             Ponte en contacto con nosotros si necesitas asesoria legal especializada. Nuestro equipo estará dispuesto a brindarte la mejor solución.
                         </p>
