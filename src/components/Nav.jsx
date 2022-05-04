@@ -14,7 +14,7 @@ const Header = styled.header`
 `;
 
 const Logo = styled.img`
-    height: 165px;
+    height: 150px;
     flex: 1;
 
     @media (min-width: 650px) {

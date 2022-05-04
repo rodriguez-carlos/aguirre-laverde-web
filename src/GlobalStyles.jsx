@@ -20,6 +20,7 @@ export default css`
   p {
     text-align: justify;
     line-height: 1.5;
+    font-size: 18px;
   }
 
   @font-face {

@@ -21,17 +21,27 @@ const Content = styled.div`
 const TextContainer = styled.div`
     background-color: #062B27;
     padding: 45px 35px;
-    width: 35%;
     max-width: 500px;
     color: white;
+
+    @media (min-width: 650px) {
+        width: 35%;
+    }
 `;
 
 const ImageContainer = styled.div`
     background-color: #D8DBDB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const Image = styled.img`
-    height: 306.5px;
+    height: 245.2px;
+
+    @media (min-width: 650px) {
+        height: 306.5px;
+    }
 `;
 
 const Actions = styled.div`
