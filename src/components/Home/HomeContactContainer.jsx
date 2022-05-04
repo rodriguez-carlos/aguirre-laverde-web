@@ -24,6 +24,10 @@ const Image = styled.img`
     max-width: 90%;
 
     @media (min-width: 650px) {
+        height: 300px;
+    }
+
+    @media (min-width: 960px) {
         height: 400px;
     }
 `;
@@ -50,6 +54,10 @@ const InfoContainer = styled.div`
 
 const SectionTitle = styled(Title)`
     font-size: 28px;
+
+    @media (min-width: 650px) {
+        font-size: 36px;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -57,9 +65,11 @@ const TextContainer = styled.div`
     background-color: #d8dbdb;
     color: #062b27;
     padding: 40px;
+    max-width: 360px;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         width: 520px;
+        max-width: none;
         padding: 40px 60px;
     }
 `;

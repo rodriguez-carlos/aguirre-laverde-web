@@ -11,7 +11,7 @@ const Content = styled.div`
     flex-direction: column-reverse;
     position: relative;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -24,7 +24,11 @@ const TextContainer = styled.div`
     max-width: 500px;
     color: white;
 
-    @media (min-width: 650px) {
+    p {
+        font-size: 20px;
+    }
+
+    @media (min-width: 960px) {
         width: 35%;
     }
 `;
@@ -39,7 +43,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
     height: 245.2px;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         height: 306.5px;
     }
 `;

@@ -27,7 +27,12 @@ const TitleContainer = styled.div`
     }
 
     @media (min-width: 650px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 960px) {
         width: 65%;
+        font-size: 30px;
 
         svg {
             margin-right: 30px;
@@ -41,8 +46,15 @@ const IntroContainer = styled.div`
     color: #fff;
     display: flex;
     flex-direction: column;
+    max-width: 500px;
 
     @media (min-width: 650px) {
+        p {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 960px) {
         width: 65%;
         flex-direction: row;
 
@@ -62,10 +74,13 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 70%;
     margin: auto;
     margin-bottom: 2rem;
     margin-top: -4rem;
+
+    @media (min-width: 960px) {
+        max-width: 70%;
+    }
 `;
 
 const Actions = styled.div`
