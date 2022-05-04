@@ -133,10 +133,21 @@ const FormActions = styled.div`
         float: right;
         color: #D8DBDB;
     }
+
+    a {
+        text-decoration: none;
+    }
+    span {
+        color: #fff;
+        margin-left: 10px;
+    }
 `;
 
 
 const ContactContainer = () => {
+    const doNothing = () => {
+        return null;
+    }
     return (
         <>
             <SectionContainer>
@@ -179,14 +190,18 @@ const ContactContainer = () => {
                         <input type="text" id="phone" name="Teléfono" placeholder='TELÉFONO' aria-label='Teléfono'/><br />
                         <textarea name="Mensaje" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
                         <FormActions>
-                            <div>
+                            <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%"}}>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
                                     <input type="checkbox" id='accept-policy' style={{flex: "none"}}/>
                                     <label htmlFor="accept-policy">Acepto</label>
                                 </div>
+                                <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
+                                    <a href="https://drive.google.com/file/d/1soIs_M-EpVeCIAH0-8_qprFptsF3rApo/view?usp=sharing" target="_blank" rel="noopener noreferrer"><RoundButton type="button" tinyVersion buttonIcon="ver" /></a>
+                                    <span>Política de tratamiento <br/> de datos personales</span>
+                                </div>
                             </div>
                             <div>
-                                <RoundButton buttonIcon="enviar" buttonSize="large"></RoundButton>
+                                <RoundButton isSubmit buttonIcon="enviar" buttonSize="large"></RoundButton>
                             </div>
                         </FormActions>
                     </ContactForm>

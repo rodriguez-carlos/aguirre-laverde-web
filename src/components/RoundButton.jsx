@@ -38,7 +38,7 @@ const Icon = styled.div`
 `;
 
 
-const RoundButton = ({ buttonSize, buttonIcon, className }) => {
+const RoundButton = ({ buttonSize, buttonIcon, className, tinyVersion, isSubmit }) => {
     function renderIcon(iconProp) {
         switch (iconProp) {
             case "plus":
@@ -54,7 +54,13 @@ const RoundButton = ({ buttonSize, buttonIcon, className }) => {
         }
     }
     return (
-        <Button className={className}>
+        <Button 
+            className={className}
+            style={{width: tinyVersion ? "50px" : "84px",
+                    height: tinyVersion ? "50px" : "84px",
+                    }}
+            type={isSubmit ? "submit" : "button"}
+        >
             <Icon size={buttonSize}>
                 {renderIcon(buttonIcon)}
             </Icon>
