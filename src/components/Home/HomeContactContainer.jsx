@@ -8,10 +8,10 @@ import Title from '../Title';
 
 const SectionContainer = styled(Container)`
     position: relative;
-    padding-bottom: 120px;
     background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
 
     @media (min-width: 650px) {
+        padding-bottom: 120px;
         padding-top: 180px;
     }
 `;
@@ -45,9 +45,6 @@ const InfoContainer = styled.div`
 
     a {
         z-index: 99;
-    }
-
-    @media (min-width: 650px) {
     }
 `;
 
