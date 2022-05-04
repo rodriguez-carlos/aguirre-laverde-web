@@ -25,10 +25,9 @@ const Logo = styled.img`
 
 const MenuContainer = styled.nav`
     display: flex;
-    padding: 0 40px;
     z-index: 1;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         flex: 3;
     }
 `;
@@ -37,7 +36,7 @@ const MenuListContainer = styled.div`
     display: none;
     flex: 1;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         display: flex;
     }
 `;
@@ -53,8 +52,9 @@ const MenuButton = styled.button`
     border: 2px solid #888;
     background-color: transparent;
     font-size: 26px;
+    margin-right: 40px;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         display: none;
     }
 `;
@@ -64,12 +64,16 @@ const MenuDrawer = styled.div`
     top: 150px;
     right: 0;
     width: 100vw;
-    height: ${props => props.isExpanded ? '300px' : 0};
+    height: ${props => props.isExpanded ? '230px' : 0};
     transition: 0.5s;
     border-top: ${props => props.isExpanded ? '2px' : 0} solid #888;
     background-color: #D8DBDB;
     z-index: 99;
     overflow: hidden;
+
+    @media (min-width: 650px) {
+        top: 221px;
+    }
 `;
 
 const Menu = styled.ul`
@@ -80,21 +84,26 @@ const Menu = styled.ul`
     list-style: none;
     justify-content: flex-end;
     margin-right: 40px;
-    font-size: 30px;
     color: #3A4948;
+    font-size: 24px;
+    padding-inline-start: 0;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         flex-direction: row;
+    }
+
+    @media (min-width: 1240px) {
+        font-size: 30px;
     }
 `;
 
 const MenuItemLink = styled(Link)`
     color: #3A4948;
     text-decoration: none;
-    margin: 30px 30px 0;
+    margin: 15px 30px;
     display: block;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         margin: 0 30px;
     }
 `;

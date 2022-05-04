@@ -28,7 +28,7 @@ const CarouselItemBox = styled.div`
     right: 0;
 
     @media (min-width: 650px) {
-        width: 45%;
+        width: 50%;
     }
 
     @media (min-width: 1240px) {
@@ -74,10 +74,10 @@ const CarouselItemActions = styled.div`
     }
 
     @media (min-width: 650px) {
-        font-size: 33px;
 
         span {
             margin-left: 35px;
+            font-size: 33px;
         }
     }
 `;
