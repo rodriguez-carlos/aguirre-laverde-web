@@ -26,6 +26,7 @@ const Logo = styled.img`
 const MenuContainer = styled.nav`
     display: flex;
     padding: 0 40px;
+    z-index: 1;
 
     @media (min-width: 650px) {
         flex: 3;
@@ -60,7 +61,7 @@ const MenuButton = styled.button`
 
 const MenuDrawer = styled.div`
     position: absolute;
-    top: 165px;
+    top: 150px;
     right: 0;
     width: 100vw;
     height: ${props => props.isExpanded ? '300px' : 0};
