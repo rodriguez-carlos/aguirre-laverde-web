@@ -11,48 +11,108 @@ import partnerData from '../static/partnerData';
 
 const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, #054340 0, #054340 20%, #326864 20%, #326864 60%, #ffffff 60%, #ffffff 100%);
-    position: relative;
+    padding: 0;
 `
 
 const Content = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     position: relative;
     margin-bottom: 80px;
     position: relative;
+    background: #054340;
+    padding: 80px 40px 100px;
+
+    @media (min-width: 960px) {
+        flex-direction: row;
+        background: none;
+        padding: 0;
+    }
 `;
 
 const TeamContent = styled.div`
+    background: linear-gradient(180deg, #326864 0%, #326864 25%, #ffffff 25%, #ffffff 50%, #326864 50%, #326864 75%, #ffffff 75%, #ffffff 100%);
     display: flex;
     flex-direction: column;
-    width: 70%;
     position: relative;
+    padding: 60px 40px 20px;
+
+    @media (min-width: 960px) {
+        width: 70%;
+        background: none;
+    }
 `;
 
 const TextContainer = styled.div`
     background-color: #062B27;
     padding: 45px 35px;
-    width: 35%;
     max-width: 500px;
     color: white;
+
+    @media (min-width: 960px) {
+        width: 35%;
+    }
 `;
 
 const TitleContainer = styled.div`
     display: flex;
-    font-size: 50px;
-    justify-content: flex-end;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
     text-align: right;
-    width: 100%;
 
     svg {
-        margin: 0 40px;
+        margin-right: 10px;
+    }
+
+    @media (min-width: 650px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 960px) {
+        justify-content: flex-end;
+        align-self: flex-end;
+        width: 65%;
+        font-size: 30px;
+        padding-top: 0;
+
+        svg {
+            margin-right: 30px;
+        }
     }
 `;
 
+const ImageContainer = styled.div`
+    background-color: #D8DBDB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
 const Image = styled.img`
-    height: 306.5px;
+    width: 100%;
+
+    @media (min-width: 960px) {
+        height: 306.5px;
+    }
+`;
+
+const PartnerCardsContainer = styled.div`
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: 960px) {
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1240px) {
+        width: 1000px;
+    }
 `;
 
 
@@ -88,7 +148,9 @@ const AboutContainer = () => {
                         </p>
                     </div>
                 </TextContainer>
-                <Image src={image} />
+                <ImageContainer>
+                    <Image src={image} />
+                </ImageContainer>
             </Content>
             <TeamContent>
                 <Circle
@@ -104,14 +166,14 @@ const AboutContainer = () => {
                     bottom="-10%"
                 />
                 <TitleContainer>
+                    <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#D8DBDB" }} />
                     <Title style={{textAlign: "right"}}>
-                        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#D8DBDB" }} />
                         NUESTRO EQUIPO
                     </Title>
                 </TitleContainer>
-                <div style={{display: "flex", alignItems: 'stretch', justifyContent: 'space-between'}}>
+                <PartnerCardsContainer>
                     {data.map(partner => <PartnerCard partner={partner}/>)}
-                </div>
+                </PartnerCardsContainer>
             </TeamContent>
         </SectionContainer>
     )

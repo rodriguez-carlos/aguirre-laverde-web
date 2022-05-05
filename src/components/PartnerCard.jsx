@@ -2,12 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Card = styled.div`
+    width: 100%;
     max-width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
+    margin-bottom: 20px;
 `;
 
 const Image = styled.img`
@@ -34,7 +36,6 @@ const Text = styled.div`
     padding: 30px 25px;
 
     p {
-        text-align: justify;
         color: #3A4948;
         line-height: 1.5;
     }
