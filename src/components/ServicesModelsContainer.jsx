@@ -72,13 +72,13 @@ const ServicesModelsContainer = () => {
       </TitleContainer>
       <CardsContainer>
         <Circle
-          color="#50706d"
+          color="#245C59"
           size="450px"
           top="-180px"
           right="-100px"
         />
         <Circle
-          color="#EDF3F2"
+          color="#D2DAD9"
           size="200px"
           bottom="-70px"
           left="-110px"
