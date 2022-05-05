@@ -104,7 +104,7 @@ const ServiceDetailCard = styled.div`
 
   @media (min-width: 960px) {
     flex-direction: row;
-    margin-bottom: 100%;
+    margin-bottom: 100px;
   }
 `;
 
@@ -123,8 +123,7 @@ const Card = styled(ServiceCard)`
 
   @media (min-width: 960px) {
     flex-direction: column;
-    height: 300px;
-    max-width: 165px;
+    height: 420px;
     align-items: center;
 
     img {
