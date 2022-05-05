@@ -1,6 +1,8 @@
 import React from "react";
 import styled from '@emotion/styled';
 import image from '../../static/imagenes-20.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import RoundButton from "../RoundButton";
 import Circle from "../Circle";
 import { Container } from '../Layout';
@@ -15,6 +17,14 @@ const SectionContainer = styled(Container)`
         padding-top: 180px;
     }
 `;
+
+const FloatingEllipsis = styled.div`
+    position: absolute;
+    top: 120px;
+    right: 29%;
+    font-size: 100px;
+    color: #628785;
+`
 
 const Image = styled.img`
     position: absolute;
@@ -82,17 +92,18 @@ const HomeContactContainer = () => {
     return(
         <SectionContainer>
             <Circle
-                color="#50706d"
+                color="#16514E"
                 size="400px"
                 left="50%"
                 top="80px"
             />
             <Circle
-                color="#a5b4b3"
+                color="#A5B4B3"
                 size="200px"
                 left="55%"
-                top="60%"
+                top="57%"
             />
+            <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>
