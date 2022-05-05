@@ -15,7 +15,8 @@ const SectionContainer = styled(Container)`
     padding-top: 100px;
 
     @media (min-width: 960px) {
-        padding-top: 230px;
+        padding-top: 180px;
+        padding-bottom: 180px;
         background: linear-gradient(180deg, #054340 0%, #054340 64%, #ffffff 64%, #ffffff 100%);
     }
 `;
@@ -34,14 +35,15 @@ const Image = styled.img`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 90px;
-    right: 35%;
+    top: 150px;
+    right: 30%;
     font-size: 100px;
     color: #628785;
 `
 
 const BoxContainer = styled.div`
     display: flex;
+    justify-content: flex-end;
     position: relative;
 
     @media (min-width: 960px) {
@@ -57,7 +59,7 @@ const SectionTitle = styled(Title)`
     }
 
     @media (min-width: 960px) {
-        font-size: 36px;
+        font-size: 50px;
     }
 `;
 
@@ -91,6 +93,11 @@ const TextContainer = styled.div`
         min-width: 500px;
         margin-top: 80px;
         width: 100%;
+
+        p {
+            margin: 30px 0;
+            font-size: 24px;
+        }
     }
 `;
 
@@ -187,6 +194,12 @@ const ContactForm = styled.form`
         height: 200px;
     }
 
+    input[type="checkbox"] {
+        width: 35px;
+        height: 35px;
+        margin-right: 20px;
+    }
+
     @media (min-width: 960px) {
         input, textarea {
             width: 60%;
@@ -206,8 +219,6 @@ const FormActions = styled.div`
 
     input {
         border: none;
-        border-radius: 7px;
-        color: red;
         background-color: #D8DBDB;
         font-size: 18px;
         padding: 10px;
@@ -224,7 +235,6 @@ const FormActions = styled.div`
 
     span {
         color: #fff;
-        margin-left: 10px;
     }
 
     @media (min-width: 960px) {
@@ -295,12 +305,15 @@ const ContactContainer = () => {
                         <textarea name="Mensaje" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
                         <FormActions>
                             <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%"}}>
-                                <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
+                                <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center", marginBottom: '10px' }}>
                                     <input type="checkbox" id='accept-policy' style={{flex: "none"}}/>
                                     <label htmlFor="accept-policy">Acepto</label>
                                 </div>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
-                                    <a href="https://drive.google.com/file/d/1soIs_M-EpVeCIAH0-8_qprFptsF3rApo/view?usp=sharing" target="_blank" rel="noopener noreferrer"><RoundButton type="button" tinyVersion buttonIcon="ver" /></a>
+                                    <a href="https://drive.google.com/file/d/1soIs_M-EpVeCIAH0-8_qprFptsF3rApo/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                        <RoundButton type="button" tinyVersion buttonIcon="ver" />
+                                    </a>
+                                    &nbsp;&nbsp;&nbsp;
                                     <span>Política de tratamiento <br/> de datos personales</span>
                                 </div>
                             </div>
