@@ -55,8 +55,8 @@ const Title = styled.div`
 
 const ServiceCard = ({ image, text, className }) => {
     return (
-        <Card className={className}>
-            <Image src={image} alt={text} />
+        <Card className={className} id={text.replaceAll(" ", "-").toLowerCase()}>
+            <Image src={image} alt={text}/>
             <Title>
                 <p>{text}</p>
             </Title>
