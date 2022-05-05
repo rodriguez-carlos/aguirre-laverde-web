@@ -10,9 +10,13 @@ import RoundButton from './RoundButton';
 import Title from './Title';
 
 const SectionContainer = styled(Container)`
-    background: linear-gradient(180deg, #054340 0%, #054340 64%, #ffffff 64%, #ffffff 100%);
+    background: linear-gradient(180deg, #054340 0%, #054340 64%, #326864 64%, #326864 100%);
     padding-top: 230px;
     position: relative;
+
+    @media (min-width: 960px) {
+        background: linear-gradient(180deg, #054340 0%, #054340 64%, #ffffff 64%, #ffffff 100%);
+    }
 `;
 
 const Image = styled.img`
@@ -63,14 +67,17 @@ const TextContainer = styled.div`
 
 const FormSection = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 800px;
     margin-bottom: 60px;
+
+    @media (min-width: 960px) {
+        flex-direction: row;
+    }
 `;
 
 const FormLeftContainer = styled.div`
-    width: 55%;
-    background-color: #054340;
+    background: #054340;
     color: #ffffff;
     font-family: 'Regular';
     display: flex;
@@ -89,13 +96,21 @@ const FormLeftContainer = styled.div`
         text-decoration: none;
         color: #ffffff;
         display: block;
+    }
 
+    @media (min-width: 960px) {
+        background-color: #054340;
+        width: 55%;
     }
 `;
 
 const FormRightContainer = styled.div`
-    width: 45%;
-    background-color: #326864;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 64%, #5F8D88 64%, #5F8D88 100%);
+
+    @media (min-width: 960px) {
+        background-color: #326864;
+        width: 45%;
+    }
 `;
 
 const ContactForm = styled.form`
