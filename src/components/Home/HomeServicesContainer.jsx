@@ -21,6 +21,7 @@ const TitleContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
     text-align: right;
+    padding-top: 40px;
 
     svg {
         margin-right: 10px;
@@ -33,6 +34,7 @@ const TitleContainer = styled.div`
     @media (min-width: 960px) {
         width: 65%;
         font-size: 30px;
+        padding-top: 0;
 
         svg {
             margin-right: 30px;
@@ -42,13 +44,17 @@ const TitleContainer = styled.div`
 
 const IntroContainer = styled.div`
     background-color: #062B27;
-    padding: 45px 35px 80px;
+    padding: 25px 35px 80px;
     color: #fff;
     display: flex;
     flex-direction: column;
     max-width: 500px;
+    margin: 0 10px;
 
     @media (min-width: 650px) {
+        margin: 0;
+        padding-top: 45px;
+        
         p {
             font-size: 20px;
         }
@@ -56,6 +62,7 @@ const IntroContainer = styled.div`
 
     @media (min-width: 960px) {
         width: 65%;
+        max-width: 1000px;
         flex-direction: row;
 
         p:first-of-type {
@@ -101,7 +108,7 @@ const HomeServicesContainer = () => {
     return (
         <SectionContainer>
             <Circle
-                color="#608e89"
+                color="#5F8D88"
                 size="700px"
                 top="40px"
                 right="43%"
@@ -111,6 +118,20 @@ const HomeServicesContainer = () => {
                 size="300px"
                 bottom="180px"
                 right="150px"
+            />
+            <Circle
+                color="#608e89"
+                size="250px"
+                top="50px"
+                left="5px"
+                mobile
+            />
+            <Circle
+                color="#a5b4b3"
+                size="130px"
+                bottom="130px"
+                right="10px"
+                mobile
             />
             <TitleContainer>
                 <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Card = styled.div`
-    height: 420px;
-    max-width: 320px;
+    height: 300px;
+    max-width: 165px;
     flex: 1 0 auto;
     display: flex;
     justify-content: center;
@@ -11,13 +11,21 @@ const Card = styled.div`
     flex-direction: column;
     padding: 20px 1.5%;
     box-sizing: border-box;
+
+    @media (min-width: 650px) {
+        height: 420px;
+        max-width: 320px;
+    }
 `;
 
 const Image = styled.img`
     width: 100%;
-    height: 280px;
-    flex: 2;
+    height: 150px;
     object-fit: cover;
+
+    @media (min-width: 650px) {
+        height: 240px;
+    }
 `;
 
 const Title = styled.div`
@@ -25,7 +33,6 @@ const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
     width: 100%;
     padding: 10px 20px;
     flex: 1;
@@ -36,6 +43,13 @@ const Title = styled.div`
         text-align: center;
         color: #3A4948;
         line-height: 30px;
+        margin: 0;
+    }
+
+    @media (min-width: 650px) {
+        p {
+            font-size: 26px;
+        }
     }
 `;
 
