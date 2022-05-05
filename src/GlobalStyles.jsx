@@ -1,8 +1,8 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import regular from './fonts/AlteHaasGroteskRegular.ttf';
 import bold from './fonts/AlteHaasGroteskBold.ttf';
 
-export default css`
+const GlobalStyles = css`
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -40,3 +40,16 @@ export default css`
     font-family: "Regular";
   }
 `;
+
+const SlideDown = keyframes`
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+`;
+
+export default GlobalStyles;
+export { SlideDown };

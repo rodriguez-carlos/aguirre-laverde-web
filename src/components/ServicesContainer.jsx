@@ -225,7 +225,7 @@ const ServicesContainer = () => {
         opacity="0.3"
       />
       <Circle
-        color="#487A76"
+        color="#447673"
         size="200px"
         top="60px"
         left="10px"

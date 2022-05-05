@@ -99,41 +99,69 @@ const Menu = styled.ul`
     }
 `;
 
+const MenuItem = styled.li`
+    position: relative;
+`;
+
 const MenuItemLink = styled(Link)`
     color: #3A4948;
     text-decoration: none;
     margin: 15px 30px;
     display: block;
+    transition: 0.5s;
+
+    :hover {
+        opacity: 0.5;
+    }
 
     @media (min-width: 960px) {
         margin: 0 30px;
     }
 `;
 
+const ServicesDrawer = styled.div`
+    position: absolute;
+    top: 100%;
+    left: 30px;
+`;
+
 const Nav = () => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isServicesExpanded, setIsServicesExpanded] = useState(false);
 
     const toggleMenu = () => setIsExpanded(!isExpanded);
 
-    const renderMenu = () => {
-        return (
-            <Menu>
-                <li>
-                    <MenuItemLink to="/conocenos">Conócenos</MenuItemLink>
-                </li>
+    const renderMenu = (desktop) => (
+        <Menu>
+            <MenuItem>
+                <MenuItemLink to="/conocenos">Conócenos</MenuItemLink>
+            </MenuItem>
+            {desktop && (
                 <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
+            )}
 
-                <li>
-                    <MenuItemLink to="/que-hacemos">¿Qué hacemos?</MenuItemLink>
-                </li>
+            <MenuItem
+                onMouseOver={() => setIsServicesExpanded(true)}
+                onMouseLeave={() => setIsServicesExpanded(false)}
+            >
+                <MenuItemLink to="/que-hacemos">
+                    ¿Qué hacemos?
+                </MenuItemLink>
+                {isServicesExpanded && (
+                    <ServicesDrawer>
+                        mimimumu
+                    </ServicesDrawer>
+                )}
+            </MenuItem>
+            {desktop && (
                 <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
+            )}
 
-                <li>
-                    <MenuItemLink to="/contacto">Contáctanos</MenuItemLink>
-                </li>
-            </Menu>
-        );
-    }
+            <MenuItem>
+                <MenuItemLink to="/contacto">Contáctanos</MenuItemLink>
+            </MenuItem>
+        </Menu>
+    )
 
     return (
         <Header>
@@ -142,37 +170,13 @@ const Nav = () => {
             </Link>
             <MenuContainer>
                 <MenuListContainer>
-                    <Menu>
-                        <li>
-                            <MenuItemLink to="/conocenos">Conócenos</MenuItemLink>
-                        </li>
-                        <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
-
-                        <li>
-                            <MenuItemLink to="/que-hacemos">¿Qué hacemos?</MenuItemLink>
-                        </li>
-                        <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
-
-                        <li>
-                            <MenuItemLink to="/contacto">Contáctanos</MenuItemLink>
-                        </li>
-                    </Menu>
+                    {renderMenu(true)}
                 </MenuListContainer>
                 <MenuButton onClick={toggleMenu}>
                     <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Toggle menu" />
                 </MenuButton>
                 <MenuDrawer isExpanded={isExpanded}>
-                    <Menu>
-                        <li>
-                            <MenuItemLink to="/conocenos">Conócenos</MenuItemLink>
-                        </li>
-                        <li>
-                            <MenuItemLink to="/que-hacemos">¿Qué hacemos?</MenuItemLink>
-                        </li>
-                        <li>
-                            <MenuItemLink to="/contacto">Contáctanos</MenuItemLink>
-                        </li>
-                    </Menu>
+                    {renderMenu()}
                 </MenuDrawer>
             </MenuContainer>
         </Header>
