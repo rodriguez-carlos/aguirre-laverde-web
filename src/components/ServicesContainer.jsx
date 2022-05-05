@@ -11,10 +11,11 @@ import servicesData from '../static/staticServicesData';
 
 const SectionContainer = styled(Container)`
     position: relative;
-    background: linear-gradient(180deg, rgba(50,104,100,1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
+    background: linear-gradient(180deg, #054340 22%, #326864 22%, #326864 44%, #FFFFFF 44%, #FFFFFF 59%, #326864 59%, #326864 79%, #FFFFFF 79%, #FFFFFF 90%, #326864 90%);
 
     @media (min-width: 960px) {
       padding-top: 180px;
+      background: linear-gradient(180deg, #326864 62%, #FFFFFF 62%, #FFFFFF 71%);
     }
 `;
 
@@ -87,7 +88,7 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 3rem 10px;
+    margin: 3rem 10px 0;
 
     @media (min-width: 960px) {
       margin: -4rem 0 3rem;
@@ -98,11 +99,12 @@ const CardsContainer = styled.div`
 const ServiceDetailCard = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   width: 100%;
 
   @media (min-width: 960px) {
     flex-direction: row;
+    margin-bottom: 100%;
   }
 `;
 
@@ -160,6 +162,10 @@ const DescriptionList = styled.ul`
   li {
     font-size: 14px;
     color: #062B27;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: 960px) {
     padding-bottom: 10px;
   }
 `;
@@ -212,6 +218,59 @@ const ServicesContainer = () => {
         bottom="100px"
         left="250px"
         opacity="0.3"
+      />
+      <Circle
+        color="#487A76"
+        size="200px"
+        top="60px"
+        left="10px"
+        mobile
+      />
+      <Circle
+        color="#608e89"
+        size="250px"
+        top="25%"
+        right="10px"
+        mobile
+      />
+      <Circle
+        color="#608e89"
+        size="120px"
+        top="43%"
+        right="20px"
+        opacity="0.3"
+        mobile
+      />
+      <Circle
+        color="#A5B4B3"
+        size="280px"
+        top="50%"
+        left="-50px"
+        mobile
+      />
+      <Circle
+        color="#50706d"
+        size="230px"
+        top="75%"
+        right="-70px"
+        opacity="0.5"
+        mobile
+      />
+      <Circle
+        color="#A5B4B3"
+        size="120px"
+        bottom="340px"
+        left="10px"
+        opacity="0.2"
+        mobile
+      />
+      <Circle
+        color="#A5B4B3"
+        size="120px"
+        bottom="10px"
+        right="20px"
+        opacity="0.4"
+        mobile
       />
       <TitleContainer>
         <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
