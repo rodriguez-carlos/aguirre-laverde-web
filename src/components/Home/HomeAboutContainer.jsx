@@ -51,12 +51,32 @@ const Image = styled.img`
 const Actions = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #fff;
     font-size: 25px;
+    align-self: flex-end;
+    margin-right: -20px;
+    margin-top: -20px;
 
     p {
+        margin-top: 30px;
         margin-right: 15px
     }
+
+    @media (min-width: 960px) {
+        align-self: center;
+        margin-right: 0;
+        margin-top: 0;
+
+        p {
+            margin-top: 20px;
+        }
+    }
+`;
+
+const Button = styled(RoundButton)`
+    width: 82px;
+    height: 82px;
 `;
 
 const HomeAboutContainer = () => {
@@ -95,7 +115,7 @@ const HomeAboutContainer = () => {
             </Content>
             <Actions>
                 <p>Más de CONÓCENOS</p>
-                <a href="/conocenos"><RoundButton buttonIcon="plus"/></a>
+                <a href="/conocenos"><Button buttonIcon="plus"/></a>
             </Actions>
         </Container>
     )

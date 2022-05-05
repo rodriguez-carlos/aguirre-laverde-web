@@ -15,6 +15,12 @@ const CircleElement = styled.div`
   bottom: ${props => props.bottom};
   right: ${props => props.right};
   z-index: ${props => props.zIndex || 0};
+
+  display: ${props => props.mobile ? 'block' : 'none'};
+
+  @media (min-width: 960px) {
+    display: ${props => props.mobile ? 'none' : 'block'};
+  }
 `;
 
 export default CircleElement;
