@@ -110,6 +110,7 @@ const FormSection = styled.div`
 
     @media (min-width: 960px) {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 `;
 
@@ -216,6 +217,7 @@ const FormActions = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
 
     input {
@@ -244,7 +246,23 @@ const FormActions = styled.div`
 `;
 
 const BackHomeButtonContainer = styled.div`
+    width: 100%;
     padding: 30px 0 10px;
+`;
+
+const TCButton = styled(RoundButton)`
+    height: 45px;
+    width: 45px;
+
+    span {
+        font-size: 18px;
+    }
+`;
+
+const EnviarButton = styled(RoundButton)`
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
 `;
 
 
@@ -316,14 +334,14 @@ const ContactContainer = () => {
                                 </div>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
                                     <a href="https://drive.google.com/file/d/1soIs_M-EpVeCIAH0-8_qprFptsF3rApo/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                        <RoundButton type="button" tinyVersion buttonIcon="ver" />
+                                        <TCButton type="button" tinyVersion buttonIcon="ver" />
                                     </a>
-                                    &nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;
                                     <span>Política de tratamiento <br/> de datos personales</span>
                                 </div>
                             </div>
                             <div>
-                                <RoundButton isSubmit buttonIcon="enviar" buttonSize="large"></RoundButton>
+                                <EnviarButton isSubmit buttonIcon="enviar" buttonSize="large"></EnviarButton>
                             </div>
                         </FormActions>
                     </ContactForm>
