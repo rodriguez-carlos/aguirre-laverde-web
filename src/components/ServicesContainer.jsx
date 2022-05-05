@@ -12,41 +12,73 @@ import servicesData from '../static/staticServicesData';
 const SectionContainer = styled(Container)`
     position: relative;
     background: linear-gradient(180deg, rgba(50,104,100,1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
-    padding-top: 180px;
+
+    @media (min-width: 960px) {
+      padding-top: 180px;
+    }
 `;
 
 const TitleContainer = styled.div`
     display: flex;
-    font-size: 50px;
-    justify-content: flex-end;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
     text-align: right;
-    width: 65%;
+    padding-top: 40px;
 
     svg {
-        margin: 0 40px;
+        margin-right: 10px;
+    }
+
+    @media (min-width: 650px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 960px) {
+        justify-content: flex-end;
+        align-self: flex-end;
+        width: 65%;
+        font-size: 30px;
+        padding-top: 0;
+
+        svg {
+            margin-right: 30px;
+        }
     }
 `;
 
 const IntroContainer = styled.div`
     background-color: #062B27;
-    padding: 45px 35px 80px;
+    padding: 25px 35px 80px;
     color: #fff;
     display: flex;
-    width: 62%;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 10px;
 
-    p {
-      font-size: 18px;
-      margin: 10px 1rem;
+    @media (min-width: 650px) {
+        margin: 0;
+        padding-top: 45px;
+        
+        p {
+            font-size: 20px;
+        }
     }
 
-    p:first-of-type {
-        margin-right: 20px;
-        flex: 1 1 50%;
-    }
+    @media (min-width: 960px) {
+        width: 65%;
+        max-width: 1000px;
+        flex-direction: row;
 
-    p:last-of-type {
-        margin-left: 20px;
-        flex: 1 1 50%;
+        p:first-of-type {
+            margin-right: 20px;
+            flex: 1 1 50%;
+        }
+
+        p:last-of-type {
+            margin-left: 20px;
+            flex: 1 1 50%;
+        }
     }
 `;
 
@@ -55,29 +87,62 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 70%;
-    margin: auto;
-    margin-bottom: 2rem;
-    margin-top: -4rem;
+    margin: 3rem 10px;
+
+    @media (min-width: 960px) {
+      margin: -4rem 0 3rem;
+      max-width: 70%;
+    }
 `;
 
 const ServiceDetailCard = styled.div`
   display: flex;
+  flex-direction: column;
   margin-bottom: 100px;
   width: 100%;
+
+  @media (min-width: 960px) {
+    flex-direction: row;
+  }
 `;
 
 const Card = styled(ServiceCard)`
   padding: 0;
+  flex-direction: row;
+  height: 150px;
+  max-width: none;
+  align-items: stretch;
+  z-index: 1;
+
+  img {
+    width: 50%;
+    z-index: 1;
+  }
+
+  @media (min-width: 960px) {
+    flex-direction: column;
+    height: 300px;
+    max-width: 165px;
+    align-items: center;
+
+    img {
+      width: 100%;
+      z-index: 0;
+    }
+  }
 `;
 
 const ServiceDetailDescription = styled.div`
   background: #dfdfdf;
-  margin: 30px 0;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
   flex: 1;
+
+  @media (min-width: 960px) {
+    margin: 30px 0;
+    padding: 30px;
+  }
 `;
 
 const DescriptionList = styled.ul`
@@ -149,8 +214,8 @@ const ServicesContainer = () => {
         opacity="0.3"
       />
       <TitleContainer>
+        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
         <Title>
-          <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
           ¿QUÉ HACEMOS?
         </Title>
       </TitleContainer>
