@@ -41,7 +41,7 @@ const CarouselItemBoxContent = styled.div`
 `;
 
 const CarouselItemBoxTextImage = styled.img`
-    height: 60%;
+    max-height: 60%;
     width: auto !important;
     max-width: 90%;
     margin-bottom: 10px;

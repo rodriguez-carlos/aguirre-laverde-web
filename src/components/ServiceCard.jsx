@@ -12,7 +12,7 @@ const Card = styled.div`
     padding: 20px 1.5%;
     box-sizing: border-box;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         height: 420px;
         max-width: 320px;
     }
@@ -23,7 +23,7 @@ const Image = styled.img`
     height: 150px;
     object-fit: cover;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         height: 240px;
     }
 `;
@@ -46,7 +46,7 @@ const Title = styled.div`
         margin: 0;
     }
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         p {
             font-size: 26px;
         }

@@ -104,7 +104,7 @@ const ServiceDetailCard = styled.div`
 
   @media (min-width: 960px) {
     flex-direction: row;
-    margin-bottom: 100%;
+    margin-bottom: 100px;
   }
 `;
 
@@ -123,8 +123,7 @@ const Card = styled(ServiceCard)`
 
   @media (min-width: 960px) {
     flex-direction: column;
-    height: 300px;
-    max-width: 165px;
+    height: 420px;
     align-items: center;
 
     img {
@@ -182,16 +181,22 @@ const ServicesContainer = () => {
   return (
     <SectionContainer>
       <Circle
-        color="#608e89"
+        color="#5F8D88"
         size="700px"
         top="90px"
         right="43%"
       />
       <Circle
-        color="#2a514d"
+        color="#2A5955"
         size="300px"
         top="47%"
         left="180px"
+      />
+      <Circle
+        color="#487A76"
+        size="150px"
+        top="49.5%"
+        left="30%"
       />
       <Circle
         color="#EDF3F2"
