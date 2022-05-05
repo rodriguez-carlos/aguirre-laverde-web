@@ -9,7 +9,7 @@ const CarouselItemContainer = styled.div`
     position: relative;
     margin: auto;
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         height: 75vh;
     }
 `;

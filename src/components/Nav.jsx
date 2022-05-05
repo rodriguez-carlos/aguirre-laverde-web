@@ -25,6 +25,7 @@ const Logo = styled.img`
 
 const MenuContainer = styled.nav`
     display: flex;
+    flex: 0 1 auto;
     z-index: 1;
 
     @media (min-width: 960px) {
@@ -45,7 +46,7 @@ const MenuButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 1 1 40px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -53,6 +54,7 @@ const MenuButton = styled.button`
     background-color: transparent;
     font-size: 26px;
     margin-right: 40px;
+    padding: 0;
 
     @media (min-width: 960px) {
         display: none;
@@ -83,13 +85,13 @@ const Menu = styled.ul`
     align-items: center;
     list-style: none;
     justify-content: flex-end;
-    margin-right: 40px;
     color: #3A4948;
     font-size: 24px;
     padding-inline-start: 0;
 
     @media (min-width: 960px) {
         flex-direction: row;
+        margin-right: 40px;
     }
 
     @media (min-width: 1240px) {

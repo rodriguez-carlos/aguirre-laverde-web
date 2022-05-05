@@ -8,11 +8,12 @@ import Title from '../Title';
 
 const SectionContainer = styled(Container)`
     position: relative;
-    background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
+    background: linear-gradient(180deg, rgba(5,67,64,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 71%);
 
-    @media (min-width: 650px) {
+    @media (min-width: 960px) {
         padding-bottom: 120px;
         padding-top: 180px;
+        background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
     }
 `;
 
@@ -20,15 +21,12 @@ const Image = styled.img`
     position: absolute;
     top: 0;
     left: 0;
-    height: 200px;
-    max-width: 90%;
-
-    @media (min-width: 650px) {
-        height: 300px;
-    }
+    width: 80%;
+    max-width: 450px;
 
     @media (min-width: 960px) {
         height: 400px;
+        max-width: none;
     }
 `;
 
@@ -45,17 +43,27 @@ const BoxContainer = styled.div`
 
 const InfoContainer = styled.div`
     display: flex;
-    margin: 50px 0;
+    margin: 40px 0;
+    width: 70%;
+    max-width: 440px;
 
     a {
         z-index: 99;
     }
+
+    @media (min-width: 960px) {
+        max-width: 60%;
+    }
 `;
 
 const SectionTitle = styled(Title)`
-    font-size: 28px;
+    font-size: 20px;
 
     @media (min-width: 650px) {
+        font-size: 30px;
+    }
+
+    @media (min-width: 960px) {
         font-size: 36px;
     }
 `;
@@ -64,18 +72,36 @@ const TextContainer = styled.div`
     box-sizing: border-box;
     background-color: #d8dbdb;
     color: #062b27;
-    padding: 40px;
+    padding: 30px;
     max-width: 360px;
+    text-align: center;
+
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    @media (min-width: 650px) {
+        max-width: 400px;
+        padding: 40px 60px;
+
+        p {
+            font-size: 22px;
+        }
+    }
 
     @media (min-width: 960px) {
         width: 520px;
         max-width: none;
-        padding: 40px 60px;
     }
 `;
 
 const Button = styled(RoundButton)`
-    margin: 40px -30px 0 0;
+    margin: 10px -20px 0 0;
+
+    @media (min-width: 960px) {
+        margin-top: 40px;
+    }
 `;
 
 const HomeContactContainer = () => {
