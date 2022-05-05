@@ -8,26 +8,44 @@ import { Container } from '../Layout';
 
 const Content = styled.div`
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column-reverse;
     position: relative;
+
+    @media (min-width: 960px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const TextContainer = styled.div`
     background-color: #062B27;
     padding: 45px 35px;
-    width: 35%;
     max-width: 500px;
     color: white;
+
+    p {
+        font-size: 20px;
+    }
+
+    @media (min-width: 960px) {
+        width: 35%;
+    }
 `;
 
 const ImageContainer = styled.div`
     background-color: #D8DBDB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const Image = styled.img`
-    height: 306.5px;
+    height: 245.2px;
+
+    @media (min-width: 960px) {
+        height: 306.5px;
+    }
 `;
 
 const Actions = styled.div`

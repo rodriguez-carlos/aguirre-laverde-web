@@ -1,25 +1,110 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import RoundButton from './RoundButton';
-import '../styles/_carouselitem.css';
 
+const CarouselItemContainer = styled.div`
+    height: 50vh;
+    display: flex;
+    position: relative;
+    margin: auto;
+
+    @media (min-width: 650px) {
+        height: 75vh;
+    }
+`;
+
+const CarouselItemImage = styled.img`
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+`;
+
+const CarouselItemBox = styled.div`
+    background-color: rgba(7, 71, 68, 0.75);
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+    @media (min-width: 650px) {
+        width: 50%;
+    }
+
+    @media (min-width: 1240px) {
+        width: 30%;
+    }
+`;
+
+const CarouselItemBoxContent = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+`;
+
+const CarouselItemBoxTextImage = styled.img`
+    width: 200px !important;
+    margin-bottom: 10px;
+    text-align: center;
+    filter: brightness(2.0);
+
+    @media (min-width: 650px) {
+        width: 350px !important;
+    }
+`;
+
+const CarouselItemActions = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    (Link) {
+        display: block;
+        text-decoration: none;
+        width: 85px;
+        color: #fff;
+    }
+
+    span {
+        font-size: 24px;
+        margin-left: 15px;
+        color: #fff;
+    }
+
+    @media (min-width: 650px) {
+
+        span {
+            margin-left: 35px;
+            font-size: 33px;
+        }
+    }
+`;
+
+const CarouselItemButton = styled(RoundButton)`
+    @media (max-width: 650px) {
+        width: 40px;
+        height: 40px;
+    }
+`;
 
 const CarouselItem = ({carouselSlideData}) => {
     return (
-        <div className='carousel-item'>
-            <img className='carousel-item-image' src={carouselSlideData.carouselSlideImg} alt="" />
-            <div className='carousel-item-right'>
-                <div className='carousel-item-right-content'>
-                    <img src={carouselSlideData.carouselSlideTextImage} alt={carouselSlideData.carouselSlideText} className='carousel-item-right-text'/>
-                    <div className="carousel-item-right-actions">
-                        <Link className="carousel-item-right-anchor" to={carouselSlideData.carouselSlideButtonRoute}>
-                            <RoundButton buttonIcon="plus" />
+        <CarouselItemContainer>
+            <CarouselItemImage src={carouselSlideData.carouselSlideImg} alt="" />
+            <CarouselItemBox>
+                <CarouselItemBoxContent>
+                    <CarouselItemBoxTextImage src={carouselSlideData.carouselSlideTextImage} alt={carouselSlideData.carouselSlideText} />
+                    <CarouselItemActions>
+                        <Link to={carouselSlideData.carouselSlideButtonRoute}>
+                            <CarouselItemButton buttonIcon="plus" />
                         </Link>
                         <span>{carouselSlideData.carouselSlideButton}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </CarouselItemActions>
+                </CarouselItemBoxContent>
+            </CarouselItemBox>
+        </CarouselItemContainer>
     )
 }
 

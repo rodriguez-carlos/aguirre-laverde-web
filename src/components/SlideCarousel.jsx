@@ -8,12 +8,12 @@ const SlideCarousel = ({startingPosition}) => {
     const [carouselData, setCarouselData] = useState(carouselSlideData);
     return (
         <Carousel 
-        autoPlay 
-        interval={6500} 
-        infiniteLoop 
-        showStatus={false} 
-        showThumbs={false} 
-        selectedItem={startingPosition ? startingPosition : 0}
+            // autoPlay 
+            interval={6500} 
+            infiniteLoop 
+            showStatus={false} 
+            showThumbs={false} 
+            selectedItem={startingPosition ? startingPosition : 0}
         >
             {carouselData.map((slide) => <CarouselItem carouselSlideData={slide}/>)}
         </Carousel>
