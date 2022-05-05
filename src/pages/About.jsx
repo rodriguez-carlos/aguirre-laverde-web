@@ -10,7 +10,6 @@ const About = () => {
             <Nav />
             <SlideCarousel startingPosition={1}/>
             <AboutContainer />
-            <BackHomeButton />
         </>
     );
 }

@@ -19,7 +19,7 @@ const TitleContainer = styled.div`
     display: flex;
     font-size: 20px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: right;
     padding-top: 40px;
 
@@ -32,6 +32,7 @@ const TitleContainer = styled.div`
     }
 
     @media (min-width: 960px) {
+        justify-content: flex-end;
         width: 65%;
         font-size: 30px;
         padding-top: 0;

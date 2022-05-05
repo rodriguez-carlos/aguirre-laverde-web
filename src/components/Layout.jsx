@@ -8,10 +8,6 @@ export const Container = styled.section`
     align-items: center;
     padding: 60px 40px 20px;
 
-    @media (min-width: 440px) {
-        padding: 80px 40px 40px;
-    }
-
     @media (min-width: 650px) {
         padding: 120px 80px 80px;
     }
