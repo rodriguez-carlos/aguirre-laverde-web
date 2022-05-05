@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import image from '../static/imagenes-20.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Container } from './Layout';
 import Circle from './Circle';
@@ -19,6 +19,14 @@ const Image = styled.img`
     height: 400px;
     max-width: 90%;
 `;
+
+const FloatingEllipsis = styled.div`
+    position: absolute;
+    top: 90px;
+    right: 35%;
+    font-size: 100px;
+    color: #628785;
+`
 
 const BoxContainer = styled.div`
     display: flex;
@@ -154,15 +162,16 @@ const ContactContainer = () => {
                 <Circle
                 color="#16514E"
                 size="450px"
-                top="90px"
+                top="70px"
                 right="23%"
                 />
                 <Circle
                 color="#A5B4B3"
                 size="190px"
-                top="420px"
-                right="36%"
+                top="300px"
+                right="37%"
                 />
+                <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                 <BoxContainer>
                     <Image src={image} alt="" />
                     <InfoContainer>
