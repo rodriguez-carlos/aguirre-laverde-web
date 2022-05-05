@@ -72,7 +72,6 @@ const FormLeftContainer = styled.div`
     width: 55%;
     background-color: #054340;
     color: #ffffff;
-    font-size: 32px;
     font-family: 'Regular';
     display: flex;
     flex-direction: column;
@@ -83,6 +82,7 @@ const FormLeftContainer = styled.div`
     p {
         margin-top: 0;
         margin-bottom: 8px;
+        font-size: 32px;
     }
 
     a {
