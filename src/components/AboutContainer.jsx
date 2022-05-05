@@ -125,7 +125,7 @@ const PartnerCardsContainer = styled.div`
     }
 
     @media (min-width: 1240px) {
-        width: 1000px;
+        width: 1100px;
     }
 `;
 

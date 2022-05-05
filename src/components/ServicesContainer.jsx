@@ -37,8 +37,9 @@ const TitleContainer = styled.div`
 
     @media (min-width: 960px) {
         justify-content: flex-end;
-        align-self: flex-end;
+        align-self: center;
         width: 65%;
+        max-width: 980px;
         font-size: 30px;
         padding-top: 0;
 
@@ -92,7 +93,7 @@ const CardsContainer = styled.div`
 
     @media (min-width: 960px) {
       margin: -4rem 0 3rem;
-      max-width: 70%;
+      max-width: 71%;
     }
 `;
 

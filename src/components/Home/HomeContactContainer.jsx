@@ -83,7 +83,7 @@ const TextContainer = styled.div`
     background-color: #d8dbdb;
     color: #062b27;
     padding: 30px;
-    max-width: 360px;
+    max-width: 390px;
     text-align: center;
 
     p {

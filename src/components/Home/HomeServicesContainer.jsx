@@ -87,13 +87,14 @@ const CardsContainer = styled.div`
     margin-top: -4rem;
 
     @media (min-width: 960px) {
-        max-width: 70%;
+        max-width: 75%;
     }
 `;
 
 const Actions = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #124D4A;
     font-size: 25px;
     margin: 30px 0;

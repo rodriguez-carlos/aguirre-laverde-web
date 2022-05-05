@@ -150,7 +150,7 @@ const ServicesDrawer = styled.div`
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #F0F0F0;
+    background-color: #D8DBDB;
     width: 100%;
     min-width: 280px;
     z-index: 101;
