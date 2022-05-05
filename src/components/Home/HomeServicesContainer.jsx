@@ -62,6 +62,7 @@ const IntroContainer = styled.div`
 
     @media (min-width: 960px) {
         width: 65%;
+        max-width: 1000px;
         flex-direction: row;
 
         p:first-of-type {
@@ -107,7 +108,7 @@ const HomeServicesContainer = () => {
     return (
         <SectionContainer>
             <Circle
-                color="#608e89"
+                color="#5F8D88"
                 size="700px"
                 top="40px"
                 right="43%"

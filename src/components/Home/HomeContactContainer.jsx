@@ -21,8 +21,8 @@ const SectionContainer = styled(Container)`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 120px;
-    right: 29%;
+    top: 130px;
+    right: 25%;
     font-size: 100px;
     color: #628785;
 `
@@ -120,14 +120,14 @@ const HomeContactContainer = () => {
             <Circle
                 color="#16514E"
                 size="400px"
-                left="50%"
+                left="60%"
                 top="80px"
             />
             <Circle
                 color="#A5B4B3"
                 size="200px"
-                left="55%"
-                top="57%"
+                left="62%"
+                top="61%"
             />
             <Circle
                 color="#50706d"
