@@ -10,17 +10,25 @@ import { Container } from './Layout';
 import partnerData from '../static/partnerData';
 
 const SectionContainer = styled(Container)`
-    background: linear-gradient(180deg, #054340 0, #054340 20%, #326864 20%, #326864 60%, #ffffff 60%, #ffffff 100%);
     padding: 0;
+
+    @media (min-width: 650px) {
+        padding: 0;
+    }
+    
+    @media (min-width: 960px) {
+        padding: 120px 80px 80px;   
+        background: linear-gradient(180deg, #054340 0, #054340 20%, #326864 20%, #326864 60%, #ffffff 60%, #ffffff 100%);
+    }
 `
 
 const Content = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-bottom: 80px;
     position: relative;
     background: #054340;
     padding: 80px 40px 100px;
@@ -29,6 +37,8 @@ const Content = styled.div`
         flex-direction: row;
         background: none;
         padding: 0;
+        margin-bottom: 80px;
+        width: auto;
     }
 `;
 
@@ -93,6 +103,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
     width: 100%;
+    max-width: 570px;
 
     @media (min-width: 960px) {
         height: 306.5px;
@@ -101,12 +112,11 @@ const Image = styled.img`
 
 const PartnerCardsContainer = styled.div`
     display: flex;
-    align-items: center; 
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
 
     @media (min-width: 960px) {
-        align-items: stretch;
         justify-content: space-between;
     }
 
