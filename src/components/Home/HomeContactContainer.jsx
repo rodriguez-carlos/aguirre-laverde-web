@@ -119,6 +119,13 @@ const HomeContactContainer = () => {
                 left="55%"
                 top="60%"
             />
+            <Circle
+                color="#50706d"
+                size="160px"
+                left="55%"
+                top="30px"
+                mobile
+            />
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>

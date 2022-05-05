@@ -19,7 +19,7 @@ export default css`
 
   p {
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 16px;
 
     @media (min-width: 960px) {
       text-align: justify;

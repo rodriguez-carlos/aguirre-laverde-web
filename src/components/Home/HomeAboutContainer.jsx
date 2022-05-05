@@ -24,10 +24,6 @@ const TextContainer = styled.div`
     max-width: 500px;
     color: white;
 
-    p {
-        font-size: 20px;
-    }
-
     @media (min-width: 960px) {
         width: 35%;
     }
@@ -75,8 +71,8 @@ const Actions = styled.div`
 `;
 
 const Button = styled(RoundButton)`
-    width: 82px;
-    height: 82px;
+    width: 100px;
+    height: 100px;
 `;
 
 const HomeAboutContainer = () => {
@@ -94,6 +90,20 @@ const HomeAboutContainer = () => {
                     size="250px"
                     left="45%"
                     top="50%"
+                />
+                <Circle
+                    color="#2a514d"
+                    size="600px"
+                    right="-300px"
+                    top="200px"
+                    mobile
+                />
+                <Circle
+                    color="#50706d"
+                    size="250px"
+                    right="-125px"
+                    top="600px"
+                    mobile
                 />
                 <TextContainer>
                     <Title>CONÓCENOS</Title>
