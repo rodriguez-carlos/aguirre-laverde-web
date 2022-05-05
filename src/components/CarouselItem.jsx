@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import RoundButton from './RoundButton';
 
 const CarouselItemContainer = styled.div`
-    height: 50vh;
+    height: 35vh;
     display: flex;
     position: relative;
     margin: auto;
@@ -22,14 +22,10 @@ const CarouselItemImage = styled.img`
 
 const CarouselItemBox = styled.div`
     background-color: rgba(7, 71, 68, 0.75);
-    width: 65%;
+    width: 45%;
     height: 100%;
     position: absolute;
     right: 0;
-
-    @media (min-width: 650px) {
-        width: 50%;
-    }
 
     @media (min-width: 1240px) {
         width: 30%;
@@ -45,12 +41,15 @@ const CarouselItemBoxContent = styled.div`
 `;
 
 const CarouselItemBoxTextImage = styled.img`
-    width: 200px !important;
+    height: 60%;
+    width: auto !important;
+    max-width: 90%;
     margin-bottom: 10px;
     text-align: center;
     filter: brightness(2.0);
 
     @media (min-width: 650px) {
+        height: auto;
         width: 350px !important;
     }
 `;
@@ -68,13 +67,12 @@ const CarouselItemActions = styled.div`
     }
 
     span {
-        font-size: 24px;
-        margin-left: 15px;
+        font-size: 16px;
+        margin-left: 10px;
         color: #fff;
     }
 
-    @media (min-width: 650px) {
-
+    @media (min-width: 960px) {
         span {
             margin-left: 35px;
             font-size: 33px;

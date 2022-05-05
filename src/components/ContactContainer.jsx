@@ -160,16 +160,16 @@ const ContactContainer = () => {
         <>
             <SectionContainer>
                 <Circle
-                color="#16514E"
-                size="450px"
-                top="70px"
-                right="23%"
+                    color="#16514E"
+                    size="450px"
+                    top="70px"
+                    right="23%"
                 />
                 <Circle
-                color="#A5B4B3"
-                size="190px"
-                top="300px"
-                right="37%"
+                    color="#A5B4B3"
+                    size="190px"
+                    top="300px"
+                    right="37%"
                 />
                 <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                 <BoxContainer>

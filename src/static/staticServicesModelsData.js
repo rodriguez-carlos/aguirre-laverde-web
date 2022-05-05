@@ -1,6 +1,6 @@
 const servicesModelsData = [
   {
-    title: 'Tarifa\n por hora:',
+    title: 'Tarifa por hora:',
     text: 'Servicio a solicitud del cliente facturados por hora.',
   },
   {
