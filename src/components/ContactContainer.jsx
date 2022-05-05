@@ -7,6 +7,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Container } from './Layout';
 import Circle from './Circle';
 import RoundButton from './RoundButton';
+import BackHomeButton from './BackHomeButton';
 import Title from './Title';
 
 const SectionContainer = styled(Container)`
@@ -149,7 +150,7 @@ const FormLeftContainer = styled.div`
 `;
 
 const FormRightContainer = styled.div`
-    padding-top: 80px;
+    padding: 80px 0;
     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 64%, #5F8D88 64%, #5F8D88 100%);
 
     @media (min-width: 960px) {
@@ -242,6 +243,10 @@ const FormActions = styled.div`
     }
 `;
 
+const BackHomeButtonContainer = styled.div`
+    padding: 30px 0 10px;
+`;
+
 
 const ContactContainer = () => {
     const doNothing = () => {
@@ -323,6 +328,9 @@ const ContactContainer = () => {
                         </FormActions>
                     </ContactForm>
                 </FormRightContainer>
+                <BackHomeButtonContainer>
+                    <BackHomeButton />
+                </BackHomeButtonContainer>
             </FormSection>
         </>
     )
