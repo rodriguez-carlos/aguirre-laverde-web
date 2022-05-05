@@ -8,6 +8,7 @@ import PartnerCard from './PartnerCard';
 import Title from './Title';
 import { Container } from './Layout';
 import partnerData from '../static/partnerData';
+import BackHomeButton from './BackHomeButton';
 
 const SectionContainer = styled(Container)`
     padding: 0;
@@ -32,6 +33,7 @@ const Content = styled.div`
     position: relative;
     background: #054340;
     padding: 80px 40px 100px;
+    box-sizing: border-box;
 
     @media (min-width: 960px) {
         flex-direction: row;
@@ -39,15 +41,16 @@ const Content = styled.div`
         padding: 0;
         margin-bottom: 80px;
         width: auto;
+        box-sizing: content-box;
     }
 `;
 
 const TeamContent = styled.div`
-    background: linear-gradient(180deg, #326864 0%, #326864 25%, #ffffff 25%, #ffffff 50%, #326864 50%, #326864 75%, #ffffff 75%, #ffffff 100%);
+    background: linear-gradient(180deg, #326864 0%, #326864 25%, #ffffff 25%, #ffffff 53%, #326864 53%, #326864 78%, #ffffff 78%, #ffffff 100%);
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 60px 40px 20px;
+    padding: 60px 40px 60px;
 
     @media (min-width: 960px) {
         width: 70%;
@@ -72,6 +75,7 @@ const TitleContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: right;
+    padding-top: 40px;
 
     svg {
         margin-right: 10px;
@@ -144,6 +148,20 @@ const AboutContainer = () => {
                     left="40%"
                     top="0px"
                 />
+                <Circle
+                    color="#2a514d"
+                    size="550px"
+                    right="-275px"
+                    top="200px"
+                    mobile
+                />
+                <Circle
+                    color="#50706d"
+                    size="220px"
+                    right="-110px"
+                    top="570px"
+                    mobile
+                />
             <TextContainer>
                     <Title>CONÓCENOS</Title>
                     <div>
@@ -175,6 +193,45 @@ const AboutContainer = () => {
                     left="-10%"
                     bottom="-10%"
                 />
+                <Circle
+                    color="#50706d"
+                    size="220px"
+                    right="20px"
+                    top="40px"
+                    mobile
+                />
+                <Circle
+                    color="#50706d"
+                    size="300px"
+                    left="-20px"
+                    top="580px"
+                    opacity="0.5"
+                    mobile
+                />
+                <Circle
+                    color="#F0F0F0"
+                    size="250px"
+                    right="0"
+                    top="1350px"
+                    opacity="0.5"
+                    mobile
+                />
+                <Circle
+                    color="#50706d"
+                    size="320px"
+                    right="-120px"
+                    bottom="400px"
+                    opacity="0.5"
+                    mobile
+                />
+                <Circle
+                    color="#F0F0F0"
+                    size="230px"
+                    left="10px"
+                    bottom="-20px"
+                    opacity="0.5"
+                    mobile
+                />
                 <TitleContainer>
                     <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#D8DBDB" }} />
                     <Title style={{textAlign: "right"}}>
@@ -185,6 +242,7 @@ const AboutContainer = () => {
                     {data.map(partner => <PartnerCard partner={partner}/>)}
                 </PartnerCardsContainer>
             </TeamContent>
+            <BackHomeButton />
         </SectionContainer>
     )
 }

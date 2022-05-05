@@ -9,7 +9,7 @@ const Card = styled.div`
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    margin: 10px;
+    margin: 20px 10px;
 `;
 
 const Image = styled.img`
