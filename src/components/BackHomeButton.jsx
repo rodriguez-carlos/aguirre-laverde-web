@@ -8,11 +8,14 @@ const Actions = styled.div`
     align-items: center;
     color: #124D4A;
     font-size: 25px;
-    margin: 30px 0 60px;
-    height: 150px;
+    margin: 10px 0 60px;
 
     p {
         margin-right: 15px;
+    }
+
+    @media (min-width: 960px) {
+      height: 150px;
     }
 `;
 

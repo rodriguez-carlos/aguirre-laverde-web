@@ -11,42 +11,75 @@ import servicesData from '../static/staticServicesData';
 
 const SectionContainer = styled(Container)`
     position: relative;
-    background: linear-gradient(180deg, rgba(50,104,100,1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
-    padding-top: 180px;
+    background: linear-gradient(180deg, #054340 22%, #326864 22%, #326864 44%, #FFFFFF 44%, #FFFFFF 59%, #326864 59%, #326864 79%, #FFFFFF 79%, #FFFFFF 90%, #326864 90%);
+
+    @media (min-width: 960px) {
+      padding-top: 180px;
+      background: linear-gradient(180deg, #326864 62%, #FFFFFF 62%, #FFFFFF 71%);
+    }
 `;
 
 const TitleContainer = styled.div`
     display: flex;
-    font-size: 50px;
-    justify-content: flex-end;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
     text-align: right;
-    width: 65%;
+    padding-top: 40px;
 
     svg {
-        margin: 0 40px;
+        margin-right: 10px;
+    }
+
+    @media (min-width: 650px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 960px) {
+        justify-content: flex-end;
+        align-self: flex-end;
+        width: 65%;
+        font-size: 30px;
+        padding-top: 0;
+
+        svg {
+            margin-right: 30px;
+        }
     }
 `;
 
 const IntroContainer = styled.div`
     background-color: #062B27;
-    padding: 45px 35px 80px;
+    padding: 25px 35px 80px;
     color: #fff;
     display: flex;
-    width: 62%;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 10px;
 
-    p {
-      font-size: 18px;
-      margin: 10px 1rem;
+    @media (min-width: 650px) {
+        margin: 0;
+        padding-top: 45px;
+        
+        p {
+            font-size: 20px;
+        }
     }
 
-    p:first-of-type {
-        margin-right: 20px;
-        flex: 1 1 50%;
-    }
+    @media (min-width: 960px) {
+        width: 65%;
+        max-width: 1000px;
+        flex-direction: row;
 
-    p:last-of-type {
-        margin-left: 20px;
-        flex: 1 1 50%;
+        p:first-of-type {
+            margin-right: 20px;
+            flex: 1 1 50%;
+        }
+
+        p:last-of-type {
+            margin-left: 20px;
+            flex: 1 1 50%;
+        }
     }
 `;
 
@@ -55,29 +88,63 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 70%;
-    margin: auto;
-    margin-bottom: 2rem;
-    margin-top: -4rem;
+    margin: 3rem 10px 0;
+
+    @media (min-width: 960px) {
+      margin: -4rem 0 3rem;
+      max-width: 70%;
+    }
 `;
 
 const ServiceDetailCard = styled.div`
   display: flex;
-  margin-bottom: 100px;
+  flex-direction: column;
+  margin-bottom: 40px;
   width: 100%;
+
+  @media (min-width: 960px) {
+    flex-direction: row;
+    margin-bottom: 100%;
+  }
 `;
 
 const Card = styled(ServiceCard)`
   padding: 0;
+  flex-direction: row;
+  height: 150px;
+  max-width: none;
+  align-items: stretch;
+  z-index: 1;
+
+  img {
+    width: 50%;
+    z-index: 1;
+  }
+
+  @media (min-width: 960px) {
+    flex-direction: column;
+    height: 300px;
+    max-width: 165px;
+    align-items: center;
+
+    img {
+      width: 100%;
+      z-index: 0;
+    }
+  }
 `;
 
 const ServiceDetailDescription = styled.div`
   background: #dfdfdf;
-  margin: 30px 0;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
   flex: 1;
+
+  @media (min-width: 960px) {
+    margin: 30px 0;
+    padding: 30px;
+  }
 `;
 
 const DescriptionList = styled.ul`
@@ -95,6 +162,10 @@ const DescriptionList = styled.ul`
   li {
     font-size: 14px;
     color: #062B27;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: 960px) {
     padding-bottom: 10px;
   }
 `;
@@ -148,9 +219,62 @@ const ServicesContainer = () => {
         left="250px"
         opacity="0.3"
       />
+      <Circle
+        color="#487A76"
+        size="200px"
+        top="60px"
+        left="10px"
+        mobile
+      />
+      <Circle
+        color="#608e89"
+        size="250px"
+        top="25%"
+        right="10px"
+        mobile
+      />
+      <Circle
+        color="#608e89"
+        size="120px"
+        top="43%"
+        right="20px"
+        opacity="0.3"
+        mobile
+      />
+      <Circle
+        color="#A5B4B3"
+        size="280px"
+        top="50%"
+        left="-50px"
+        mobile
+      />
+      <Circle
+        color="#50706d"
+        size="230px"
+        top="75%"
+        right="-70px"
+        opacity="0.5"
+        mobile
+      />
+      <Circle
+        color="#A5B4B3"
+        size="120px"
+        bottom="340px"
+        left="10px"
+        opacity="0.2"
+        mobile
+      />
+      <Circle
+        color="#A5B4B3"
+        size="120px"
+        bottom="10px"
+        right="20px"
+        opacity="0.4"
+        mobile
+      />
       <TitleContainer>
+        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
         <Title>
-          <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
           ¿QUÉ HACEMOS?
         </Title>
       </TitleContainer>
