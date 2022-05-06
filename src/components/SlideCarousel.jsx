@@ -8,7 +8,7 @@ const SlideCarousel = ({startingPosition}) => {
     const [carouselData, setCarouselData] = useState(carouselSlideData);
     return (
         <Carousel 
-            // autoPlay 
+            autoPlay 
             interval={6500} 
             infiniteLoop 
             showStatus={false} 
