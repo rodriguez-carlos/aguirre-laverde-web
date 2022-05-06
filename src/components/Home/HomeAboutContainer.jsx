@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import logo from '../../static/DEFINITIVOS-06.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import RoundButton from '../RoundButton';
 import Circle from '../Circle';
 import Title from '../Title';
@@ -26,7 +26,20 @@ const FloatingEllipsis = styled.div`
     right: 38%;
     font-size: 100px;
     color: #94A8A7;
-`
+`;
+
+const FloatingEllipsisMobile = styled.div`
+    position: absolute;
+    top: 700px;
+    right: -30px;
+    font-size: 100px;
+    color: #94A8A7;
+    z-index: 99;
+
+    @media (min-width: 650px) {
+        display: none;
+    }
+`;
 
 const TextContainer = styled.div`
     background-color: #062B27;
@@ -75,7 +88,7 @@ const Actions = styled.div`
         margin-top: -30px;
 
         p {
-            margin-top: 20px;
+            margin-top: 40px;
         }
     }
 `;
@@ -89,6 +102,7 @@ const HomeAboutContainer = () => {
     return (
         <Container color="#054340">
             <Content>
+                <FloatingEllipsisMobile><FontAwesomeIcon icon={faEllipsisVertical} /></FloatingEllipsisMobile>
                 <Circle
                     color="#29514d"
                     size="500px"

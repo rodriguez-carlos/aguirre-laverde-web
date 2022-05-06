@@ -37,7 +37,7 @@ const Image = styled.img`
 const FloatingEllipsis = styled.div`
     position: absolute;
     top: 150px;
-    right: 31%;
+    right: 29%;
     font-size: 100px;
     color: #628785;
 `
@@ -49,7 +49,7 @@ const BoxContainer = styled.div`
 
     @media (min-width: 960px) {
         width: 80%;
-        max-width: 1020px;
+        max-width: 950px;
     }
 `;
 
@@ -284,8 +284,8 @@ const ContactContainer = () => {
                 <Circle
                     color="#A5B4B3"
                     size="190px"
-                    top="300px"
-                    right="37%"
+                    top="360px"
+                    right="30%"
                 />
                 <Circle
                     color="#A5B4B3"

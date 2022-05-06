@@ -25,6 +25,10 @@ const TitleContainer = styled.div`
 
     svg {
         margin-right: 10px;
+
+        @media (min-width: 960px) {
+            font-size: 100px;
+        }
     }
 
     @media (min-width: 650px) {
@@ -136,7 +140,7 @@ const HomeServicesContainer = () => {
                 mobile
             />
             <TitleContainer>
-                <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
+                <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948"}} />
                 <Title>
                     ¿QUÉ HACEMOS?
                 </Title>

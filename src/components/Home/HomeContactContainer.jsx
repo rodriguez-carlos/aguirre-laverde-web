@@ -13,7 +13,7 @@ const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, rgba(5,67,64,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 71%);
 
     @media (min-width: 960px) {
-        padding-bottom: 120px;
+        padding-bottom: 180px;
         padding-top: 180px;
         background: linear-gradient(180deg, rgba(5,67,64,1) 64%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 71%);
     }
@@ -21,8 +21,8 @@ const SectionContainer = styled(Container)`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 130px;
-    right: 25%;
+    top: 160px;
+    right: 23%;
     font-size: 100px;
     color: #628785;
 `
@@ -63,6 +63,7 @@ const InfoContainer = styled.div`
 
     @media (min-width: 960px) {
         max-width: 60%;
+        margin: 80px 0;
     }
 `;
 
@@ -74,7 +75,7 @@ const SectionTitle = styled(Title)`
     }
 
     @media (min-width: 960px) {
-        font-size: 36px;
+        font-size: 48px;
     }
 `;
 
@@ -93,21 +94,21 @@ const TextContainer = styled.div`
 
     @media (min-width: 650px) {
         max-width: 400px;
-        padding: 40px 60px;
+        padding: 25px 30px;
 
         p {
-            font-size: 22px;
+            font-size: 20px;
         }
     }
 
     @media (min-width: 960px) {
-        width: 520px;
+        width: 620px;
         max-width: none;
     }
 `;
 
 const Button = styled(RoundButton)`
-    margin: 10px -20px 0 0;
+    margin: -10px -20px 0 0;
 
     @media (min-width: 960px) {
         margin-top: 40px;
@@ -121,13 +122,13 @@ const HomeContactContainer = () => {
                 color="#16514E"
                 size="400px"
                 left="60%"
-                top="80px"
+                top="62px"
             />
             <Circle
                 color="#A5B4B3"
                 size="200px"
-                left="62%"
-                top="61%"
+                left="63%"
+                top="56%"
             />
             <Circle
                 color="#50706d"

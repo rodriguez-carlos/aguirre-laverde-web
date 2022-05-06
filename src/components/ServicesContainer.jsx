@@ -45,13 +45,14 @@ const TitleContainer = styled.div`
 
         svg {
             margin-right: 30px;
+            font-size: 100px;
         }
     }
 `;
 
 const IntroContainer = styled.div`
     background-color: #062B27;
-    padding: 25px 35px 80px;
+    padding: 25px 35px 20px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -60,7 +61,7 @@ const IntroContainer = styled.div`
 
     @media (min-width: 650px) {
         margin: 0;
-        padding-top: 45px;
+        padding: 45px 35px 80px;
         
         p {
             font-size: 20px;
@@ -279,7 +280,7 @@ const ServicesContainer = () => {
         mobile
       />
       <TitleContainer>
-        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948" }} />
+        <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948"}} />
         <Title>
           ¿QUÉ HACEMOS?
         </Title>

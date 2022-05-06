@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Card = styled.div`
-    height: 300px;
+    height: 270px;
     max-width: 165px;
     flex: 1 0 auto;
     display: flex;
@@ -42,13 +42,14 @@ const Title = styled.div`
     p {
         text-align: center;
         color: #3A4948;
-        line-height: 30px;
+        line-height: 20px;
         margin: 0;
     }
 
     @media (min-width: 960px) {
         p {
             font-size: 26px;
+            line-height: 30px;
         }
     }
 `;

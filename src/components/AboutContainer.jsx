@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from '@emotion/styled';
 import image from '../static/VERSION-MOBIL-15.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Circle from './Circle';
 import PartnerCard from './PartnerCard';
 import Title from './Title';
@@ -18,7 +18,7 @@ const SectionContainer = styled(Container)`
     }
     
     @media (min-width: 960px) {
-        padding: 120px 80px 80px;   
+        padding: 120px 80px 30px;   
         background: linear-gradient(180deg, #054340 0, #054340 20%, #326864 20%, #326864 60%, #ffffff 60%, #ffffff 100%);
     }
 `
@@ -29,7 +29,6 @@ const Content = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    position: relative;
     position: relative;
     background: #054340;
     padding: 80px 40px 100px;
@@ -71,7 +70,18 @@ const TextContainer = styled.div`
         width: 35%;
     }
 `;
+const FloatingEllipsisMobile = styled.div`
+    position: absolute;
+    top: 620px;
+    right: 10px;
+    font-size: 100px;
+    color: #94A8A7;
+    z-index: 99;
 
+    @media (min-width: 650px) {
+        display: none;
+    }
+`;
 const TitleContainer = styled.div`
     display: flex;
     font-size: 20px;
@@ -97,6 +107,7 @@ const TitleContainer = styled.div`
 
         svg {
             margin-right: 30px;
+            font-size: 100px;
         }
     }
 `;
@@ -139,6 +150,7 @@ const AboutContainer = () => {
     return (
         <SectionContainer>
             <Content>
+                <FloatingEllipsisMobile><FontAwesomeIcon icon={faEllipsisVertical}/></FloatingEllipsisMobile>
                 <Circle
                     color="#2a514d"
                     size="530px"
