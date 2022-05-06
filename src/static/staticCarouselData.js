@@ -25,7 +25,7 @@ const carouselSlideData = [
         carouselSlideText: "¡Te escuchamos y te acompañamos en cada proceso!",
         carouselSlideImg: carouselThree,
         carouselSlideButton: "Contáctanos",
-        carouselSlideButtonRoute: "/contactanos",
+        carouselSlideButtonRoute: "/contacto",
         carouselSlideTextImage: carouselTextThree
     }
 ]

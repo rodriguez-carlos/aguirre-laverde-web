@@ -37,7 +37,7 @@ const Image = styled.img`
 const FloatingEllipsis = styled.div`
     position: absolute;
     top: 150px;
-    right: 30%;
+    right: 31%;
     font-size: 100px;
     color: #628785;
 `
@@ -49,6 +49,7 @@ const BoxContainer = styled.div`
 
     @media (min-width: 960px) {
         width: 80%;
+        max-width: 1020px;
     }
 `;
 
@@ -82,7 +83,8 @@ const TextContainer = styled.div`
     p {
         text-align: center;
         font-size: 16px;
-        margin: 10px 0 0;
+        margin: 5px 0 0;
+        line-height: 1.5;
     }
 
     @media (min-width: 960px) {
