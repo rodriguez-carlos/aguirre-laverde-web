@@ -27,6 +27,10 @@ const CarouselItemBox = styled.div`
     position: absolute;
     right: 0;
 
+    @media (min-width: 960px) {
+        width: 35%;
+    }
+
     @media (min-width: 1240px) {
         width: 30%;
     }
@@ -50,7 +54,7 @@ const CarouselItemBoxTextImage = styled.img`
 
     @media (min-width: 650px) {
         height: auto;
-        width: 350px !important;
+        max-width: 350px;
     }
 `;
 

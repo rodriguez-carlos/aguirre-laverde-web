@@ -53,8 +53,11 @@ const TeamContent = styled.div`
     padding: 60px 40px 60px;
 
     @media (min-width: 960px) {
-        width: 70%;
         background: none;
+    }
+
+    @media (min-width: 1240px) {
+        width: 1100px;
     }
 `;
 
@@ -122,10 +125,6 @@ const PartnerCardsContainer = styled.div`
 
     @media (min-width: 960px) {
         justify-content: space-between;
-    }
-
-    @media (min-width: 1240px) {
-        width: 1000px;
     }
 `;
 
