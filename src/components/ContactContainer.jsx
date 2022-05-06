@@ -157,7 +157,7 @@ const FormRightContainer = styled.div`
     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 64%, #5F8D88 64%, #5F8D88 100%);
 
     @media (min-width: 960px) {
-        background-color: #326864;
+        background: #326864;
         width: 45%;
     }
 `;

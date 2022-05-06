@@ -3,13 +3,17 @@ import styled from "@emotion/styled";
 
 const Card = styled.div`
     width: 100%;
-    max-width: 320px;
+    max-width: 290px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
     margin: 20px 10px;
+
+    @media (min-width: 1240px) {
+        max-width: 320px;
+    }
 `;
 
 const Image = styled.img`
