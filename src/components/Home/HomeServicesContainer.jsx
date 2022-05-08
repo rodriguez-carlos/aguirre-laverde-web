@@ -13,6 +13,7 @@ import servicesData from '../../static/staticServicesData';
 const SectionContainer = styled(Container)`
     position: relative;
     background: linear-gradient(180deg, rgba(50,104,100,1) 62%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%);
+    padding-top: 20px;
 `;
 
 const TitleContainer = styled.div`
@@ -21,7 +22,7 @@ const TitleContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: right;
-    padding-top: 40px;
+    padding-top: 80px;
 
     svg {
         margin-right: 10px;
@@ -116,7 +117,7 @@ const HomeServicesContainer = () => {
             <Circle
                 color="#5F8D88"
                 size="700px"
-                top="40px"
+                top="90px"
                 right="43%"
             />
             <Circle

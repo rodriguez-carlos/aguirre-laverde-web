@@ -22,17 +22,17 @@ const Content = styled.div`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 375px;
-    right: 38%;
-    font-size: 100px;
+    top: 390px;
+    right: 39%;
+    font-size: 80px;
     color: #94A8A7;
 `;
 
 const FloatingEllipsisMobile = styled.div`
     position: absolute;
-    top: 700px;
-    right: -30px;
-    font-size: 100px;
+    top: 675px;
+    right: -20px;
+    font-size: 50px;
     color: #94A8A7;
     z-index: 99;
 
@@ -124,9 +124,9 @@ const HomeAboutContainer = () => {
                 />
                 <Circle
                     color="#50706d"
-                    size="250px"
+                    size="160px"
                     right="-125px"
-                    top="600px"
+                    top="620px"
                     mobile
                 />
                 <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>

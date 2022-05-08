@@ -69,13 +69,14 @@ const InfoContainer = styled.div`
 
 const SectionTitle = styled(Title)`
     font-size: 20px;
+    margin: 0;
 
     @media (min-width: 650px) {
         font-size: 30px;
     }
 
     @media (min-width: 960px) {
-        font-size: 48px;
+        font-size: 56px;
     }
 `;
 
@@ -88,7 +89,8 @@ const TextContainer = styled.div`
     text-align: center;
 
     p {
-        margin-bottom: 0;
+        margin: 0;
+        line-height: 1.25;
         font-size: 14px;
     }
 
@@ -104,6 +106,10 @@ const TextContainer = styled.div`
     @media (min-width: 960px) {
         width: 620px;
         max-width: none;
+
+        p {
+            margin-top: 0;
+        }
     }
 `;
 
@@ -111,7 +117,9 @@ const Button = styled(RoundButton)`
     margin: -10px -20px 0 0;
 
     @media (min-width: 960px) {
-        margin-top: 40px;
+        margin-top: 20px;
+        height: 100px;
+        width: 100px;
     }
 `;
 

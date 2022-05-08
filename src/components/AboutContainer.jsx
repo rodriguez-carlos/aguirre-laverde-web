@@ -72,9 +72,9 @@ const TextContainer = styled.div`
 `;
 const FloatingEllipsisMobile = styled.div`
     position: absolute;
-    top: 620px;
-    right: 10px;
-    font-size: 100px;
+    top: 650px;
+    right: 15px;
+    font-size: 50px;
     color: #94A8A7;
     z-index: 99;
 
@@ -172,9 +172,9 @@ const AboutContainer = () => {
                 />
                 <Circle
                     color="#50706d"
-                    size="220px"
-                    right="-110px"
-                    top="570px"
+                    size="160px"
+                    right="-80px"
+                    top="590px"
                     mobile
                 />
             <TextContainer>
@@ -209,7 +209,7 @@ const AboutContainer = () => {
                     bottom="-10%"
                 />
                 <Circle
-                    color="#50706d"
+                    color="#5F8D88"
                     size="220px"
                     right="20px"
                     top="40px"
@@ -219,15 +219,15 @@ const AboutContainer = () => {
                     color="#50706d"
                     size="300px"
                     left="-20px"
-                    top="580px"
-                    opacity="0.5"
+                    top="650px"
+                    opacity="0.4"
                     mobile
                 />
                 <Circle
                     color="#F0F0F0"
-                    size="250px"
+                    size="230px"
                     right="0"
-                    top="1350px"
+                    top="1450px"
                     opacity="0.5"
                     mobile
                 />
@@ -240,11 +240,10 @@ const AboutContainer = () => {
                     mobile
                 />
                 <Circle
-                    color="#F0F0F0"
-                    size="230px"
+                    color="#EDF3F2"
+                    size="180px"
                     left="10px"
-                    bottom="-20px"
-                    opacity="0.5"
+                    bottom="10px"
                     mobile
                 />
                 <TitleContainer>

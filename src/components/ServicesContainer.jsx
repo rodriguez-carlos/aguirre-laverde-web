@@ -197,7 +197,7 @@ const ServicesContainer = () => {
       <Circle
         color="#487A76"
         size="150px"
-        top="49.5%"
+        top="50.5%"
         left="30%"
       />
       <Circle
@@ -209,7 +209,7 @@ const ServicesContainer = () => {
       <Circle
         color="#487A76"
         size="300px"
-        top="25%"
+        top="27%"
         right="150px"
       />
       <Circle

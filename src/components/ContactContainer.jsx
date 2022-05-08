@@ -46,6 +46,7 @@ const BoxContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     position: relative;
+    width: 90%
 
     @media (min-width: 960px) {
         width: 80%;
@@ -72,34 +73,35 @@ const InfoContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 80%;
-    max-width: 360px;
+    width: 65%;
+    max-width: 300px;
     background-color: #d8dbdb;
     color: #062b27;
-    padding: 15px;
+    padding: 20px;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-top: 30px;
 
     p {
         text-align: center;
         font-size: 16px;
-        margin: 5px 0 0;
-        line-height: 1.5;
+        margin: -10px 0 0 0;
+        line-height: 1.25;
     }
 
     @media (min-width: 960px) {
         margin-top: -7px;
         font-size: 26px;
         line-height: 26px;
-        padding: 40px 60px;
-        height: 220px;
+        padding: 60px 60px 70px;
+        height: 210px;
         min-width: 500px;
         margin-top: 80px;
         width: 100%;
 
         p {
-            margin: 30px 0;
+            margin: 18px 0;
             font-size: 24px;
+            line-height: 1.5;
         }
     }
 `;
@@ -277,9 +279,9 @@ const ContactContainer = () => {
             <SectionContainer>
                 <Circle
                     color="#16514E"
-                    size="450px"
+                    size="430px"
                     top="70px"
-                    right="23%"
+                    right="24%"
                 />
                 <Circle
                     color="#A5B4B3"
@@ -288,17 +290,17 @@ const ContactContainer = () => {
                     right="30%"
                 />
                 <Circle
-                    color="#A5B4B3"
+                    color="#16514E"
                     size="190px"
-                    top="300px"
-                    right="37%"
+                    top="40px"
+                    right="10%"
                     mobile
                 />
                 <Circle
-                    color="#A5B4B3"
-                    size="190px"
-                    top="300px"
-                    right="37%"
+                    color="#2A5955"
+                    size="250px"
+                    top="170px"
+                    right="50%"
                     mobile
                 />
                 <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
