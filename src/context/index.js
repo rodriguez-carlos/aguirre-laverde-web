@@ -10,10 +10,16 @@ function useServices() {
 
 function useServiceModels() {
   const { serviceModels } = useContext(DataContext);
-  console.log(serviceModels)
 
   return serviceModels ? serviceModels.data : [];
 }
 
+function usePartners() {
+  const { partners } = useContext(DataContext);
+  console.log(partners)
+
+  return partners ? partners.data : [];
+}
+
 export default DataContext;
-export { useServices, useServiceModels };
+export { useServices, useServiceModels, usePartners };

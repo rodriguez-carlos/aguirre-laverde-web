@@ -45,15 +45,15 @@ const Text = styled.div`
     }
 `;
 
-const PartnerCard = ({partner}) => {
+const PartnerCard = ({ partner }) => {
     return (
         <Card>
-            <Image src={partner.image}/>
+            <Image src={`${process.env.REACT_APP_HOST_URL}${partner.foto.data.attributes.url}`}/>
             <Text>
-                <Name>{partner.name}</Name>
-                <Name>{partner.lastName}</Name>
-                <p>{partner.bio}</p>
-                <p><strong>Estudios: </strong>{partner.academics}</p>
+                <Name>{partner.nombre}</Name>
+                <Name>{partner.apellido}</Name>
+                <p>{partner.biografia}</p>
+                <p><strong>Estudios: </strong>{partner.educacion}</p>
             </Text>
         </Card>
     )

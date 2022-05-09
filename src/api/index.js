@@ -17,4 +17,9 @@ export async function getServiceModels() {
   return response.data;
 }
 
+export async function getPartners() {
+  const response = await ApiClient.get('/socios');
+  return response.data;
+}
+
 export default ApiClient;

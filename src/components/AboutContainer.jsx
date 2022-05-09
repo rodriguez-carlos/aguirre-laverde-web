@@ -7,8 +7,8 @@ import Circle from './Circle';
 import PartnerCard from './PartnerCard';
 import Title from './Title';
 import { Container } from './Layout';
-import partnerData from '../static/partnerData';
 import BackHomeButton from './BackHomeButton';
+import { usePartners } from '../context';
 
 const SectionContainer = styled(Container)`
     padding: 0;
@@ -145,7 +145,7 @@ const PartnerCardsContainer = styled.div`
 
 
 const AboutContainer = () => {
-    const [data] = useState(partnerData);
+    const data = usePartners();
 
     return (
         <SectionContainer>
@@ -253,7 +253,7 @@ const AboutContainer = () => {
                     </Title>
                 </TitleContainer>
                 <PartnerCardsContainer>
-                    {data.map(partner => <PartnerCard key={partner.name} partner={partner}/>)}
+                    {data.map(partner => <PartnerCard key={partner.id} partner={partner.attributes}/>)}
                 </PartnerCardsContainer>
             </TeamContent>
             <BackHomeButton />
