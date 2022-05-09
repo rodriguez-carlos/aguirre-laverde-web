@@ -5,7 +5,7 @@ import Title from './Title';
 import Circle from './Circle';
 import ServiceModelCard from './ServiceModelCard';
 import BackHomeButton from './BackHomeButton';
-import data from '../static/staticServicesModelsData';
+import { useServiceModels } from '../context';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -47,6 +47,8 @@ const CardsContainer = styled.div`
 `;
 
 const ServicesModelsContainer = () => {
+  const data = useServiceModels();
+
   return (
     <SectionContainer>
       <Circle
@@ -84,7 +86,11 @@ const ServicesModelsContainer = () => {
           left="-110px"
         />
         {data.map(item => (
-          <ServiceModelCard title={item.title} text={item.text} />
+          <ServiceModelCard
+            key={item.id}
+            title={item.attributes.titulo}
+            text={item.attributes.descripcion}
+          />
         ))}
       </CardsContainer>
       <BackHomeButton />

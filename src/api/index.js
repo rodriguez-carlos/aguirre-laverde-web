@@ -12,4 +12,9 @@ export async function getServices() {
   return response.data;
 }
 
+export async function getServiceModels() {
+  const response = await ApiClient.get('/servicio-modelos');
+  return response.data;
+}
+
 export default ApiClient;
