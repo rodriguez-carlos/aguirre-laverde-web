@@ -23,7 +23,7 @@ const Content = styled.div`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 390px;
+    top: 420px;
     right: 39%;
     font-size: 80px;
     color: #94A8A7;
@@ -144,7 +144,6 @@ const HomeAboutContainer = () => {
                     top="620px"
                     mobile
                 />
-                <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                 <TextContainer>
                     <Title>{aboutPageData.attributes.titulo}</Title>
                     <IntroContainer>
@@ -152,6 +151,7 @@ const HomeAboutContainer = () => {
                     </IntroContainer>
                 </TextContainer>
                 <ImageContainer>
+                    <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                     <Image
                         src={`${process.env.REACT_APP_HOST_URL}${aboutPageData.attributes.imagenHome.data.attributes.url}`}
                         alt=""
