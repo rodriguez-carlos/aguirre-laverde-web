@@ -155,7 +155,7 @@ const HomeServicesContainer = () => {
                 </p>
             </IntroContainer>
             <CardsContainer>
-                {data.map(item => <ServiceCard image={item.image} text={item.text} />)}
+                {data.map(item => <ServiceCard key={item.text} image={item.image} text={item.text} />)}
             </CardsContainer>
             <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>
