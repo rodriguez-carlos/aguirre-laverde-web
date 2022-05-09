@@ -27,4 +27,9 @@ export async function getPartners() {
   return response.data;
 }
 
+export async function getAboutPage() {
+  const response = await ApiClient.get('/conocenos-pagina');
+  return response.data;
+}
+
 export default ApiClient;

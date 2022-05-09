@@ -26,5 +26,17 @@ function usePartners() {
   return partners ? partners.data : [];
 }
 
+function useAboutPage() {
+  const { aboutPage } = useContext(DataContext);
+
+  return aboutPage ? aboutPage.data : undefined;
+}
+
 export default DataContext;
-export { useCarouselSlides, useServices, useServiceModels, usePartners };
+export {
+  useCarouselSlides,
+  useServices,
+  useServiceModels,
+  usePartners,
+  useAboutPage,
+};

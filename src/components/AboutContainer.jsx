@@ -8,7 +8,7 @@ import PartnerCard from './PartnerCard';
 import Title from './Title';
 import { Container } from './Layout';
 import BackHomeButton from './BackHomeButton';
-import { usePartners } from '../context';
+import { usePartners, useAboutPage } from '../context';
 
 const SectionContainer = styled(Container)`
     padding: 0;
@@ -143,9 +143,22 @@ const PartnerCardsContainer = styled.div`
     }
 `;
 
+const IntroContainer = styled.pre`
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 16px;
+
+    @media (min-width: 960px) {
+      text-align: justify;
+    }
+`;
+
 
 const AboutContainer = () => {
-    const data = usePartners();
+    const partnersData = usePartners();
+    const aboutPageData = useAboutPage();
+
+    if (!aboutPageData) return;
 
     return (
         <SectionContainer>
@@ -178,21 +191,16 @@ const AboutContainer = () => {
                     mobile
                 />
             <TextContainer>
-                    <Title>CONÓCENOS</Title>
-                    <div>
-                        <p>
-                            Somos  una  firma  de  abogados  con experiencia  y  conocimiento  especializado  que brinda a sus clientes asesoría jurídica integral, oportuna y confiable.
-                        </p>
-                        <p>
-                            Las   áreas   más   relevantes   de   nuestra   practica  incluyen  responsabilidad  civil  y seguros, derecho comercial y corporativo, derecho de familia, derecho inmobiliario y derecho penal.
-                        </p>
-                        <p>
-                            Buscamos crear relaciones de largo plazo integrando  el  conocimiento  legal  con  el entendimiento   de   los   negocios   de nuestros   clientes,   sus   objetivos   y desafíos...
-                        </p>
-                    </div>
+                    <Title>{aboutPageData.attributes.titulo}</Title>
+                    <IntroContainer>
+                        {aboutPageData.attributes.textoIntroductorio}
+                    </IntroContainer>
                 </TextContainer>
                 <ImageContainer>
-                    <Image src={image} />
+                    <Image
+                        src={`${process.env.REACT_APP_HOST_URL}${aboutPageData.attributes.imagen.data.attributes.url}`}
+                        alt=""
+                    />
                 </ImageContainer>
             </Content>
             <TeamContent>
@@ -253,7 +261,7 @@ const AboutContainer = () => {
                     </Title>
                 </TitleContainer>
                 <PartnerCardsContainer>
-                    {data.map(partner => <PartnerCard key={partner.id} partner={partner.attributes}/>)}
+                    {partnersData.map(partner => <PartnerCard key={partner.id} partner={partner.attributes}/>)}
                 </PartnerCardsContainer>
             </TeamContent>
             <BackHomeButton />
