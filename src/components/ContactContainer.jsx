@@ -46,7 +46,7 @@ const BoxContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     position: relative;
-    width: 90%
+    width: 90%;
 
     @media (min-width: 960px) {
         width: 80%;
