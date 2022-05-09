@@ -8,7 +8,7 @@ import Title from '../Title';
 import Circle from '../Circle';
 import { Container } from '../Layout';
 
-import servicesData from '../../static/staticServicesData';
+import { useServices } from '../../context';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -110,7 +110,7 @@ const Actions = styled.div`
 `;
 
 const HomeServicesContainer = () => {
-    const [data, setData] = useState(servicesData);
+    const data = useServices();
 
     return (
         <SectionContainer>
@@ -155,7 +155,13 @@ const HomeServicesContainer = () => {
                 </p>
             </IntroContainer>
             <CardsContainer>
-                {data.map(item => <ServiceCard key={item.text} image={item.image} text={item.text} />)}
+                {data.map(item => (
+                    <ServiceCard
+                        key={item.id}
+                        image={`${process.env.REACT_APP_HOST_URL}${item.attributes.imagen.data.attributes.url}`}
+                        text={item.attributes.nombre}
+                    />
+                ))}
             </CardsContainer>
             <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>
