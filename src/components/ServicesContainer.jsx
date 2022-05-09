@@ -6,8 +6,7 @@ import ServiceCard from './ServiceCard';
 import Title from './Title';
 import Circle from './Circle';
 import { Container } from './Layout';
-
-import servicesData from '../static/staticServicesData';
+import { useServices } from '../context';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -148,37 +147,16 @@ const ServiceDetailDescription = styled.div`
   }
 `;
 
-const DescriptionList = styled.ul`
-  padding-inline-start: 20px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // inner list
-  ul {
-    padding-inline-start: 5px;
-    list-style-type: '-';
-  }
-
-  li {
-    font-size: 14px;
-    color: #062B27;
-    padding-bottom: 5px;
-  }
-
-  @media (min-width: 960px) {
-    padding-bottom: 10px;
-  }
-`;
-
-const DescriptionListItem = styled.li`
+const ServiceDetailInfo = styled.pre`
+  white-space: pre-wrap;
+  line-height: 1.5;
   font-size: 14px;
   color: #062B27;
 `;
 
 
 const ServicesContainer = () => {
-  const [data, setData] = useState(servicesData);
+  const data = useServices();
 
   return (
     <SectionContainer>
@@ -295,23 +273,15 @@ const ServicesContainer = () => {
       </IntroContainer>
       <CardsContainer>
         {data.map(service => (
-          <ServiceDetailCard>
-            <Card image={service.image} text={service.text} />
+          <ServiceDetailCard key={service.id}>
+            <Card
+              image={`${process.env.REACT_APP_HOST_URL}${service.attributes.imagen.data.attributes.url}`}
+              text={service.attributes.nombre}
+            />
             <ServiceDetailDescription>
-              <DescriptionList>
-                {service.itemList.map(item => {
-                  return (
-                    <>
-                      <DescriptionListItem>{item.text}</DescriptionListItem>
-                      {item.inner && (
-                        <ul>
-                          {item.inner.map(inner => <li>{inner}</li>)}
-                        </ul>
-                      )}
-                    </>
-                  )
-                })}
-              </DescriptionList>
+              <ServiceDetailInfo>
+                {service.attributes.informacion}
+              </ServiceDetailInfo>
             </ServiceDetailDescription>
           </ServiceDetailCard>
         ))}
