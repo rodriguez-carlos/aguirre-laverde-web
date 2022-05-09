@@ -15,7 +15,7 @@ const SlideCarousel = ({startingPosition}) => {
             showThumbs={false} 
             selectedItem={startingPosition ? startingPosition : 0}
         >
-            {carouselData.map((slide) => <CarouselItem carouselSlideData={slide}/>)}
+            {carouselData.map((slide) => <CarouselItem key={slide.id} carouselSlideData={slide}/>)}
         </Carousel>
     )
 }

@@ -8,6 +8,7 @@ import carouselTextThree from './LETREROS-23.png';
 
 const carouselSlideData = [
     {
+        id: '1',
         carouselSlideText: "¡Más de 40 años de experiencia y conocimiento especializado!",
         carouselSlideImg: carouselOne,
         carouselSlideButton: "Conócenos",
@@ -15,6 +16,7 @@ const carouselSlideData = [
         carouselSlideTextImage: carouselTextOne
     },
     {
+        id: '2',
         carouselSlideText: "¡Asesoría jurídica integral, oportuna y confiable!",
         carouselSlideImg: carouselTwo,
         carouselSlideButton: "¿Qué hacemos?",
@@ -22,6 +24,7 @@ const carouselSlideData = [
         carouselSlideTextImage: carouselTextTwo
     },
     {
+        id: '3',
         carouselSlideText: "¡Te escuchamos y te acompañamos en cada proceso!",
         carouselSlideImg: carouselThree,
         carouselSlideButton: "Contáctanos",
