@@ -169,7 +169,7 @@ const Nav = () => {
                 <MenuItemLink to="/conocenos">Conócenos</MenuItemLink>
             </MenuItem>
             {desktop && (
-                <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
+                <FontAwesomeIcon icon={faEllipsisVertical} color="#888" alt="Visual division on menu. No action" />
             )}
 
             <MenuItem
@@ -192,7 +192,7 @@ const Nav = () => {
                 )}
             </MenuItem>
             {desktop && (
-                <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Visual division on menu. No action" />
+                <FontAwesomeIcon icon={faEllipsisVertical} color="#888" alt="Visual division on menu. No action" />
             )}
 
             <MenuItem>
@@ -211,7 +211,7 @@ const Nav = () => {
                     {renderMenu(true)}
                 </MenuListContainer>
                 <MenuButton onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={faEllipsisVertical} color="#888" size="s" alt="Toggle menu" />
+                    <FontAwesomeIcon icon={faEllipsisVertical} color="#888" alt="Toggle menu" />
                 </MenuButton>
                 <MenuDrawer isExpanded={isExpanded}>
                     {renderMenu()}
