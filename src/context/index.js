@@ -32,6 +32,12 @@ function useAboutPage() {
   return aboutPage ? aboutPage.data : undefined;
 }
 
+function useServicesPage() {
+  const { servicesPage } = useContext(DataContext);
+
+  return servicesPage ? servicesPage.data : undefined;
+}
+
 export default DataContext;
 export {
   useCarouselSlides,
@@ -39,4 +45,5 @@ export {
   useServiceModels,
   usePartners,
   useAboutPage,
+  useServicesPage,
 };

@@ -32,4 +32,9 @@ export async function getAboutPage() {
   return response.data;
 }
 
+export async function getServicesPage() {
+  const response = await ApiClient.get('/que-hacemos-pagina');
+  return response.data;
+}
+
 export default ApiClient;

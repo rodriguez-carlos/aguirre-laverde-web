@@ -5,6 +5,7 @@ import {
   getServiceModels,
   getPartners,
   getAboutPage,
+  getServicesPage,
 } from './api';
 import Router from './Router';
 import DataContext from './context';
@@ -15,6 +16,7 @@ function App() {
   const [serviceModels, setServiceModels] = useState();
   const [partners, setPartners] = useState();
   const [aboutPage, setAboutPage] = useState();
+  const [servicesPage, setServicesPage] = useState();
 
   useEffect(() => {
     (async () => {
@@ -41,6 +43,11 @@ function App() {
       const data = await getAboutPage();
       setAboutPage(data);
     })();
+
+    (async () => {
+      const data = await getServicesPage();
+      setServicesPage(data);
+    })();
   }, []);
 
   return (
@@ -50,6 +57,7 @@ function App() {
       serviceModels,
       partners,
       aboutPage,
+      servicesPage,
     }}>
       <Router />
     </DataContext.Provider>
