@@ -271,9 +271,6 @@ const EnviarButton = styled(RoundButton)`
 
 
 const ContactContainer = () => {
-    const doNothing = () => {
-        return null;
-    }
     return (
         <>
             <SectionContainer>
