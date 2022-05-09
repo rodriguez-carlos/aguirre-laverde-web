@@ -253,7 +253,7 @@ const AboutContainer = () => {
                     </Title>
                 </TitleContainer>
                 <PartnerCardsContainer>
-                    {data.map(partner => <PartnerCard partner={partner}/>)}
+                    {data.map(partner => <PartnerCard key={partner.name} partner={partner}/>)}
                 </PartnerCardsContainer>
             </TeamContent>
             <BackHomeButton />
