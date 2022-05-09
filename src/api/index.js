@@ -7,6 +7,11 @@ const ApiClient = axios.create({
   },
 });
 
+export async function getCarouselSlides() {
+  const response = await ApiClient.get('/diapositivas');
+  return response.data;
+}
+
 export async function getServices() {
   const response = await ApiClient.get('/servicios');
   return response.data;
