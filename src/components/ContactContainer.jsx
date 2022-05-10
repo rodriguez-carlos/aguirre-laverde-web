@@ -40,6 +40,7 @@ const FloatingEllipsis = styled.div`
     right: 29%;
     font-size: 100px;
     color: #628785;
+
 `
 
 const BoxContainer = styled.div`

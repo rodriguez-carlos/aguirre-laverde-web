@@ -6,7 +6,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 40px 20px;
+    padding: 60px 40px 60px;
 
     @media (min-width: 650px) {
         padding: 140px 80px 80px;

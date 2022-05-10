@@ -11,7 +11,7 @@ import BackHomeButton from './BackHomeButton';
 import { usePartners, useAboutPage } from '../context';
 
 const SectionContainer = styled(Container)`
-    padding: 0;
+    padding: 0 0 60px;
 
     @media (min-width: 650px) {
         padding: 0;

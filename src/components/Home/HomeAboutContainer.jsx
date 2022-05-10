@@ -27,6 +27,11 @@ const FloatingEllipsis = styled.div`
     right: 39%;
     font-size: 80px;
     color: #94A8A7;
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+
 `;
 
 const FloatingEllipsisMobile = styled.div`
@@ -122,7 +127,7 @@ const HomeAboutContainer = () => {
                     color="#29514d"
                     size="500px"
                     left="55%"
-                    top="-40px"
+                    top="0"
                 />
                 <Circle
                     color="#50706d"
