@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,7 @@ import Title from '../Title';
 import Circle from '../Circle';
 import { Container } from '../Layout';
 
-import servicesData from '../../static/staticServicesData';
+import { useServices, useServicesPage } from '../../context';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -110,7 +110,10 @@ const Actions = styled.div`
 `;
 
 const HomeServicesContainer = () => {
-    const [data, setData] = useState(servicesData);
+    const servicesData = useServices();
+    const servicesPageData = useServicesPage();
+
+    if (!servicesPageData) return;
 
     return (
         <SectionContainer>
@@ -143,19 +146,24 @@ const HomeServicesContainer = () => {
             <TitleContainer>
                 <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948"}} />
                 <Title>
-                    ¿QUÉ HACEMOS?
+                    {servicesPageData.attributes.titulo}
                 </Title>
             </TitleContainer>
             <IntroContainer>
-                <p>
-                    Escuchamos  a  nuestros  clientes  y  les  brindamos soluciones legales de acuerdo a  sus  necesidades.  Los  asesoramos  y representamos  en  litigios  judiciales  y arbitrales.   
-                </p>
-                <p>
-                    Realizamos consultorías, capacitaciones, gestiones  ante  autoridades  y  proyectos especiales.    Desarrollamos  estrategias legales que permiten dar solución efectiva a los problemas de nuestros clientes.
-                </p>
+                {servicesPageData.attributes.parrafos.map(parrafo => (
+                    <p key={parrafo.id}>
+                        {parrafo.texto}
+                    </p>
+                ))}
             </IntroContainer>
             <CardsContainer>
-                {data.map(item => <ServiceCard image={item.image} text={item.text} />)}
+                {servicesData.map(item => (
+                    <ServiceCard
+                        key={item.id}
+                        image={`${process.env.REACT_APP_HOST_URL}${item.attributes.imagen.data.attributes.url}`}
+                        text={item.attributes.nombre}
+                    />
+                ))}
             </CardsContainer>
             <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>

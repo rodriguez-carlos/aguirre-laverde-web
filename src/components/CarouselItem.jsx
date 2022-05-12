@@ -91,18 +91,24 @@ const CarouselItemButton = styled(RoundButton)`
     }
 `;
 
-const CarouselItem = ({carouselSlideData}) => {
+const CarouselItem = ({ carouselSlideData }) => {
     return (
         <CarouselItemContainer>
-            <CarouselItemImage src={carouselSlideData.carouselSlideImg} alt="" />
+            <CarouselItemImage
+                src={`${process.env.REACT_APP_HOST_URL}${carouselSlideData.imagenFondo.data.attributes.url}`}
+                alt=""
+            />
             <CarouselItemBox>
                 <CarouselItemBoxContent>
-                    <CarouselItemBoxTextImage src={carouselSlideData.carouselSlideTextImage} alt={carouselSlideData.carouselSlideText} />
+                    <CarouselItemBoxTextImage
+                        src={`${process.env.REACT_APP_HOST_URL}${carouselSlideData.imagenTexto.data.attributes.url}`}
+                        alt={carouselSlideData.texto}
+                    />
                     <CarouselItemActions>
-                        <Link to={carouselSlideData.carouselSlideButtonRoute}>
+                        <Link to={carouselSlideData.rutaBoton}>
                             <CarouselItemButton buttonIcon="plus" />
                         </Link>
-                        <span>{carouselSlideData.carouselSlideButton}</span>
+                        <span>{carouselSlideData.boton}</span>
                     </CarouselItemActions>
                 </CarouselItemBoxContent>
             </CarouselItemBox>

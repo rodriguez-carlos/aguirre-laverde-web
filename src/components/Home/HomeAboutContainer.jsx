@@ -7,6 +7,7 @@ import RoundButton from '../RoundButton';
 import Circle from '../Circle';
 import Title from '../Title';
 import { Container } from '../Layout';
+import { useAboutPage } from '../../context';
 
 const Content = styled.div`
     display: flex;
@@ -22,10 +23,15 @@ const Content = styled.div`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 390px;
+    top: 420px;
     right: 39%;
     font-size: 80px;
     color: #94A8A7;
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+
 `;
 
 const FloatingEllipsisMobile = styled.div`
@@ -98,7 +104,21 @@ const Button = styled(RoundButton)`
     height: 100px;
 `;
 
+const IntroContainer = styled.pre`
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 16px;
+
+    @media (min-width: 960px) {
+      text-align: justify;
+    }
+`;
+
 const HomeAboutContainer = () => {
+    const aboutPageData = useAboutPage();
+
+    if (!aboutPageData) return;
+
     return (
         <Container color="#054340">
             <Content>
@@ -107,7 +127,7 @@ const HomeAboutContainer = () => {
                     color="#29514d"
                     size="500px"
                     left="55%"
-                    top="-40px"
+                    top="0"
                 />
                 <Circle
                     color="#50706d"
@@ -129,23 +149,18 @@ const HomeAboutContainer = () => {
                     top="620px"
                     mobile
                 />
-                <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                 <TextContainer>
-                    <Title>CONÓCENOS</Title>
-                    <div>
-                        <p>
-                            Somos  una  firma  de  abogados  con experiencia  y  conocimiento  especializado  que brinda a sus clientes asesoría jurídica integral, oportuna y confiable.
-                        </p>
-                        <p>
-                            Las   áreas   más   relevantes   de   nuestra   practica  incluyen  responsabilidad  civil  y seguros, derecho comercial y corporativo, derecho de familia, derecho inmobiliario y derecho penal.
-                        </p>
-                        <p>
-                            Buscamos crear relaciones de largo plazo integrando  el  conocimiento  legal  con  el entendimiento   de   los   negocios   de nuestros   clientes,   sus   objetivos   y desafíos...
-                        </p>
-                    </div>
+                    <Title>{aboutPageData.attributes.titulo}</Title>
+                    <IntroContainer>
+                        {aboutPageData.attributes.textoIntroductorio}
+                    </IntroContainer>
                 </TextContainer>
                 <ImageContainer>
-                    <Image src={logo} alt="" />
+                    <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
+                    <Image
+                        src={`${process.env.REACT_APP_HOST_URL}${aboutPageData.attributes.imagenHome.data.attributes.url}`}
+                        alt=""
+                    />
                 </ImageContainer>
             </Content>
             <Actions>
