@@ -296,7 +296,7 @@ const ContactContainer = () => {
                 />
                 <Circle
                     color="#2A5955"
-                    size="250px"
+                    size="140px"
                     top="170px"
                     right="50%"
                     mobile

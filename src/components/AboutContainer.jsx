@@ -193,7 +193,11 @@ const AboutContainer = () => {
             <TextContainer>
                     <Title>{aboutPageData.attributes.titulo}</Title>
                     <IntroContainer>
-                        {aboutPageData.attributes.textoIntroductorio}
+                    {aboutPageData.attributes.parrafos.map(parrafo => (
+                        <p key={parrafo.id}>
+                            {parrafo.texto}
+                        </p>
+                    ))}
                     </IntroContainer>
                 </TextContainer>
                 <ImageContainer>
