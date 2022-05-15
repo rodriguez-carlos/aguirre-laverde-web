@@ -7,6 +7,7 @@ import RoundButton from "../RoundButton";
 import Circle from "../Circle";
 import { Container } from '../Layout';
 import Title from '../Title';
+import { HashLink } from "react-router-hash-link";
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -149,7 +150,7 @@ const HomeContactContainer = () => {
             <BoxContainer>
                 <Image src={image} alt="" />
                 <InfoContainer>
-                    <a href="/contacto"><Button buttonIcon="plus" buttonSize="large" /></a>
+                    <HashLink to="/contacto#contactanos"><Button buttonIcon="plus" buttonSize="large" /></HashLink>
                     <TextContainer>
                         <SectionTitle color="#062b27">CONTÁCTANOS</SectionTitle>
                         <p>

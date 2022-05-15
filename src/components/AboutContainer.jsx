@@ -161,7 +161,7 @@ const AboutContainer = () => {
     if (!aboutPageData) return;
 
     return (
-        <SectionContainer>
+        <SectionContainer id="about-content">
             <Content>
                 <FloatingEllipsisMobile><FontAwesomeIcon icon={faEllipsisVertical}/></FloatingEllipsisMobile>
                 <Circle
@@ -191,7 +191,7 @@ const AboutContainer = () => {
                     mobile
                 />
             <TextContainer>
-                    <Title>{aboutPageData.attributes.titulo}</Title>
+                    <Title id="conocenos">{aboutPageData.attributes.titulo}</Title>
                     <IntroContainer>
                     {aboutPageData.attributes.parrafos.map(parrafo => (
                         <p key={parrafo.id}>

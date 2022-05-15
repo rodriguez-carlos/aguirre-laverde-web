@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import logo from '../../static/DEFINITIVOS-06.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { HashLink } from 'react-router-hash-link';
 import { faEllipsis, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import RoundButton from '../RoundButton';
 import Circle from '../Circle';
@@ -169,7 +169,7 @@ const HomeAboutContainer = () => {
             </Content>
             <Actions>
                 <p>Más de CONÓCENOS</p>
-                <a href="/conocenos"><Button buttonIcon="plus"/></a>
+                <HashLink to="/conocenos#conocenos"><Button buttonIcon="plus"/></HashLink>
             </Actions>
         </Container>
     )

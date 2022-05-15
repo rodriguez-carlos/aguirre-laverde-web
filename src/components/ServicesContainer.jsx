@@ -162,7 +162,7 @@ const ServicesContainer = () => {
   if (!servicesPageData) return;
 
   return (
-    <SectionContainer>
+    <SectionContainer id="services-content">
       <Circle
         color="#5F8D88"
         size="700px"
@@ -282,7 +282,7 @@ const ServicesContainer = () => {
             />
             <ServiceDetailDescription>
               <ServiceDetailInfo>
-                {service.attributes.informacion}
+                {service.attributes.informacion.replaceAll('-', `\u2022`)}
               </ServiceDetailInfo>
             </ServiceDetailDescription>
           </ServiceDetailCard>

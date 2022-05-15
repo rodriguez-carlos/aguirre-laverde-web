@@ -36,10 +36,23 @@ const Image = styled.img`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 150px;
-    right: 29%;
-    font-size: 100px;
+    top: 40px;
+    right: 25%;
+    font-size: 50px;
     color: #628785;
+
+    @media (min-width: 650px) {
+        top: 80px;
+        right: 40%;
+        font-size: 100px;
+        color: #628785;
+    }
+    @media (min-width: 1300px) {
+        top: 150px;
+        right: 26%;
+        font-size: 100px;
+        color: #628785;
+    }
 
 `
 
@@ -277,15 +290,15 @@ const ContactContainer = () => {
             <SectionContainer>
                 <Circle
                     color="#16514E"
-                    size="430px"
-                    top="70px"
-                    right="24%"
+                    size="500px"
+                    top="60px"
+                    right="21%"
                 />
                 <Circle
                     color="#A5B4B3"
-                    size="190px"
-                    top="360px"
-                    right="30%"
+                    size="250px"
+                    top="310px"
+                    right="25%"
                 />
                 <Circle
                     color="#16514E"
@@ -306,7 +319,7 @@ const ContactContainer = () => {
                     <Image src={image} alt="" />
                     <InfoContainer>
                         <TextContainer>
-                            <SectionTitle color="#062b27" >CONTÁCTANOS</SectionTitle>
+                            <SectionTitle color="#062b27" id="contactanos">CONTÁCTANOS</SectionTitle>
                             <p>
                                 ¡Déjanos tus datos y muy pronto nos pondremos en contacto!
                             </p>
@@ -323,7 +336,7 @@ const ContactContainer = () => {
                     </div>
                 </FormLeftContainer>
                 <FormRightContainer>
-                    <ContactForm target="_blank" action="https://formsubmit.co/carlosdanielrod@gmail.com" method="POST">
+                    <ContactForm target="_blank" action="https://formsubmit.co/info@aguirrelaverde.com" method="POST">
                         <input type="text" id="nameAndLastName" name="Nombre y apellido" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido'/><br />
                         <input type="text" id="email" name="Email" placeholder='MAIL' aria-label='Mail'/><br />
                         <input type="text" id="phone" name="Teléfono" placeholder='TELÉFONO' aria-label='Teléfono'/><br />
