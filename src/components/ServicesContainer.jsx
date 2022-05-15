@@ -162,7 +162,7 @@ const ServicesContainer = () => {
   if (!servicesPageData) return;
 
   return (
-    <SectionContainer id="services-content">
+    <SectionContainer>
       <Circle
         color="#5F8D88"
         size="700px"
@@ -262,7 +262,7 @@ const ServicesContainer = () => {
       />
       <TitleContainer>
         <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948"}} />
-        <Title>
+        <Title id="que-hacemos">
           {servicesPageData.attributes.titulo}
         </Title>
       </TitleContainer>

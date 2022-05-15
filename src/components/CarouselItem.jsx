@@ -104,12 +104,15 @@ const CarouselItem = ({ carouselSlideData }) => {
                         src={`${process.env.REACT_APP_HOST_URL}${carouselSlideData.imagenTexto.data.attributes.url}`}
                         alt={carouselSlideData.texto}
                     />
-                    <CarouselItemActions>
-                        <Link to={carouselSlideData.rutaBoton}>
-                            <CarouselItemButton buttonIcon="plus" />
-                        </Link>
-                        <span>{carouselSlideData.boton}</span>
-                    </CarouselItemActions>
+                    {
+                        carouselSlideData.rutaBoton ?
+                        <CarouselItemActions>
+                            <Link to={carouselSlideData.rutaBoton}>
+                                <CarouselItemButton buttonIcon="plus" />
+                            </Link>
+                            <span>{carouselSlideData.boton}</span>
+                        </CarouselItemActions> : ''
+                    }
                 </CarouselItemBoxContent>
             </CarouselItemBox>
         </CarouselItemContainer>

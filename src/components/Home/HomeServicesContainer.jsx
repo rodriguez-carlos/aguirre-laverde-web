@@ -9,6 +9,7 @@ import Circle from '../Circle';
 import { Container } from '../Layout';
 
 import { useServices, useServicesPage } from '../../context';
+import { HashLink } from 'react-router-hash-link';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -167,7 +168,7 @@ const HomeServicesContainer = () => {
             </CardsContainer>
             <Actions>
                 <p>Más de ¿QUÉ HACEMOS?</p>
-                <a href="/que-hacemos"><RoundButton buttonIcon="plus"/></a>
+                <HashLink to="/que-hacemos#que-hacemos"><RoundButton buttonIcon="plus"/></HashLink>
             </Actions>
         </SectionContainer>
     );
