@@ -6,7 +6,7 @@ import { useCarouselSlides } from '../context';
 
 const SlideCarousel = ({ startingPosition }) => {
     const carouselData = useCarouselSlides();
-    carouselData.sort((a, b) => a.id - b.id);
+
     return (
         <Carousel 
             autoPlay 

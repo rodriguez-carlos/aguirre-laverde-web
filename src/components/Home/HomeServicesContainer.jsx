@@ -99,6 +99,10 @@ const CardsContainer = styled.div`
     @media (min-width: 960px) {
         max-width: 75%;
     }
+
+    @media (min-width: 1700px) {
+        max-width: 60%;
+    }
 `;
 
 const Actions = styled.div`
