@@ -109,7 +109,7 @@ const IntroContainer = styled.pre`
     line-height: 1.5;
     font-size: 16px;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1200px) {
       text-align: justify;
     }
 `;
