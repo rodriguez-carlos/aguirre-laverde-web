@@ -1,6 +1,7 @@
 {
   "name": "aguirre-laverde-web",
   "version": "0.1.0",
+  "homepage": "https://aguirrelaverde.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
