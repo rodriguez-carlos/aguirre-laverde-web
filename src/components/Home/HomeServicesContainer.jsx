@@ -87,8 +87,10 @@ const IntroContainer = styled.div`
 const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: space-between;
     flex-wrap: wrap;
-    margin: auto;
+    min-width: 350px;
+    margin: 0;
     margin-bottom: 2rem;
     margin-top: -4rem;
 
