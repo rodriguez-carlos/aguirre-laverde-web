@@ -36,20 +36,14 @@ const Image = styled.img`
 
 const FloatingEllipsis = styled.div`
     position: absolute;
-    top: 40px;
-    right: 25%;
+    top: -20px;
+    right: 0;
     font-size: 50px;
     color: #628785;
 
     @media (min-width: 650px) {
-        top: 80px;
-        right: 40%;
-        font-size: 100px;
-        color: #628785;
-    }
-    @media (min-width: 1300px) {
-        top: 150px;
-        right: 26%;
+        top: -30px;
+        right: 15%;
         font-size: 100px;
         color: #628785;
     }
@@ -141,7 +135,7 @@ const FormLeftContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: left;
-    padding: 80px 0;
+    padding: 40px 0 80px;
 
     p {
         margin-top: 0;
@@ -159,6 +153,7 @@ const FormLeftContainer = styled.div`
         background-color: #054340;
         width: 55%;
         text-align: left;
+        padding: 80px 0;
 
         p {
             margin-top: 0;
@@ -289,33 +284,33 @@ const ContactContainer = () => {
         <>
             <SectionContainer>
                 <Circle
-                    color="#16514E"
-                    size="500px"
-                    top="60px"
-                    right="21%"
-                />
-                <Circle
-                    color="#A5B4B3"
-                    size="250px"
-                    top="310px"
-                    right="25%"
-                />
-                <Circle
-                    color="#16514E"
-                    size="190px"
-                    top="40px"
-                    right="10%"
-                    mobile
-                />
-                <Circle
                     color="#2A5955"
-                    size="140px"
-                    top="170px"
-                    right="50%"
+                    size="170px"
+                    top="180px"
+                    left="-50px"
                     mobile
                 />
-                <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                 <BoxContainer>
+                    <Circle
+                        color="#16514E"
+                        size="400px"
+                        top="-110px"
+                        right="-50px"
+                    />
+                    <Circle
+                        color="#A5B4B3"
+                        size="250px"
+                        top="130px"
+                        right="15%"
+                    />
+                    <Circle
+                        color="#16514E"
+                        size="160px"
+                        top="-60px"
+                        right="-50px"
+                        mobile
+                    />
+                    <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                     <Image src={image} alt="" />
                     <InfoContainer>
                         <TextContainer>
