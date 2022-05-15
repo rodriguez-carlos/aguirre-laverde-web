@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import image from '../static/VERSION-MOBIL-15.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Circle from './Circle';
