@@ -105,6 +105,16 @@ const CardsContainer = styled.div`
     }
 `;
 
+const CardLink = styled(HashLink)`
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 960px) {
+        flex: auto;
+    }
+`;
+
 const Actions = styled.div`
     display: flex;
     justify-content: center;
@@ -167,13 +177,16 @@ const HomeServicesContainer = () => {
             </IntroContainer>
             <CardsContainer>
                 {servicesData.map(item => (
-                    <HashLink to={`/que-hacemos#${item.attributes.nombre.replaceAll(" ", "-").toLowerCase()}`}>
+                    <CardLink to={`/que-hacemos#${item.attributes.nombre
+                        .replaceAll(" ", "-")
+                        .toLowerCase()
+                    }`}>
                         <ServiceCard
                             key={item.id}
                             image={`${process.env.REACT_APP_HOST_URL}${item.attributes.imagen.data.attributes.url}`}
                             text={item.attributes.nombre}
                         />
-                    </HashLink>
+                    </CardLink>
                 ))}
             </CardsContainer>
             <Actions>

@@ -34,7 +34,7 @@ const Title = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px;
     flex: 1;
     box-sizing: border-box;
     box-shadow: -4px 4px 12px #00000060;
