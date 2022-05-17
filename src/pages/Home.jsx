@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <Nav />
-            <SlideCarousel />
+            <SlideCarousel startingPosition={0} />
             <HomeAboutContainer />
             <HomeServicesContainer />
             <HomeContactContainer />
