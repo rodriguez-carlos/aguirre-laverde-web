@@ -71,6 +71,7 @@ const IntroContainer = styled.div`
         width: 65%;
         max-width: 1000px;
         flex-direction: row;
+        min-width: 807px;
 
         p:first-of-type {
             margin-right: 20px;

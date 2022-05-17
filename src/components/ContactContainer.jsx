@@ -327,7 +327,7 @@ const ContactContainer = () => {
                     <div>
                         <a href="https://wa.me/573176485863" target="_blank" rel="noopener noreferrer"><p><FontAwesomeIcon icon={faWhatsapp}/> +57 317 648 5863</p></a>
                         <a href="mailto:info@aguirrelaverde.com"><p><FontAwesomeIcon icon={faEnvelope} /> info@aguirrelaverde.com</p></a>
-                        <p>MEDELLÍN - COLOMBIA</p>
+                        <p>Medellín, Colombia</p>
                     </div>
                 </FormLeftContainer>
                 <FormRightContainer>

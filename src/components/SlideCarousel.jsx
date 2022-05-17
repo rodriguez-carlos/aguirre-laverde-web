@@ -9,12 +9,12 @@ const SlideCarousel = ({ startingPosition }) => {
 
     return (
         <Carousel 
-            autoPlay 
+            autoPlay={true}
             interval={6500} 
             infiniteLoop 
             showStatus={false} 
             showThumbs={false} 
-            selectedItem={startingPosition ? startingPosition : 0}
+            selectedItem={startingPosition}
         >
             {carouselData.map((slide) => <CarouselItem key={slide.id} carouselSlideData={slide.attributes}/>)}
         </Carousel>
