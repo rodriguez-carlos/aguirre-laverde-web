@@ -37,4 +37,9 @@ export async function getServicesPage() {
   return response.data;
 }
 
+export async function postContactSubmission (submission) {
+  const response = await ApiClient.post('/ezforms/submit', {formData: submission});
+  return response.data;
+}
+
 export default ApiClient;
