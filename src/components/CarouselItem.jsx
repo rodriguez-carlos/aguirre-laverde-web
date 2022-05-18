@@ -54,7 +54,16 @@ const CarouselItemBoxTextImage = styled.img`
 
     @media (min-width: 650px) {
         height: auto;
-        max-width: 350px;
+        max-width: 250px;
+    }
+
+    @media (min-width: 960px) {
+        height: auto;
+        max-width: 270px;
+    }
+    @media (min-width: 1300px) {
+        height: auto;
+        max-width: 320px;
     }
 `;
 

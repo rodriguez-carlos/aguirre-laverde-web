@@ -18,9 +18,8 @@ const Header = styled.header`
 const Logo = styled.img`
     height: 150px;
     flex: 1;
-
-    @media (min-width: 650px) {
-        height: 221px;
+    
+    @media (min-width: 960px) {
         margin: 0 40px;
     }
 `;

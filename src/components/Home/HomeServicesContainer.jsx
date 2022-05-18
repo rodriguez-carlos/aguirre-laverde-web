@@ -70,6 +70,7 @@ const IntroContainer = styled.div`
     @media (min-width: 960px) {
         width: 65%;
         max-width: 1000px;
+        min-width: 807px;
         flex-direction: row;
 
         p:first-of-type {
@@ -179,7 +180,7 @@ const HomeServicesContainer = () => {
             </IntroContainer>
             <CardsContainer>
                 {servicesData.map(item => (
-                    <CardLink to={`/que-hacemos#${item.attributes.nombre
+                    <CardLink key={item.id} to={`/que-hacemos#${item.attributes.nombre
                         .replaceAll(" ", "-")
                         .toLowerCase()
                     }`}>

@@ -23,9 +23,13 @@ const SectionContainer = styled(Container)`
 const FloatingEllipsis = styled.div`
     position: absolute;
     top: 160px;
-    right: 23%;
+    right: 16%;
     font-size: 100px;
     color: #628785;
+
+    @media (min-width: 1500px) {
+        right: 25%;
+    }
 `
 
 const Image = styled.img`
