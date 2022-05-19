@@ -149,6 +149,10 @@ const FormLeftContainer = styled.div`
         text-decoration: none;
         color: #ffffff;
         display: block;
+
+        :hover {
+            text-decoration: underline;
+        }
     }
 
     @media (min-width: 960px) {
