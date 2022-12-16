@@ -1,6 +1,6 @@
 import imagen1 from '../images/imagenes-06.png'
 import imagen2 from '../images/imagenes-07.png'
-import imagen3 from '../images/imagenes-09.png'
+import imagen3 from '../images/imagenes-08.png'
 import imagenDeTexto1 from '../images/LETRETROS-21.png'
 import imagenDeTexto2 from '../images/asesoria-22.png'
 import imagenDeTexto3 from '../images/LETRETROS-23.png'
