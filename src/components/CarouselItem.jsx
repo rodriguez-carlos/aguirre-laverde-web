@@ -104,22 +104,21 @@ const CarouselItem = ({ carouselSlideData }) => {
     return (
         <CarouselItemContainer>
             <CarouselItemImage
-                src={`${process.env.REACT_APP_HOST_URL}${carouselSlideData.imagenFondo.data.attributes.url}`}
+                src={carouselSlideData.imagen}
                 alt=""
             />
             <CarouselItemBox>
                 <CarouselItemBoxContent>
                     <CarouselItemBoxTextImage
-                        src={`${process.env.REACT_APP_HOST_URL}${carouselSlideData.imagenTexto.data.attributes.url}`}
-                        alt={carouselSlideData.texto}
+                        src={carouselSlideData.imagenDeTexto}
                     />
                     {
-                        carouselSlideData.rutaBoton ?
+                        carouselSlideData.rutaDelBoton ?
                         <CarouselItemActions>
-                            <Link to={carouselSlideData.rutaBoton}>
+                            <Link to={carouselSlideData.rutaDelBoton}>
                                 <CarouselItemButton buttonIcon="plus" />
                             </Link>
-                            <span>{carouselSlideData.boton}</span>
+                            <span>{carouselSlideData.textoDelBoton}</span>
                         </CarouselItemActions> : ''
                     }
                 </CarouselItemBoxContent>
