@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import logo from "../static/DEFINITIVOS-06.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
-import { useServices } from '../context';
+import { ServicesFixture } from '../static/fixtures';
 
 const Header = styled.header`
     width: 100%;
@@ -156,7 +156,7 @@ const ServicesDrawer = styled.div`
 const Nav = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isServicesExpanded, setIsServicesExpanded] = useState(false);
-    const servicesData = useServices();
+    const servicesData = ServicesFixture;
 
     const toggleMenu = () => setIsExpanded(!isExpanded);
 
@@ -180,8 +180,8 @@ const Nav = () => {
                     <ServicesDrawer>
                         {servicesData.map(service => (
                             <MenuItemLinkDrawer key={service.id}
-                                to={`/que-hacemos#${service.attributes.nombre.replaceAll(" ", "-").toLowerCase()}`}>
-                                    {service.attributes.nombre}
+                                to={`/que-hacemos#${service.nombre.replaceAll(" ", "-").toLowerCase()}`}>
+                                    {service.nombre}
                             </MenuItemLinkDrawer>
                         ))}
                         <MenuItemLinkDrawer to="/que-hacemos#modelos-de-servicio">Modelos de Servicio</MenuItemLinkDrawer>

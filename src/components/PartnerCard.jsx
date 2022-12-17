@@ -48,11 +48,11 @@ const Text = styled.div`
 const PartnerCard = ({ partner }) => {
     return (
         <Card>
-            <Image src={`${process.env.REACT_APP_HOST_URL}${partner.foto.data.attributes.url}`}/>
+            <Image src={partner.imagen}/>
             <Text>
                 <Name>{partner.nombre}</Name>
                 <Name>{partner.apellido}</Name>
-                <p>{partner.biografia}</p>
+                {partner.biografia.map(paragraph => <p>{paragraph}</p>)}
                 <p><strong>Estudios: </strong>{partner.educacion}</p>
             </Text>
         </Card>
