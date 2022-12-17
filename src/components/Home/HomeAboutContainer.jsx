@@ -7,7 +7,6 @@ import RoundButton from '../RoundButton';
 import Circle from '../Circle';
 import Title from '../Title';
 import { Container } from '../Layout';
-import { useAboutPage } from '../../context';
 import imagenFamilia from '../../static/images/imagenes-16.png'
 
 const Content = styled.div`

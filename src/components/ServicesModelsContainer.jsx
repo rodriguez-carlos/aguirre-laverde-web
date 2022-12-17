@@ -5,7 +5,6 @@ import Title from './Title';
 import Circle from './Circle';
 import ServiceModelCard from './ServiceModelCard';
 import BackHomeButton from './BackHomeButton';
-import { useServiceModels } from '../context';
 import { ServiceModelsFixture } from "../static/fixtures";
 
 const SectionContainer = styled(Container)`

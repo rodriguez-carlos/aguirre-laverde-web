@@ -8,7 +8,7 @@ const TeammembersFixture = [
         "id": 1,
         "nombre": "Juan Carlos",
         "apellido": "Aguirre Laverde",
-        "biografia": ["Cuenta con más de 10 años de experiencia en la asesoría jurídica y representación de personas naturales y sociedades en arbitraje comercial y litigios en procesos de responsabilidad civil y seguros, administrativos y ejecutivos."],
+        "biografia": ["Cuenta con más de 10 años de experiencia en la asesoría jurídica y representación de personas naturales y sociedades en arbitraje comercial y litigios en procesos de responsabilidad civil y seguros, administrativos y ejecutivos.", "Secretario de tribunales de arbitramento del Centro de Conciliación, Arbitraje  y Amigable Composición de la Cámara de Comercio de Medellín."],
         "educacion": "Abogado de la Universidad Pontificia Bolivariana. Especialista en Responsabilidad Civil y Seguros de la misma Universidad. Especialista en Derecho Comercial de la Universidad del Rosario.",
         "imagen": juanCarlos
     },
