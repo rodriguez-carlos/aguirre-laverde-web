@@ -1,9 +1,9 @@
 import imagen1 from '../images/dominoes.jpg'
-import imagen2 from '../images/imagenes-10.png'
-import imagen3 from '../images/imagenes-11.png'
-import imagen4 from '../images/imagenes-12.png'
-import imagen5 from '../images/imagenes-13.png'
-import imagen6 from '../images/imagenes-14.png'
+import imagen2 from '../images/imagenes-10.jpg'
+import imagen3 from '../images/imagenes-11.jpg'
+import imagen4 from '../images/imagenes-12.jpg'
+import imagen5 from '../images/imagenes-13.jpg'
+import imagen6 from '../images/imagenes-14.jpg'
 
 
 

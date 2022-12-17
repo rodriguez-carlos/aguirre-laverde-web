@@ -1,6 +1,6 @@
-import juanCarlos from '../images/imagenes-17.png';
-import luisFernando from '../images/imagenes-18.png';
-import lucia from '../images/imagenes-19.png';
+import juanCarlos from '../images/imagenes-17.jpg';
+import luisFernando from '../images/imagenes-18.jpg';
+import lucia from '../images/imagenes-19.jpg';
 
 
 const TeammembersFixture = [
