@@ -115,7 +115,7 @@ const CarouselItem = ({ carouselSlideData }) => {
                     {
                         carouselSlideData.rutaDelBoton ?
                         <CarouselItemActions>
-                            <Link to={carouselSlideData.rutaDelBoton}>
+                            <Link to={`/${carouselSlideData.rutaDelBoton}`}>
                                 <CarouselItemButton buttonIcon="plus" />
                             </Link>
                             <span>{carouselSlideData.textoDelBoton}</span>
