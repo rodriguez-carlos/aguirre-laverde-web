@@ -6,7 +6,7 @@ import ServiceCard from './ServiceCard';
 import Title from './Title';
 import Circle from './Circle';
 import { Container } from './Layout';
-import { useServices, useServicesPage } from '../context';
+import { ServicesFixture } from '../static/fixtures';
 
 const SectionContainer = styled(Container)`
     position: relative;
@@ -157,8 +157,8 @@ const ServiceDetailInfo = styled.pre`
 
 
 const ServicesContainer = () => {
-  const servicesData = useServices();
-  const servicesPageData = useServicesPage();
+  const servicesData = ServicesFixture;
+  const servicesPageData = ServicesFixture;
 
   if (!servicesPageData) return;
 
@@ -264,26 +264,34 @@ const ServicesContainer = () => {
       <TitleContainer>
         <FontAwesomeIcon icon={faEllipsis} size="xl" style={{ color: "#3A4948"}} />
         <Title id="que-hacemos">
-          {servicesPageData.attributes.titulo}
+          ¿QUÉ HACEMOS?
         </Title>
       </TitleContainer>
       <IntroContainer>
-        {servicesPageData.attributes.parrafos.map(parrafo => (
-          <p key={parrafo.id}>
-            {parrafo.texto}
-          </p>
-        ))}
+        <p>Escuchamos a nuestros clientes y
+        les brindamos soluciones legales de
+        acuerdo a sus necesidades. Los
+        asesoramos y representamos en
+        litigios judiciales y arbitrales.</p>
+        <p>Realizamos consultorías,
+        capacitaciones, gestiones ante
+        autoridades y proyectos especiales.
+        Desarrollamos estrategias legales
+        que permiten dar solución efectiva a
+        los problemas de nuestros clientes.</p>
       </IntroContainer>
       <CardsContainer>
         {servicesData.map(service => (
           <ServiceDetailCard key={service.id}>
             <Card
-              image={`${process.env.REACT_APP_HOST_URL}${service.attributes.imagen.data.attributes.url}`}
-              text={service.attributes.nombre}
+              image={service.imagen}
+              text={service.nombre}
             />
             <ServiceDetailDescription>
               <ServiceDetailInfo>
-                {service.attributes.informacion.replaceAll('-', `\u2022`)}
+                <ul>
+                  {service.informacion.map(paragraph => <li>{paragraph}</li>)}
+                </ul>
               </ServiceDetailInfo>
             </ServiceDetailDescription>
           </ServiceDetailCard>

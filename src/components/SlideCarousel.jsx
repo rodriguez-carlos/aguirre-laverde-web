@@ -2,7 +2,6 @@ import React from 'react';
 import CarouselItem from './CarouselItem';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { useCarouselSlides } from '../context';
 import { CarouselFixture } from '../static/fixtures/index';
 
 

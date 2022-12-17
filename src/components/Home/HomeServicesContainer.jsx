@@ -10,7 +10,6 @@ import { Container } from '../Layout';
 import { ServicesFixture } from '../../static/fixtures/index';
 
 
-import { useServices, useServicesPage } from '../../context';
 import { HashLink } from 'react-router-hash-link';
 
 const SectionContainer = styled(Container)`
@@ -135,8 +134,6 @@ const Actions = styled.div`
 
 const HomeServicesContainer = () => {
     const servicesData = ServicesFixture;
-    const servicesPageData = useServicesPage();
-
 
     return (
         <SectionContainer>
