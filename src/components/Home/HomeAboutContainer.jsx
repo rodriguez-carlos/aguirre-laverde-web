@@ -8,6 +8,7 @@ import Circle from '../Circle';
 import Title from '../Title';
 import { Container } from '../Layout';
 import { useAboutPage } from '../../context';
+import imagenFamilia from '../../static/images/imagenes-16.png'
 
 const Content = styled.div`
     display: flex;
@@ -115,9 +116,6 @@ const IntroContainer = styled.pre`
 `;
 
 const HomeAboutContainer = () => {
-    const aboutPageData = useAboutPage();
-
-    if (!aboutPageData) return;
 
     return (
         <Container color="#054340">
@@ -150,19 +148,30 @@ const HomeAboutContainer = () => {
                     mobile
                 />
                 <TextContainer>
-                    <Title>{aboutPageData.attributes.titulo}</Title>
+                    <Title>CONÓCENOS</Title>
                     <IntroContainer>
-                    {aboutPageData.attributes.parrafos.map(parrafo => (
-                        <p key={parrafo.id}>
-                            {parrafo.texto}
-                        </p>
-                    ))}
+                        <p>Somos una firma de abogados con
+                        experiencia y conocimiento
+                        especializado que brinda a sus
+                        clientes asesoría jurídica integral,
+                        oportuna y confiable.</p>
+                        <p>Las áreas más relevantes de
+                        nuestra practica incluyen
+                        responsabilidad civil y seguros,
+                        derecho comercial y corporativo,
+                        derecho de familia, derecho
+                        inmobiliario y derecho penal.</p>
+                        <p>Buscamos crear relaciones de largo
+                        plazo integrando el conocimiento
+                        legal con el entendimiento de los
+                        negocios de nuestros clientes, sus
+                        objetivos y desafíos...</p>
                     </IntroContainer>
                 </TextContainer>
                 <ImageContainer>
                     <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                     <Image
-                        src={`${process.env.REACT_APP_HOST_URL}${aboutPageData.attributes.imagenHome.data.attributes.url}`}
+                        src={imagenFamilia}
                         alt=""
                     />
                 </ImageContainer>
