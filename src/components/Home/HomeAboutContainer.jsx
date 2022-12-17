@@ -7,7 +7,7 @@ import RoundButton from '../RoundButton';
 import Circle from '../Circle';
 import Title from '../Title';
 import { Container } from '../Layout';
-import imagenFamilia from '../../static/images/imagenes-16.png'
+import logoAncho from '../../static/images/logo-ancho.png'
 
 const Content = styled.div`
     display: flex;
@@ -170,7 +170,7 @@ const HomeAboutContainer = () => {
                 <ImageContainer>
                     <FloatingEllipsis><FontAwesomeIcon icon={faEllipsis} /></FloatingEllipsis>
                     <Image
-                        src={imagenFamilia}
+                        src={logoAncho}
                         alt=""
                     />
                 </ImageContainer>
