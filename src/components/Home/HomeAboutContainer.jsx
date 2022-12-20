@@ -66,7 +66,8 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-    height: 245.2px;
+    width: 100%;
+    max-width: 570px;
 
     @media (min-width: 960px) {
         height: 306.5px;

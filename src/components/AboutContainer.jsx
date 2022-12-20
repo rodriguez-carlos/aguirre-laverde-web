@@ -8,7 +8,7 @@ import Title from './Title';
 import { Container } from './Layout';
 import BackHomeButton from './BackHomeButton';
 import { TeammembersFixture } from '../static/fixtures';
-import imagenFamilia from '../static/images/imagenes-16.jpg'
+import imagenFamilia from '../static/images/imagenes-16.jpg';
 
 
 const SectionContainer = styled(Container)`
