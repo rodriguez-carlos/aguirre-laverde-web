@@ -314,7 +314,7 @@ const ContactContainer = () => {
             }
             backHome();        
         }
-    }, [state]);
+    }, [state, navigate]);
     return (
         <>
             <SectionContainer>
