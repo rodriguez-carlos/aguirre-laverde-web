@@ -11,7 +11,6 @@ import BackHomeButton from './BackHomeButton';
 import Title from './Title';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '@formspree/react';
-import { postContactSubmission } from '../api';
 
 const SectionContainer = styled(Container)`
     background: linear-gradient(180deg, #054340 0%, #054340 64%, #326864 64%, #326864 100%);
@@ -296,24 +295,23 @@ const ContactContainer = () => {
     };
 
     const [formData, setFormData] = useState(initialForm);
-    const [formValid, setFormValid] = useState(false);
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         })
     }
-    const [state, handleSubmit] = useForm('xgebkqlk');
+    const [state, handleSubmit] = useForm('myyawvny');
 
     let navigate = useNavigate();
-    const backHome = () => {
-        let path = `/`;
-        navigate(path);
-        window.scrollTo(0, 0);
-    }
     useEffect(() => {
         if (state.succeeded) {
             alert("Recibimos tus datos y pronto estaremos en contacto");
+            const backHome = () => {
+                let path = `/`;
+                navigate(path);
+                window.scrollTo(0, 0);
+            }
             backHome();        
         }
     }, [state]);
