@@ -10,6 +10,7 @@ import RoundButton from './RoundButton';
 import BackHomeButton from './BackHomeButton';
 import Title from './Title';
 import { useNavigate } from 'react-router-dom';
+import { useForm } from '@formspree/react';
 import { postContactSubmission } from '../api';
 
 const SectionContainer = styled(Container)`
@@ -302,22 +303,8 @@ const ContactContainer = () => {
             [e.target.name]: e.target.value
         })
     }
-    const handleSubmit = (e) => {
-        if (formValid) {
-            const newSubmission = {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                message: formData.message
-            }
-            console.log(newSubmission);
-            postContactSubmission(newSubmission);
-            alert("¡Recibimos sus datos y pronto estaremos en contacto!")
-            backHome();
-        }
-        else
-            alert("No ha completado el formulario correctamente.");
-    }
+    const [state, handleSubmit] = useForm('xgebkqlk');
+
     let navigate = useNavigate();
     const backHome = () => {
         let path = `/`;
@@ -325,8 +312,11 @@ const ContactContainer = () => {
         window.scrollTo(0, 0);
     }
     useEffect(() => {
-        setFormValid(formData.name && formData.email && formData.phone && formData.message && formData.policy)
-    }, [formData]);
+        if (state.succeeded) {
+            alert("Recibimos tus datos y pronto estaremos en contacto");
+            backHome();        
+        }
+    }, [state]);
     return (
         <>
             <SectionContainer>
@@ -378,15 +368,15 @@ const ContactContainer = () => {
                     </div>
                 </FormLeftContainer>
                 <FormRightContainer>
-                    <ContactForm target="_blank" onChange={handleChange}>
-                        <input type="text" id="nameAndLastName" name="name" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido'/><br />
-                        <input type="text" id="email" name="email" placeholder='MAIL' aria-label='Mail'/><br />
-                        <input type="text" id="phone" name="phone" placeholder='TELÉFONO' aria-label='Teléfono'/><br />
-                        <textarea name="message" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje'></textarea>
+                    <ContactForm onChange={handleChange} target="_blank" onSubmit={handleSubmit} method="POST">
+                        <input type="text" id="nameAndLastName" name="name" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido' required/><br />
+                        <input type="text" id="email" name="email" placeholder='MAIL' aria-label='Mail' required/><br />
+                        <input type="text" id="phone" name="phone" placeholder='TELÉFONO' aria-label='Teléfono' required/><br />
+                        <textarea name="message" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje' required></textarea>
                         <FormActions>
                             <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%"}}>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center", marginBottom: '10px' }}>
-                                    <input type="checkbox" id='accept-policy' style={{flex: "none"}} name="policy"/>
+                                    <input type="checkbox" id='accept-policy' style={{flex: "none"}} name="policy" required/>
                                     <label htmlFor="accept-policy">Acepto</label>
                                 </div>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
@@ -397,8 +387,8 @@ const ContactContainer = () => {
                                     <span>Política de tratamiento <br/> de datos personales</span>
                                 </div>
                             </div>
-                            <div onClick={handleSubmit} >
-                                <EnviarButton buttonIcon="enviar" buttonSize="large"></EnviarButton>
+                            <div>
+                                <button style={{backgroundColor: "transparent", border: "transparent"}} ><EnviarButton buttonIcon="enviar" buttonSize="large" onclick={handleSubmit}></EnviarButton></button>
                             </div>
                         </FormActions>
                     </ContactForm>
