@@ -369,14 +369,14 @@ const ContactContainer = () => {
                 </FormLeftContainer>
                 <FormRightContainer>
                     <ContactForm onChange={handleChange} target="_blank" onSubmit={handleSubmit} method="POST">
-                        <input type="text" id="nameAndLastName" name="name" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido' required/><br />
-                        <input type="text" id="email" name="email" placeholder='MAIL' aria-label='Mail' required/><br />
-                        <input type="text" id="phone" name="phone" placeholder='TELÉFONO' aria-label='Teléfono' required/><br />
-                        <textarea name="message" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje' required></textarea>
+                        <input type="text" id="nameAndLastName" name="Nombre" placeholder='NOMBRE Y APELLIDO' aria-label='Nombre y apellido' required/><br />
+                        <input type="text" id="email" name="Email" placeholder='MAIL' aria-label='Mail' required/><br />
+                        <input type="text" id="phone" name="Teléfono" placeholder='TELÉFONO' aria-label='Teléfono' required/><br />
+                        <textarea name="Mensaje" id="message" cols="20" rows="10" placeholder='MENSAJE' aria-label='Mensaje' required></textarea>
                         <FormActions>
                             <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%"}}>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center", marginBottom: '10px' }}>
-                                    <input type="checkbox" id='accept-policy' style={{flex: "none"}} name="policy" required/>
+                                    <input type="checkbox" id='accept-policy' style={{flex: "none"}} name="¿Acepta política?" required/>
                                     <label htmlFor="accept-policy">Acepto</label>
                                 </div>
                                 <div style={{width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}>
