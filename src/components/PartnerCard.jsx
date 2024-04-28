@@ -43,6 +43,11 @@ const Text = styled.div`
         color: #3A4948;
         line-height: 1.5;
     }
+    ul {
+        padding-inline-start: 0.5em;
+        color: #3A4948;
+        line-height: 1.5;
+    }
 `;
 
 const PartnerCard = ({ partner }) => {
@@ -53,7 +58,15 @@ const PartnerCard = ({ partner }) => {
                 <Name>{partner.nombre}</Name>
                 <Name>{partner.apellido}</Name>
                 {partner.biografia.map(paragraph => <p>{paragraph}</p>)}
-                <p><strong>Estudios: </strong>{partner.educacion}</p>
+                {partner.subcampos?.map((paragraph) => {
+                    return <div>
+                        <p><strong>{paragraph.subtitulo}</strong></p>
+                        <p>{paragraph.subtexto}</p>
+                        <ul>
+                            {paragraph.vinetas?.map(paragraphTwo => <li>{paragraphTwo}</li>)}
+                        </ul>
+                    </div>
+                })}
             </Text>
         </Card>
     )

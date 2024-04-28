@@ -197,7 +197,7 @@ const AboutContainer = () => {
                         clientes asesoría jurídica integral,
                         oportuna y confiable.</p>
                         <p>Las áreas más relevantes de
-                        nuestra practica incluyen
+                        nuestra práctica incluyen
                         responsabilidad civil y seguros,
                         derecho comercial y corporativo,
                         derecho de familia, derecho
@@ -206,7 +206,7 @@ const AboutContainer = () => {
                         plazo integrando el conocimiento
                         legal con el entendimiento de los
                         negocios de nuestros clientes, sus
-                        objetivos y desafíos...</p>
+                        objetivos y desafíos.</p>
                     </IntroContainer>
                 </TextContainer>
                 <ImageContainer>
