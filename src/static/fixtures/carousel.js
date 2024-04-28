@@ -1,4 +1,4 @@
-import imagen1 from '../images/imagenes-06.jpg'
+import imagen1 from '../images/imagenes-16_LE_auto_x2-transformed.jpeg'
 import imagen2 from '../images/imagenes-07.jpg'
 import imagen3 from '../images/imagenes-08.jpg'
 import imagenDeTexto1 from '../images/LETRETROS-21.png'
