@@ -107,6 +107,7 @@ const CarouselItem = ({ carouselSlideData }) => {
                 src={carouselSlideData.imagen}
                 alt=""
             />
+            {carouselSlideData.imagenDeTexto ? 
             <CarouselItemBox>
                 <CarouselItemBoxContent>
                     <CarouselItemBoxTextImage
@@ -123,6 +124,8 @@ const CarouselItem = ({ carouselSlideData }) => {
                     }
                 </CarouselItemBoxContent>
             </CarouselItemBox>
+            : ''
+        }
         </CarouselItemContainer>
     )
 }
