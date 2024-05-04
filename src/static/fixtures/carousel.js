@@ -1,7 +1,7 @@
 import imagen1 from '../images/imagenes-16_LE_auto_x2-transformed.jpeg'
 import imagen2 from '../images/imagenes-07.jpg'
 //import imagen3 from '../images/imagenes-08.jpg'
-import imagen4 from '../images/iStock-1023022966 (1)_LE_auto_x1.jpg'
+import imagen4 from '../images/200220090015-organizeddesk-super-169.jpg'
 import imagenDeTexto1 from '../images/LETRETROS-21.png'
 //import imagenDeTexto2 from '../images/asesoria-22.png'
 import imagenDeTexto3 from '../images/LETRETROS-23.png'
