@@ -50,17 +50,25 @@ const Text = styled.div`
     }
 `;
 
+const capitalizeEachWord = (sentence) => {
+    const words = sentence.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+    return words.join(" ");
+}
+
 const PartnerCard = ({ partner }) => {
     return (
         <Card>
             <Image src={partner.imagen}/>
             <Text>
-                <Name>{partner.nombre}</Name>
-                <Name>{partner.apellido}</Name>
+                <Name>{capitalizeEachWord(partner.nombre)}</Name>
+                <Name>{capitalizeEachWord(partner.apellido)}</Name>
                 {partner.biografia.map(paragraph => <p>{paragraph}</p>)}
                 {partner.subcampos?.map((paragraph) => {
                     return <div>
-                        <p><strong>{paragraph.subtitulo}</strong></p>
+                        <p><strong>{capitalizeEachWord(paragraph.subtitulo)}</strong></p>
                         <p>{paragraph.subtexto}</p>
                         <ul>
                             {paragraph.vinetas?.map(paragraphTwo => <li>{paragraphTwo}</li>)}

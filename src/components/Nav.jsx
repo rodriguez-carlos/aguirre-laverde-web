@@ -153,6 +153,12 @@ const ServicesDrawer = styled.div`
     z-index: 101;
 `;
 
+const capitalizeFirstWord = (sentence) => {
+    const firstLetter = sentence.charAt(0);
+
+    return firstLetter.toUpperCase() + sentence.substr(1);
+}
+
 const Nav = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isServicesExpanded, setIsServicesExpanded] = useState(false);
@@ -181,7 +187,7 @@ const Nav = () => {
                         {servicesData.map(service => (
                             <MenuItemLinkDrawer key={service.id}
                                 to={`/que-hacemos#${service.nombre.replaceAll(" ", "-").toLowerCase()}`}>
-                                    {service.nombre}
+                                    {capitalizeFirstWord(service.nombre)}
                             </MenuItemLinkDrawer>
                         ))}
                         <MenuItemLinkDrawer to="/que-hacemos#modelos-de-servicio">Modelos de Servicio</MenuItemLinkDrawer>
