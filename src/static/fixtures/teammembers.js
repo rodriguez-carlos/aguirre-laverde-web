@@ -33,7 +33,7 @@ const TeammembersFixture = [
         "imagen": luisFernando,
         "subcampos": [{
             "subtitulo": "Estudios",
-            "subtexto": "Abogado de la Universidad Pontificia Bolivariana. Especialista en Derecho Procesal de la Universidad Pontificia Bolivariana. Especialista en Investigación Criminal y Sistema Penal Acusatorio de la Universidad Católica. Aspirante a Maestría teoría del delito y derecho procesal penal."
+            "subtexto": "Abogado de la Universidad Pontificia Bolivariana. Especialista en Derecho Procesal de la Universidad Pontificia Bolivariana. Especialista en Investigación Criminal y Sistema Penal Acusatorio de la Universidad Católica. Aspirante a Maestría Teoría del Delito y Derecho Procesal Penal."
         }]
 
     },
@@ -41,12 +41,12 @@ const TeammembersFixture = [
         "id": 3,
         "nombre": "Lucía",
         "apellido": "Laverde Gallego",
-        "biografia": ["Cuenta con más de 40 años de experiencia en la asesoría jurídica y representación de personas naturales en procesos de familia e inmobiliario."],
-        "educacion": "Abogada de la Universidad Pontificia Bolivariana. Especialista en Derecho de Familia e inmobilidad de de la Universidad Pontificia Bolivariana.",
+        "biografia": ["Cuenta con más de 40 años de experiencia en la asesoría jurídica y representación de personas naturales en procesos de familia e inmobiliario y en derecho canónico ante el Tribunal Eclesiástico."],
+        "educacion": "Abogada de la Universidad Pontificia Bolivariana. Especialista en Derecho de Familia e Inmobiliario de la Universidad Pontificia Bolivariana.",
         "imagen": lucia,
         "subcampos": [{
             "subtitulo": "Estudios",
-            "subtexto": "Abogada de la Universidad Pontificia Bolivariana. Especialista en Derecho de Familia e inmobilidad de de la Universidad Pontificia Bolivariana."
+            "subtexto": "Abogada de la Universidad Pontificia Bolivariana. Especialista en Derecho de Familia e Inmobiliario de la Universidad Pontificia Bolivariana. Especialista en Derecho Civil y Comercial de la Universidad de Medellín."
         }]
     },
 ]
