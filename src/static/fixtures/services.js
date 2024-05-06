@@ -12,7 +12,7 @@ const ServicesFixture = [
     {
         "id": 1,
         "nombre": "Responsabilidad Civil y Seguros",
-        "informacion": ['Asesoría y representación judicial en litigios y arbitraje relacionados con el derecho de transporte, seguros y responsabilidad civil contractual y extracontractual.', 'Asesoría y representación en procesos de responsabilidad del estado', 'Elaboración de reclamación de siniestros a las aseguradoras.', 'Elaboración de contratos relacionados con proyectos de inmobiliarios y fiduciarios.', 'Asesoría y representación en procesos contravencionales.'],
+        "informacion": ['Asesoría y representación judicial en litigios y arbitraje relacionados con el derecho de transporte, seguros y responsabilidad civil contractual y extracontractual.', 'Asesoría y representación en procesos de responsabilidad del estado.', 'Elaboración de reclamación de siniestros a las aseguradoras.', 'Elaboración de contratos relacionados con proyectos de inmobiliarios y fiduciarios.', 'Asesoría y representación en procesos contravencionales.'],
         "imagen": imagen1
     },
     {
@@ -30,7 +30,7 @@ const ServicesFixture = [
     {
         "id": 4,
         "nombre": "Derecho de Familia",
-        "informacion": ['Divorcios.', 'Nulidad del matrimonio.', 'Declaración de unión marital de hecho y sociedad patrimonial.', 'Separación de bienes voluntarias y contenciosas.', 'Disolución y liquidaciones de sociedad conyugal y patrimonial.', 'Asuntos alimentarios.', 'Trámite judicial y notaría de sucesiones.', 'Cesación de efectos civiles de matrimonio católico.', 'Suscripción de acuerdos de apoyo y directivas anticipadas ', 'Patria potestad, custodia, cuidado personal y régimen de visitas.', 'Capitulaciones matrimoniales y maritales.'],
+        "informacion": ['Divorcios.', 'Nulidad del matrimonio.', 'Declaración de unión marital de hecho y sociedad patrimonial.', 'Separación de bienes voluntarias y contenciosas.', 'Disolución y liquidaciones de sociedad conyugal y patrimonial.', 'Asuntos alimentarios.', 'Trámite judicial y notaría de sucesiones.', 'Cesación de efectos civiles de matrimonio católico.', 'Suscripción de acuerdos de apoyo y directivas anticipadas.', 'Patria potestad, custodia, cuidado personal y régimen de visitas.', 'Capitulaciones matrimoniales y maritales.'],
         "imagen": imagen4
     },
     {
@@ -48,7 +48,7 @@ const ServicesFixture = [
     {
         "id": 7,
         "nombre": "Conciliación",
-        "informacion": ['Puedes designar a Juan Carlos Aguirre Laverde como conciliador para que sea el tercero neutral y calificado que ayude a resolver los conflictos que tengas en materia civil y comercial. Hace parte de los siguientes Centros de Conciliación: \n\n-Centro de Conciliación, Arbitraje y Amigable Composición de la Cámara de Comercio del Oriente Antioqueño. Isabel.pineda@ccoa.org.co. Teléfono 604 531 25 14 Opción 4. \n\n-Centro de Conciliación, Arbitraje y Amigable Composición de la Universidad Pontifica Bolivariana “Darío Velásquez Gaviria" Teléfonos: (+57 4) 354 45 89. Celular: 311 634 41 66 WhatsApp: 311 634 41 66 conciliacionyarbitraje.med@upb.edu.co'],
+        "informacion": ['Puedes designar a Juan Carlos Aguirre Laverde como conciliador para que sea el tercero neutral y calificado que ayude a resolver los conflictos que tengas en materia civil y comercial. Hace parte de los siguientes Centros de Conciliación: \n\n-Centro de Conciliación, Arbitraje y Amigable Composición de la Cámara de Comercio del Oriente Antioqueño. Isabel.pineda@ccoa.org.co. Teléfono 604 531 25 14 Opción 4. \n\n-Centro de Conciliación, Arbitraje y Amigable Composición de la Universidad Pontifica Bolivariana “Darío Velásquez Gaviria" Teléfonos: (+57 4) 354 45 89. Celular: 311 634 41 66 WhatsApp: 311 634 41 66 conciliacionyarbitraje.med@upb.edu.co.'],
         "imagen": imagen7
     }
 ]
